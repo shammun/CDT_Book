@@ -15,6 +15,7 @@ The format of CDT station data.
 ## Assess data availability
 
 ## Download data using CDT
+We can download different data including digital elevation model, shapefile, satellite rainfall estimates data and reanalysis data iknside CDT. We can specify our area of interest and CDT will download these for us.  
 
 ### Download digital elevation model
 ### Download different country administrative boundaries or shapefile
