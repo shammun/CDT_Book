@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 8 Case study | Climate Data Tools (CDT)</title>
+  <meta name="description" content="CDT Book" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 8 Case study | Climate Data Tools (CDT)" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://iri.columbia.edu/our-expertise/climate/tools/cdt/" />
+  
+  <meta property="og:description" content="CDT Book" />
+  <meta name="github-repo" content="shammun/CDT-Book" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 Case study | Climate Data Tools (CDT)" />
+  
+  <meta name="twitter:description" content="CDT Book" />
+  
+
+<meta name="author" content="Shammunul Islam" />
+
+
+<meta name="date" content="2020-05-04" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="visualization.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">CDT Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html"><i class="fa fa-check"></i><b>1</b> Introduction to CDT</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#what-is-cdt"><i class="fa fa-check"></i><b>1.1</b> What is CDT</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-preparation.html"><a href="data-preparation.html"><i class="fa fa-check"></i><b>2</b> Data Preparation</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-preparation.html"><a href="data-preparation.html#cdt-station-data-format"><i class="fa fa-check"></i><b>2.1</b> CDT station data format</a></li>
+<li class="chapter" data-level="2.2" data-path="data-preparation.html"><a href="data-preparation.html#manipulating-cdt-station-data"><i class="fa fa-check"></i><b>2.2</b> Manipulating CDT station data</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-preparation.html"><a href="data-preparation.html#merge-two-cdt-station-data"><i class="fa fa-check"></i><b>2.2.1</b> Merge two CDT station data</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-preparation.html"><a href="data-preparation.html#filtering-cdt-station-data"><i class="fa fa-check"></i><b>2.2.2</b> Filtering CDT station data</a></li>
+<li class="chapter" data-level="2.2.3" data-path="data-preparation.html"><a href="data-preparation.html#selecting-cdt-station-data"><i class="fa fa-check"></i><b>2.2.3</b> Selecting CDT station data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="data-preparation.html"><a href="data-preparation.html#assess-data-availability"><i class="fa fa-check"></i><b>2.3</b> Assess data availability</a></li>
+<li class="chapter" data-level="2.4" data-path="data-preparation.html"><a href="data-preparation.html#download-data-using-cdt"><i class="fa fa-check"></i><b>2.4</b> Download data using CDT</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="data-preparation.html"><a href="data-preparation.html#download-digital-elevation-model"><i class="fa fa-check"></i><b>2.4.1</b> Download digital elevation model</a></li>
+<li class="chapter" data-level="2.4.2" data-path="data-preparation.html"><a href="data-preparation.html#download-different-country-administrative-boundaries-or-shapefile"><i class="fa fa-check"></i><b>2.4.2</b> Download different country administrative boundaries or shapefile</a></li>
+<li class="chapter" data-level="2.4.3" data-path="data-preparation.html"><a href="data-preparation.html#download-satellite-rainfall-estimates-data"><i class="fa fa-check"></i><b>2.4.3</b> Download satellite rainfall estimates data</a></li>
+<li class="chapter" data-level="2.4.4" data-path="data-preparation.html"><a href="data-preparation.html#download-reanalysis-data"><i class="fa fa-check"></i><b>2.4.4</b> Download reanalysis data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="data-preparation.html"><a href="data-preparation.html#aggregate-data"><i class="fa fa-check"></i><b>2.5</b> Aggregate data</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="data-preparation.html"><a href="data-preparation.html#aggregating-time-series"><i class="fa fa-check"></i><b>2.5.1</b> Aggregating time series</a></li>
+<li class="chapter" data-level="2.5.2" data-path="data-preparation.html"><a href="data-preparation.html#aggregatedisaggregate-spatial-netcdf-data"><i class="fa fa-check"></i><b>2.5.2</b> Aggregate/disaggregate spatial NetCDF data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="data-preparation.html"><a href="data-preparation.html#transform-netcdf-files-into-cdt-dataset"><i class="fa fa-check"></i><b>2.6</b> Transform NetCDF files into CDT dataset</a></li>
+<li class="chapter" data-level="2.7" data-path="data-preparation.html"><a href="data-preparation.html#data-extraction"><i class="fa fa-check"></i><b>2.7</b> Data extraction</a></li>
+<li class="chapter" data-level="2.8" data-path="data-preparation.html"><a href="data-preparation.html#split-netcdf-files-into-cdt-netcdf-format"><i class="fa fa-check"></i><b>2.8</b> Split NetCDF files into CDT NetCDF format</a></li>
+<li class="chapter" data-level="2.9" data-path="data-preparation.html"><a href="data-preparation.html#blank-grid-outside-polygons"><i class="fa fa-check"></i><b>2.9</b> Blank grid outside polygons</a></li>
+<li class="chapter" data-level="2.10" data-path="data-preparation.html"><a href="data-preparation.html#data-format-conversion"><i class="fa fa-check"></i><b>2.10</b> Data format conversion</a><ul>
+<li class="chapter" data-level="2.10.1" data-path="data-preparation.html"><a href="data-preparation.html#conversion-to-cpt-format"><i class="fa fa-check"></i><b>2.10.1</b> Conversion to CPT format</a></li>
+<li class="chapter" data-level="2.10.2" data-path="data-preparation.html"><a href="data-preparation.html#converting-netcdfgeotiffesri-.hdr-labelled"><i class="fa fa-check"></i><b>2.10.2</b> Converting NetCDF/GeoTIFF/ESRI .hdr Labelled</a></li>
+<li class="chapter" data-level="2.10.3" data-path="data-preparation.html"><a href="data-preparation.html#fillling-missing-dekadal-temperature-values"><i class="fa fa-check"></i><b>2.10.3</b> Fillling missing dekadal temperature values</a></li>
+</ul></li>
+<li class="chapter" data-level="2.11" data-path="data-preparation.html"><a href="data-preparation.html#exercise"><i class="fa fa-check"></i><b>2.11</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="quality-control.html"><a href="quality-control.html"><i class="fa fa-check"></i><b>3</b> Quality Control</a><ul>
+<li class="chapter" data-level="3.1" data-path="quality-control.html"><a href="quality-control.html#what-is-quality-control-and-why-do-we-need-it"><i class="fa fa-check"></i><b>3.1</b> What is quality control and why do we need it?</a></li>
+<li class="chapter" data-level="3.2" data-path="quality-control.html"><a href="quality-control.html#quality-control-in-cdt"><i class="fa fa-check"></i><b>3.2</b> Quality control in CDT</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="quality-control.html"><a href="quality-control.html#checking-station-coordinates"><i class="fa fa-check"></i><b>3.2.1</b> Checking station coordinates</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="quality-control.html"><a href="quality-control.html#exercise-1"><i class="fa fa-check"></i><b>3.3</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="gridding.html"><a href="gridding.html"><i class="fa fa-check"></i><b>4</b> Gridding</a><ul>
+<li class="chapter" data-level="4.1" data-path="gridding.html"><a href="gridding.html#spatial-interpolation"><i class="fa fa-check"></i><b>4.1</b> Spatial interpolation</a></li>
+<li class="chapter" data-level="4.2" data-path="gridding.html"><a href="gridding.html#merging-rainfall-data"><i class="fa fa-check"></i><b>4.2</b> Merging rainfall data</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="gridding.html"><a href="gridding.html#compute-bias-coefficients"><i class="fa fa-check"></i><b>4.2.1</b> Compute bias coefficients</a></li>
+<li class="chapter" data-level="4.2.2" data-path="gridding.html"><a href="gridding.html#apply-bias-correction"><i class="fa fa-check"></i><b>4.2.2</b> Apply bias correction</a></li>
+<li class="chapter" data-level="4.2.3" data-path="gridding.html"><a href="gridding.html#merging-data"><i class="fa fa-check"></i><b>4.2.3</b> Merging data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="gridding.html"><a href="gridding.html#merging-tremperature-data"><i class="fa fa-check"></i><b>4.3</b> Merging tremperature data</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="gridding.html"><a href="gridding.html#compute-downscaling-coefficients"><i class="fa fa-check"></i><b>4.3.1</b> Compute downscaling coefficients</a></li>
+<li class="chapter" data-level="4.3.2" data-path="gridding.html"><a href="gridding.html#reanalysis-downscaling"><i class="fa fa-check"></i><b>4.3.2</b> Reanalysis downscaling</a></li>
+<li class="chapter" data-level="4.3.3" data-path="gridding.html"><a href="gridding.html#compute-bias-coefficients-1"><i class="fa fa-check"></i><b>4.3.3</b> Compute bias coefficients</a></li>
+<li class="chapter" data-level="4.3.4" data-path="gridding.html"><a href="gridding.html#apply-bias-correction-1"><i class="fa fa-check"></i><b>4.3.4</b> Apply bias correction</a></li>
+<li class="chapter" data-level="4.3.5" data-path="gridding.html"><a href="gridding.html#merging-data-1"><i class="fa fa-check"></i><b>4.3.5</b> Merging data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="gridding.html"><a href="gridding.html#scale-merged-data"><i class="fa fa-check"></i><b>4.4</b> Scale merged data</a></li>
+<li class="chapter" data-level="4.5" data-path="gridding.html"><a href="gridding.html#merging-cross-validation."><i class="fa fa-check"></i><b>4.5</b> Merging cross-validation.</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="gridding.html"><a href="gridding.html#precipitation-data"><i class="fa fa-check"></i><b>4.5.1</b> Precipitation data</a></li>
+<li class="chapter" data-level="4.5.2" data-path="gridding.html"><a href="gridding.html#temperature-data"><i class="fa fa-check"></i><b>4.5.2</b> Temperature data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="gridding.html"><a href="gridding.html#exercise-2"><i class="fa fa-check"></i><b>4.6</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="validation.html"><a href="validation.html"><i class="fa fa-check"></i><b>5</b> Validation</a><ul>
+<li class="chapter" data-level="5.1" data-path="validation.html"><a href="validation.html#validating-spatial-points-data-in-cdt-format"><i class="fa fa-check"></i><b>5.1</b> Validating spatial points data (in CDT format)</a></li>
+<li class="chapter" data-level="5.2" data-path="validation.html"><a href="validation.html#validating-gridded-data-in-netcdf-format"><i class="fa fa-check"></i><b>5.2</b> Validating gridded data (in netCDF format)</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="validation.html"><a href="validation.html#validating-multiple-datasets"><i class="fa fa-check"></i><b>5.2.1</b> Validating multiple datasets</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="validation.html"><a href="validation.html#exercise-3"><i class="fa fa-check"></i><b>5.3</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>6</b> Analysis</a><ul>
+<li class="chapter" data-level="6.1" data-path="analysis.html"><a href="analysis.html#calculating-summary-statistics"><i class="fa fa-check"></i><b>6.1</b> Calculating summary statistics</a></li>
+<li class="chapter" data-level="6.2" data-path="analysis.html"><a href="analysis.html#compute-climate-variables"><i class="fa fa-check"></i><b>6.2</b> Compute climate variables</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="analysis.html"><a href="analysis.html#temperature-variables"><i class="fa fa-check"></i><b>6.2.1</b> Temperature variables</a></li>
+<li class="chapter" data-level="6.2.2" data-path="analysis.html"><a href="analysis.html#potential-evapotranspiration"><i class="fa fa-check"></i><b>6.2.2</b> Potential evapotranspiration</a></li>
+<li class="chapter" data-level="6.2.3" data-path="analysis.html"><a href="analysis.html#water-balance"><i class="fa fa-check"></i><b>6.2.3</b> Water balance</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="analysis.html"><a href="analysis.html#compute-climatologies"><i class="fa fa-check"></i><b>6.3</b> Compute climatologies</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="analysis.html"><a href="analysis.html#climatologies"><i class="fa fa-check"></i><b>6.3.1</b> Climatologies</a></li>
+<li class="chapter" data-level="6.3.2" data-path="analysis.html"><a href="analysis.html#compute-anomalies"><i class="fa fa-check"></i><b>6.3.2</b> Compute anomalies</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="analysis.html"><a href="analysis.html#spatial-analysis"><i class="fa fa-check"></i><b>6.4</b> Spatial analysis</a></li>
+<li class="chapter" data-level="6.5" data-path="analysis.html"><a href="analysis.html#daily-rainfall-analysis"><i class="fa fa-check"></i><b>6.5</b> Daily rainfall analysis</a></li>
+<li class="chapter" data-level="6.6" data-path="analysis.html"><a href="analysis.html#rainy-season-characteristics"><i class="fa fa-check"></i><b>6.6</b> Rainy season characteristics</a><ul>
+<li class="chapter" data-level="6.6.1" data-path="analysis.html"><a href="analysis.html#season-onset"><i class="fa fa-check"></i><b>6.6.1</b> Season onset</a></li>
+<li class="chapter" data-level="6.6.2" data-path="analysis.html"><a href="analysis.html#season-cessation"><i class="fa fa-check"></i><b>6.6.2</b> Season cessation</a></li>
+<li class="chapter" data-level="6.6.3" data-path="analysis.html"><a href="analysis.html#season-length"><i class="fa fa-check"></i><b>6.6.3</b> Season length</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="analysis.html"><a href="analysis.html#rainy-season-analysis"><i class="fa fa-check"></i><b>6.7</b> Rainy season analysis</a></li>
+<li class="chapter" data-level="6.8" data-path="analysis.html"><a href="analysis.html#climate-extreme-indices"><i class="fa fa-check"></i><b>6.8</b> Climate extreme indices</a><ul>
+<li class="chapter" data-level="6.8.1" data-path="analysis.html"><a href="analysis.html#precipitation-data-1"><i class="fa fa-check"></i><b>6.8.1</b> Precipitation data</a></li>
+<li class="chapter" data-level="6.8.2" data-path="analysis.html"><a href="analysis.html#temperature-data-1"><i class="fa fa-check"></i><b>6.8.2</b> Temperature data</a></li>
+</ul></li>
+<li class="chapter" data-level="6.9" data-path="analysis.html"><a href="analysis.html#drought-indices"><i class="fa fa-check"></i><b>6.9</b> Drought indices</a><ul>
+<li class="chapter" data-level="6.9.1" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-index-spi"><i class="fa fa-check"></i><b>6.9.1</b> Standardized precipitation index (SPI)</a></li>
+<li class="chapter" data-level="6.9.2" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-evapotranspiration-index-spei"><i class="fa fa-check"></i><b>6.9.2</b> Standardized precipitation evapotranspiration index (SPEI)</a></li>
+<li class="chapter" data-level="6.9.3" data-path="analysis.html"><a href="analysis.html#decile"><i class="fa fa-check"></i><b>6.9.3</b> Decile</a></li>
+</ul></li>
+<li class="chapter" data-level="6.10" data-path="analysis.html"><a href="analysis.html#exercise-4"><i class="fa fa-check"></i><b>6.10</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="visualization.html"><a href="visualization.html"><i class="fa fa-check"></i><b>7</b> Visualization</a><ul>
+<li class="chapter" data-level="7.1" data-path="visualization.html"><a href="visualization.html#plot-cdt-stations-data"><i class="fa fa-check"></i><b>7.1</b> Plot CDT stations data</a></li>
+<li class="chapter" data-level="7.2" data-path="visualization.html"><a href="visualization.html#plot-cdt-gridded-dataset"><i class="fa fa-check"></i><b>7.2</b> Plot CDT gridded dataset</a></li>
+<li class="chapter" data-level="7.3" data-path="visualization.html"><a href="visualization.html#plot-a-single-netcdf-file"><i class="fa fa-check"></i><b>7.3</b> Plot a single netCDF file</a></li>
+<li class="chapter" data-level="7.4" data-path="visualization.html"><a href="visualization.html#plot-sequential-netcdf-files"><i class="fa fa-check"></i><b>7.4</b> Plot sequential netCDF files</a></li>
+<li class="chapter" data-level="7.5" data-path="visualization.html"><a href="visualization.html#plot-a-netcdf-data-with-multiple-variables"><i class="fa fa-check"></i><b>7.5</b> Plot a netCDF data with multiple variables</a></li>
+<li class="chapter" data-level="7.6" data-path="visualization.html"><a href="visualization.html#plot-multiple-datasets"><i class="fa fa-check"></i><b>7.6</b> Plot multiple datasets</a></li>
+<li class="chapter" data-level="7.7" data-path="visualization.html"><a href="visualization.html#exercise-5"><i class="fa fa-check"></i><b>7.7</b> Exercise</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="case-study.html"><a href="case-study.html"><i class="fa fa-check"></i><b>8</b> Case study</a></li>
+<li class="divider"></li>
+<li><a href="https://iri.columbia.edu/our-expertise/climate/tools/cdt/" target="blank">Published by IRI</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Climate Data Tools (CDT)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="case-study" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Case study</h1>
+<p>This chapter will put forward a case study with pseudo-dataset that will reinforce most of the topics covered in this book. We will explore the climate dataset of the country “Wonder Land” and will analyze its observational data to infer about the climate of this country.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="visualization.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
