@@ -1,7 +1,7 @@
 book_filename: "bookdown-start"
 chapter_name: "Chapter "
-repo: https://github.com/seankross/bookdown-start
+repo: https://github.com/shammun/CDT_Book/
 output_dir: docs
-rmd_files: ["index.Rmd", "01-Introduction.Rmd", "02-Data-Preparation.Rmd", "03-Quality-Control.Rmd", "04-Gridding.Rmd", "05-Validation.Rmd", "06-Analysis.Rmd", "07-Visualization.Rmd", "08-Case-Study.Rmd"]
+rmd_files: ["index.Rmd", "01-Introduction.Rmd", "02-Data-Preparation.Rmd", "03-Quality-Control.Rmd", "04-Gridding.Rmd", "05-Validation.Rmd", "06-Analysis.Rmd", "07-Visualization.Rmd"]
 clean: [packages.bib, bookdown.bbl]
 new_session: yes
