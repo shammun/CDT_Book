@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Quality Control | Climate Data Tools (CDT)</title>
   <meta name="description" content="CDT Book" />
-  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Quality Control | Climate Data Tools (CDT)" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,9 @@
   
 <link rel="prev" href="data-preparation.html"/>
 <link rel="next" href="gridding.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,6 +51,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 
@@ -70,111 +74,167 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html"><i class="fa fa-check"></i><b>1</b> Introduction to CDT</a><ul>
-<li class="chapter" data-level="1.1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#what-is-cdt"><i class="fa fa-check"></i><b>1.1</b> What is CDT</a></li>
+<li class="chapter" data-level="1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html"><i class="fa fa-check"></i><b>1</b> Introduction to CDT</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#installation-of-cdt"><i class="fa fa-check"></i><b>1.2</b> Installation of CDT</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#cdt-installation-on-windows"><i class="fa fa-check"></i><b>1.2.1</b> CDT installation on Windows</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#cdt-installation-on-macos-x"><i class="fa fa-check"></i><b>1.2.2</b> CDT installation on MacOS X</a></li>
+<li class="chapter" data-level="1.2.3" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#cdt-installation-on-ubuntu"><i class="fa fa-check"></i><b>1.2.3</b> CDT installation on Ubuntu</a></li>
+<li class="chapter" data-level="1.2.4" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#updating-cdt"><i class="fa fa-check"></i><b>1.2.4</b> Updating CDT</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="data-preparation.html"><a href="data-preparation.html"><i class="fa fa-check"></i><b>2</b> Data Preparation</a><ul>
+<li class="chapter" data-level="1.3" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#getting-to-know-the-graphical-user-interface-of-cdt"><i class="fa fa-check"></i><b>1.3</b> Getting to know the graphical user interface of CDT</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#getting-to-know-the-graphical-user-interface-of-cdt-1"><i class="fa fa-check"></i><b>1.4</b> Getting to know the graphical user interface of CDT</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-preparation.html"><a href="data-preparation.html"><i class="fa fa-check"></i><b>2</b> Data preparation</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="data-preparation.html"><a href="data-preparation.html#cdt-station-data-format"><i class="fa fa-check"></i><b>2.1</b> CDT station data format</a></li>
-<li class="chapter" data-level="2.2" data-path="data-preparation.html"><a href="data-preparation.html#manipulating-cdt-station-data"><i class="fa fa-check"></i><b>2.2</b> Manipulating CDT station data</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="data-preparation.html"><a href="data-preparation.html#merge-two-cdt-station-data"><i class="fa fa-check"></i><b>2.2.1</b> Merge two CDT station data</a></li>
-<li class="chapter" data-level="2.2.2" data-path="data-preparation.html"><a href="data-preparation.html#filtering-cdt-station-data"><i class="fa fa-check"></i><b>2.2.2</b> Filtering CDT station data</a></li>
-<li class="chapter" data-level="2.2.3" data-path="data-preparation.html"><a href="data-preparation.html#selecting-cdt-station-data"><i class="fa fa-check"></i><b>2.2.3</b> Selecting CDT station data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-preparation.html"><a href="data-preparation.html#missing-values-in-cdt"><i class="fa fa-check"></i><b>2.2</b> Missing values in CDT</a></li>
+<li class="chapter" data-level="2.3" data-path="data-preparation.html"><a href="data-preparation.html#date-format"><i class="fa fa-check"></i><b>2.3</b> Date format</a></li>
+<li class="chapter" data-level="2.4" data-path="data-preparation.html"><a href="data-preparation.html#cdt-coordinates-file"><i class="fa fa-check"></i><b>2.4</b> CDT coordinates file</a></li>
+<li class="chapter" data-level="2.5" data-path="data-preparation.html"><a href="data-preparation.html#netcdf-data"><i class="fa fa-check"></i><b>2.5</b> NetCDF data</a></li>
+<li class="chapter" data-level="2.6" data-path="data-preparation.html"><a href="data-preparation.html#format-cdt-input-station-data"><i class="fa fa-check"></i><b>2.6</b> Format CDT input station data</a></li>
+<li class="chapter" data-level="2.7" data-path="data-preparation.html"><a href="data-preparation.html#creating-cdt-station-data-from-multiple-input-files"><i class="fa fa-check"></i><b>2.7</b> Creating CDT station data from multiple input files</a></li>
+<li class="chapter" data-level="2.8" data-path="data-preparation.html"><a href="data-preparation.html#observation-date-types"><i class="fa fa-check"></i><b>2.8</b> Observation date types</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="data-preparation.html"><a href="data-preparation.html#grouped"><i class="fa fa-check"></i><b>2.8.1</b> Grouped</a></li>
+<li class="chapter" data-level="2.8.2" data-path="data-preparation.html"><a href="data-preparation.html#separated"><i class="fa fa-check"></i><b>2.8.2</b> Separated</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="data-preparation.html"><a href="data-preparation.html#assess-data-availability"><i class="fa fa-check"></i><b>2.3</b> Assess data availability</a></li>
-<li class="chapter" data-level="2.4" data-path="data-preparation.html"><a href="data-preparation.html#download-data-using-cdt"><i class="fa fa-check"></i><b>2.4</b> Download data using CDT</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="data-preparation.html"><a href="data-preparation.html#download-digital-elevation-model"><i class="fa fa-check"></i><b>2.4.1</b> Download digital elevation model</a></li>
-<li class="chapter" data-level="2.4.2" data-path="data-preparation.html"><a href="data-preparation.html#download-different-country-administrative-boundaries-or-shapefile"><i class="fa fa-check"></i><b>2.4.2</b> Download different country administrative boundaries or shapefile</a></li>
-<li class="chapter" data-level="2.4.3" data-path="data-preparation.html"><a href="data-preparation.html#download-satellite-rainfall-estimates-data"><i class="fa fa-check"></i><b>2.4.3</b> Download satellite rainfall estimates data</a></li>
-<li class="chapter" data-level="2.4.4" data-path="data-preparation.html"><a href="data-preparation.html#download-reanalysis-data"><i class="fa fa-check"></i><b>2.4.4</b> Download reanalysis data</a></li>
+<li class="chapter" data-level="2.9" data-path="data-preparation.html"><a href="data-preparation.html#single-file"><i class="fa fa-check"></i><b>2.9</b> Single File</a></li>
+<li class="chapter" data-level="2.10" data-path="data-preparation.html"><a href="data-preparation.html#manipulating-cdt-station-data"><i class="fa fa-check"></i><b>2.10</b> Manipulating CDT station data</a></li>
+<li class="chapter" data-level="2.11" data-path="data-preparation.html"><a href="data-preparation.html#merge-two-cdt-station-data"><i class="fa fa-check"></i><b>2.11</b> Merge two CDT station data</a></li>
+<li class="chapter" data-level="2.12" data-path="data-preparation.html"><a href="data-preparation.html#filtering-cdt-station-data"><i class="fa fa-check"></i><b>2.12</b> Filtering CDT station data</a></li>
+<li class="chapter" data-level="2.13" data-path="data-preparation.html"><a href="data-preparation.html#selecting-cdt-station-data"><i class="fa fa-check"></i><b>2.13</b> Selecting CDT station data</a></li>
+<li class="chapter" data-level="2.14" data-path="data-preparation.html"><a href="data-preparation.html#assess-data-availability"><i class="fa fa-check"></i><b>2.14</b> Assess data availability</a></li>
+<li class="chapter" data-level="2.15" data-path="data-preparation.html"><a href="data-preparation.html#download-data-using-cdt"><i class="fa fa-check"></i><b>2.15</b> Download data using CDT</a>
+<ul>
+<li class="chapter" data-level="2.15.1" data-path="data-preparation.html"><a href="data-preparation.html#download-digital-elevation-model"><i class="fa fa-check"></i><b>2.15.1</b> Download Digital Elevation Model</a></li>
+<li class="chapter" data-level="2.15.2" data-path="data-preparation.html"><a href="data-preparation.html#download-different-country-administrative-boundaries-or-shapefile"><i class="fa fa-check"></i><b>2.15.2</b> Download different country administrative boundaries or shapefile</a></li>
+<li class="chapter" data-level="2.15.3" data-path="data-preparation.html"><a href="data-preparation.html#download-proxy-and-ancilliary-data"><i class="fa fa-check"></i><b>2.15.3</b> Download proxy and ancilliary data</a></li>
+<li class="chapter" data-level="2.15.4" data-path="data-preparation.html"><a href="data-preparation.html#download-satellite-rainfall-estimates-data"><i class="fa fa-check"></i><b>2.15.4</b> Download satellite rainfall estimates data</a></li>
+<li class="chapter" data-level="2.15.5" data-path="data-preparation.html"><a href="data-preparation.html#download-reanalysis-data"><i class="fa fa-check"></i><b>2.15.5</b> Download reanalysis data</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="data-preparation.html"><a href="data-preparation.html#aggregate-data"><i class="fa fa-check"></i><b>2.5</b> Aggregate data</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="data-preparation.html"><a href="data-preparation.html#aggregating-time-series"><i class="fa fa-check"></i><b>2.5.1</b> Aggregating time series</a></li>
-<li class="chapter" data-level="2.5.2" data-path="data-preparation.html"><a href="data-preparation.html#aggregatedisaggregate-spatial-netcdf-data"><i class="fa fa-check"></i><b>2.5.2</b> Aggregate/disaggregate spatial NetCDF data</a></li>
+<li class="chapter" data-level="2.16" data-path="data-preparation.html"><a href="data-preparation.html#aggregate-data"><i class="fa fa-check"></i><b>2.16</b> Aggregate data</a>
+<ul>
+<li class="chapter" data-level="2.16.1" data-path="data-preparation.html"><a href="data-preparation.html#aggregating-time-series"><i class="fa fa-check"></i><b>2.16.1</b> Aggregating time series</a></li>
+<li class="chapter" data-level="2.16.2" data-path="data-preparation.html"><a href="data-preparation.html#aggregatedisaggregate-spatial-netcdf-data"><i class="fa fa-check"></i><b>2.16.2</b> Aggregate/disaggregate spatial NetCDF data</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="data-preparation.html"><a href="data-preparation.html#transform-netcdf-files-into-cdt-dataset"><i class="fa fa-check"></i><b>2.6</b> Transform NetCDF files into CDT dataset</a></li>
-<li class="chapter" data-level="2.7" data-path="data-preparation.html"><a href="data-preparation.html#data-extraction"><i class="fa fa-check"></i><b>2.7</b> Data extraction</a></li>
-<li class="chapter" data-level="2.8" data-path="data-preparation.html"><a href="data-preparation.html#split-netcdf-files-into-cdt-netcdf-format"><i class="fa fa-check"></i><b>2.8</b> Split NetCDF files into CDT NetCDF format</a></li>
-<li class="chapter" data-level="2.9" data-path="data-preparation.html"><a href="data-preparation.html#blank-grid-outside-polygons"><i class="fa fa-check"></i><b>2.9</b> Blank grid outside polygons</a></li>
-<li class="chapter" data-level="2.10" data-path="data-preparation.html"><a href="data-preparation.html#data-format-conversion"><i class="fa fa-check"></i><b>2.10</b> Data format conversion</a><ul>
-<li class="chapter" data-level="2.10.1" data-path="data-preparation.html"><a href="data-preparation.html#conversion-to-cpt-format"><i class="fa fa-check"></i><b>2.10.1</b> Conversion to CPT format</a></li>
-<li class="chapter" data-level="2.10.2" data-path="data-preparation.html"><a href="data-preparation.html#converting-netcdfgeotiffesri-.hdr-labelled"><i class="fa fa-check"></i><b>2.10.2</b> Converting NetCDF/GeoTIFF/ESRI .hdr Labelled</a></li>
-<li class="chapter" data-level="2.10.3" data-path="data-preparation.html"><a href="data-preparation.html#fillling-missing-dekadal-temperature-values"><i class="fa fa-check"></i><b>2.10.3</b> Fillling missing dekadal temperature values</a></li>
+<li class="chapter" data-level="2.17" data-path="data-preparation.html"><a href="data-preparation.html#transform-netcdf-files-into-cdt-dataset"><i class="fa fa-check"></i><b>2.17</b> Transform NetCDF files into CDT dataset</a></li>
+<li class="chapter" data-level="2.18" data-path="data-preparation.html"><a href="data-preparation.html#data-extraction"><i class="fa fa-check"></i><b>2.18</b> Data extraction</a></li>
+<li class="chapter" data-level="2.19" data-path="data-preparation.html"><a href="data-preparation.html#split-netcdf-files-into-cdt-netcdf-format"><i class="fa fa-check"></i><b>2.19</b> Split NetCDF files into CDT NetCDF format</a></li>
+<li class="chapter" data-level="2.20" data-path="data-preparation.html"><a href="data-preparation.html#blank-grid-outside-polygons"><i class="fa fa-check"></i><b>2.20</b> Blank grid outside polygons</a></li>
+<li class="chapter" data-level="2.21" data-path="data-preparation.html"><a href="data-preparation.html#data-format-conversion"><i class="fa fa-check"></i><b>2.21</b> Data format conversion</a>
+<ul>
+<li class="chapter" data-level="2.21.1" data-path="data-preparation.html"><a href="data-preparation.html#conversion-to-cpt-format"><i class="fa fa-check"></i><b>2.21.1</b> Conversion to CPT format</a></li>
+<li class="chapter" data-level="2.21.2" data-path="data-preparation.html"><a href="data-preparation.html#converting-netcdfgeotiffesri-.hdr-labelled"><i class="fa fa-check"></i><b>2.21.2</b> Converting NetCDF/GeoTIFF/ESRI .hdr Labelled</a></li>
+<li class="chapter" data-level="2.21.3" data-path="data-preparation.html"><a href="data-preparation.html#converting-netcdfgeotiffesri-.hdr-labelled-1"><i class="fa fa-check"></i><b>2.21.3</b> Converting NetCDF/GeoTIFF/ESRI .hdr Labelled</a></li>
+<li class="chapter" data-level="2.21.4" data-path="data-preparation.html"><a href="data-preparation.html#create-grads-descriptor-file-from-cdt-netcdf-files"><i class="fa fa-check"></i><b>2.21.4</b> Create GrADS Descriptor File from CDT NetCDF files</a></li>
 </ul></li>
-<li class="chapter" data-level="2.11" data-path="data-preparation.html"><a href="data-preparation.html#exercise"><i class="fa fa-check"></i><b>2.11</b> Exercise</a></li>
+<li class="chapter" data-level="2.22" data-path="data-preparation.html"><a href="data-preparation.html#filing-missing-dekadal-temperature-values"><i class="fa fa-check"></i><b>2.22</b> Filing missing dekadal temperature values</a></li>
+<li class="chapter" data-level="2.23" data-path="data-preparation.html"><a href="data-preparation.html#references"><i class="fa fa-check"></i><b>2.23</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="quality-control.html"><a href="quality-control.html"><i class="fa fa-check"></i><b>3</b> Quality Control</a><ul>
-<li class="chapter" data-level="3.1" data-path="quality-control.html"><a href="quality-control.html#what-is-quality-control-and-why-do-we-need-it"><i class="fa fa-check"></i><b>3.1</b> What is quality control and why do we need it?</a></li>
-<li class="chapter" data-level="3.2" data-path="quality-control.html"><a href="quality-control.html#quality-control-in-cdt"><i class="fa fa-check"></i><b>3.2</b> Quality control in CDT</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="quality-control.html"><a href="quality-control.html#checking-station-coordinates"><i class="fa fa-check"></i><b>3.2.1</b> Checking station coordinates</a></li>
+<li class="chapter" data-level="3" data-path="quality-control.html"><a href="quality-control.html"><i class="fa fa-check"></i><b>3</b> Quality Control</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="quality-control.html"><a href="quality-control.html#checking-station-coordinates"><i class="fa fa-check"></i><b>3.1</b> Checking station coordinates</a></li>
+<li class="chapter" data-level="3.2" data-path="quality-control.html"><a href="quality-control.html#false-zero-check-for-daily-rainfall"><i class="fa fa-check"></i><b>3.2</b> False-zero check for daily rainfall</a></li>
+<li class="chapter" data-level="3.3" data-path="quality-control.html"><a href="quality-control.html#outliers-check"><i class="fa fa-check"></i><b>3.3</b> Outliers check</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="quality-control.html"><a href="quality-control.html#outliers-check-for-rainfall-data"><i class="fa fa-check"></i><b>3.3.1</b> Outliers check for rainfall data</a></li>
+<li class="chapter" data-level="3.3.2" data-path="quality-control.html"><a href="quality-control.html#outliers-check-for-temperatures-data"><i class="fa fa-check"></i><b>3.3.2</b> Outliers check for temperatures data</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="quality-control.html"><a href="quality-control.html#exercise-1"><i class="fa fa-check"></i><b>3.3</b> Exercise</a></li>
+<li class="chapter" data-level="3.4" data-path="quality-control.html"><a href="quality-control.html#homogeneity-test"><i class="fa fa-check"></i><b>3.4</b> Homogeneity test</a></li>
+<li class="chapter" data-level="3.5" data-path="quality-control.html"><a href="quality-control.html#references-1"><i class="fa fa-check"></i><b>3.5</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="gridding.html"><a href="gridding.html"><i class="fa fa-check"></i><b>4</b> Gridding</a><ul>
-<li class="chapter" data-level="4.1" data-path="gridding.html"><a href="gridding.html#spatial-interpolation"><i class="fa fa-check"></i><b>4.1</b> Spatial interpolation</a></li>
-<li class="chapter" data-level="4.2" data-path="gridding.html"><a href="gridding.html#merging-rainfall-data"><i class="fa fa-check"></i><b>4.2</b> Merging rainfall data</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="gridding.html"><a href="gridding.html#compute-bias-coefficients"><i class="fa fa-check"></i><b>4.2.1</b> Compute bias coefficients</a></li>
-<li class="chapter" data-level="4.2.2" data-path="gridding.html"><a href="gridding.html#apply-bias-correction"><i class="fa fa-check"></i><b>4.2.2</b> Apply bias correction</a></li>
-<li class="chapter" data-level="4.2.3" data-path="gridding.html"><a href="gridding.html#merging-data"><i class="fa fa-check"></i><b>4.2.3</b> Merging data</a></li>
+<li class="chapter" data-level="4" data-path="gridding.html"><a href="gridding.html"><i class="fa fa-check"></i><b>4</b> Gridding:</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="gridding.html"><a href="gridding.html#spatial-interpolation"><i class="fa fa-check"></i><b>4.1</b> Spatial Interpolation:</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="gridding.html"><a href="gridding.html#inverse-distance-weighting"><i class="fa fa-check"></i><b>4.1.1</b> Inverse Distance Weighting:</a></li>
+<li class="chapter" data-level="4.1.2" data-path="gridding.html"><a href="gridding.html#modified-shephards-method"><i class="fa fa-check"></i><b>4.1.2</b> Modified Shephard’s Method:</a></li>
+<li class="chapter" data-level="4.1.3" data-path="gridding.html"><a href="gridding.html#kriging"><i class="fa fa-check"></i><b>4.1.3</b> Kriging</a></li>
+<li class="chapter" data-level="4.1.4" data-path="gridding.html"><a href="gridding.html#spheremap-interpolation"><i class="fa fa-check"></i><b>4.1.4</b> Spheremap Interpolation</a></li>
+<li class="chapter" data-level="4.1.5" data-path="gridding.html"><a href="gridding.html#nearest-neighbor-interpolation-with-elevation"><i class="fa fa-check"></i><b>4.1.5</b> Nearest Neighbor Interpolation with elevation:</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="gridding.html"><a href="gridding.html#merging-tremperature-data"><i class="fa fa-check"></i><b>4.3</b> Merging tremperature data</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="gridding.html"><a href="gridding.html#compute-downscaling-coefficients"><i class="fa fa-check"></i><b>4.3.1</b> Compute downscaling coefficients</a></li>
-<li class="chapter" data-level="4.3.2" data-path="gridding.html"><a href="gridding.html#reanalysis-downscaling"><i class="fa fa-check"></i><b>4.3.2</b> Reanalysis downscaling</a></li>
-<li class="chapter" data-level="4.3.3" data-path="gridding.html"><a href="gridding.html#compute-bias-coefficients-1"><i class="fa fa-check"></i><b>4.3.3</b> Compute bias coefficients</a></li>
-<li class="chapter" data-level="4.3.4" data-path="gridding.html"><a href="gridding.html#apply-bias-correction-1"><i class="fa fa-check"></i><b>4.3.4</b> Apply bias correction</a></li>
-<li class="chapter" data-level="4.3.5" data-path="gridding.html"><a href="gridding.html#merging-data-1"><i class="fa fa-check"></i><b>4.3.5</b> Merging data</a></li>
+<li class="chapter" data-level="4.2" data-path="gridding.html"><a href="gridding.html#merging"><i class="fa fa-check"></i><b>4.2</b> Merging:</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="gridding.html"><a href="gridding.html#downscaling-reanalysis"><i class="fa fa-check"></i><b>4.2.1</b> Downscaling reanalysis</a></li>
+<li class="chapter" data-level="4.2.2" data-path="gridding.html"><a href="gridding.html#bias-adjustment"><i class="fa fa-check"></i><b>4.2.2</b> Bias adjustment</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="gridding.html"><a href="gridding.html#scale-merged-data"><i class="fa fa-check"></i><b>4.4</b> Scale merged data</a></li>
-<li class="chapter" data-level="4.5" data-path="gridding.html"><a href="gridding.html#merging-cross-validation."><i class="fa fa-check"></i><b>4.5</b> Merging cross-validation.</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="gridding.html"><a href="gridding.html#precipitation-data"><i class="fa fa-check"></i><b>4.5.1</b> Precipitation data</a></li>
-<li class="chapter" data-level="4.5.2" data-path="gridding.html"><a href="gridding.html#temperature-data"><i class="fa fa-check"></i><b>4.5.2</b> Temperature data</a></li>
+<li class="chapter" data-level="4.3" data-path="gridding.html"><a href="gridding.html#merging-in-cdt"><i class="fa fa-check"></i><b>4.3</b> Merging in CDT</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="gridding.html"><a href="gridding.html#merging-rainfall-data-with-satellite-data"><i class="fa fa-check"></i><b>4.3.1</b> Merging rainfall data with satellite data</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="gridding.html"><a href="gridding.html#exercise-2"><i class="fa fa-check"></i><b>4.6</b> Exercise</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="validation.html"><a href="validation.html"><i class="fa fa-check"></i><b>5</b> Validation</a><ul>
-<li class="chapter" data-level="5.1" data-path="validation.html"><a href="validation.html#validating-spatial-points-data-in-cdt-format"><i class="fa fa-check"></i><b>5.1</b> Validating spatial points data (in CDT format)</a></li>
-<li class="chapter" data-level="5.2" data-path="validation.html"><a href="validation.html#validating-gridded-data-in-netcdf-format"><i class="fa fa-check"></i><b>5.2</b> Validating gridded data (in netCDF format)</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="validation.html"><a href="validation.html#validating-multiple-datasets"><i class="fa fa-check"></i><b>5.2.1</b> Validating multiple datasets</a></li>
+<li class="chapter" data-level="5" data-path="validation.html"><a href="validation.html"><i class="fa fa-check"></i><b>5</b> Validation</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="validation.html"><a href="validation.html#spatial-points-data-cdt-format"><i class="fa fa-check"></i><b>5.1</b> Spatial Points Data (CDT Format)</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="validation.html"><a href="validation.html#precipitation-data"><i class="fa fa-check"></i><b>5.1.1</b> Precipitation data</a></li>
+<li class="chapter" data-level="5.1.2" data-path="validation.html"><a href="validation.html#temperature-data"><i class="fa fa-check"></i><b>5.1.2</b> Temperature data</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="validation.html"><a href="validation.html#exercise-3"><i class="fa fa-check"></i><b>5.3</b> Exercise</a></li>
+<li class="chapter" data-level="5.2" data-path="validation.html"><a href="validation.html#gridded-data-netcdf-format"><i class="fa fa-check"></i><b>5.2</b> Gridded Data (NetCDF Format)</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="validation.html"><a href="validation.html#precipitation-data-1"><i class="fa fa-check"></i><b>5.2.1</b> Precipitation data</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>6</b> Analysis</a><ul>
-<li class="chapter" data-level="6.1" data-path="analysis.html"><a href="analysis.html#calculating-summary-statistics"><i class="fa fa-check"></i><b>6.1</b> Calculating summary statistics</a></li>
-<li class="chapter" data-level="6.2" data-path="analysis.html"><a href="analysis.html#compute-climate-variables"><i class="fa fa-check"></i><b>6.2</b> Compute climate variables</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="analysis.html"><a href="analysis.html#temperature-variables"><i class="fa fa-check"></i><b>6.2.1</b> Temperature variables</a></li>
-<li class="chapter" data-level="6.2.2" data-path="analysis.html"><a href="analysis.html#potential-evapotranspiration"><i class="fa fa-check"></i><b>6.2.2</b> Potential evapotranspiration</a></li>
-<li class="chapter" data-level="6.2.3" data-path="analysis.html"><a href="analysis.html#water-balance"><i class="fa fa-check"></i><b>6.2.3</b> Water balance</a></li>
+<li class="chapter" data-level="5.3" data-path="validation.html"><a href="validation.html#validate-multiple-data-sets"><i class="fa fa-check"></i><b>5.3</b> Validate multiple data sets</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="validation.html"><a href="validation.html#precipitation-data-2"><i class="fa fa-check"></i><b>5.3.1</b> Precipitation Data</a></li>
+<li class="chapter" data-level="5.3.2" data-path="validation.html"><a href="validation.html#temperature-data-1"><i class="fa fa-check"></i><b>5.3.2</b> Temperature Data</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="analysis.html"><a href="analysis.html#compute-climatologies"><i class="fa fa-check"></i><b>6.3</b> Compute climatologies</a><ul>
-<li class="chapter" data-level="6.3.1" data-path="analysis.html"><a href="analysis.html#climatologies"><i class="fa fa-check"></i><b>6.3.1</b> Climatologies</a></li>
-<li class="chapter" data-level="6.3.2" data-path="analysis.html"><a href="analysis.html#compute-anomalies"><i class="fa fa-check"></i><b>6.3.2</b> Compute anomalies</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="analysis.html"><a href="analysis.html#spatial-analysis"><i class="fa fa-check"></i><b>6.4</b> Spatial analysis</a></li>
-<li class="chapter" data-level="6.5" data-path="analysis.html"><a href="analysis.html#daily-rainfall-analysis"><i class="fa fa-check"></i><b>6.5</b> Daily rainfall analysis</a></li>
-<li class="chapter" data-level="6.6" data-path="analysis.html"><a href="analysis.html#rainy-season-characteristics"><i class="fa fa-check"></i><b>6.6</b> Rainy season characteristics</a><ul>
-<li class="chapter" data-level="6.6.1" data-path="analysis.html"><a href="analysis.html#season-onset"><i class="fa fa-check"></i><b>6.6.1</b> Season onset</a></li>
-<li class="chapter" data-level="6.6.2" data-path="analysis.html"><a href="analysis.html#season-cessation"><i class="fa fa-check"></i><b>6.6.2</b> Season cessation</a></li>
-<li class="chapter" data-level="6.6.3" data-path="analysis.html"><a href="analysis.html#season-length"><i class="fa fa-check"></i><b>6.6.3</b> Season length</a></li>
+<li class="chapter" data-level="6" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>6</b> Analysis</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="analysis.html"><a href="analysis.html#potential-evapotranspiration"><i class="fa fa-check"></i><b>6.1</b> Potential evapotranspiration</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="analysis.html"><a href="analysis.html#hargreaves-method"><i class="fa fa-check"></i><b>6.1.1</b> Hargreaves method</a></li>
+<li class="chapter" data-level="6.1.2" data-path="analysis.html"><a href="analysis.html#modified-hargreaves-method"><i class="fa fa-check"></i><b>6.1.2</b> Modified Hargreaves method</a></li>
+<li class="chapter" data-level="6.1.3" data-path="analysis.html"><a href="analysis.html#water-balance"><i class="fa fa-check"></i><b>6.1.3</b> Water balance</a></li>
+<li class="chapter" data-level="6.1.4" data-path="analysis.html"><a href="analysis.html#drought-index"><i class="fa fa-check"></i><b>6.1.4</b> Drought Index</a></li>
+<li class="chapter" data-level="6.1.5" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-index-spi"><i class="fa fa-check"></i><b>6.1.5</b> Standardized precipitation index (SPI)</a></li>
+<li class="chapter" data-level="6.1.6" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-evapotranspiration-index-spei"><i class="fa fa-check"></i><b>6.1.6</b> Standardized precipitation evapotranspiration index (SPEI)</a></li>
+<li class="chapter" data-level="6.1.7" data-path="analysis.html"><a href="analysis.html#extreme-indices"><i class="fa fa-check"></i><b>6.1.7</b> Extreme Indices</a></li>
 </ul></li>
-<li class="chapter" data-level="6.7" data-path="analysis.html"><a href="analysis.html#rainy-season-analysis"><i class="fa fa-check"></i><b>6.7</b> Rainy season analysis</a></li>
-<li class="chapter" data-level="6.8" data-path="analysis.html"><a href="analysis.html#climate-extreme-indices"><i class="fa fa-check"></i><b>6.8</b> Climate extreme indices</a><ul>
-<li class="chapter" data-level="6.8.1" data-path="analysis.html"><a href="analysis.html#precipitation-data-1"><i class="fa fa-check"></i><b>6.8.1</b> Precipitation data</a></li>
-<li class="chapter" data-level="6.8.2" data-path="analysis.html"><a href="analysis.html#temperature-data-1"><i class="fa fa-check"></i><b>6.8.2</b> Temperature data</a></li>
+<li class="chapter" data-level="6.2" data-path="analysis.html"><a href="analysis.html#summary-statistics-in-cdt"><i class="fa fa-check"></i><b>6.2</b> Summary statistics in CDT</a></li>
+<li class="chapter" data-level="6.3" data-path="analysis.html"><a href="analysis.html#derived-climate-variables"><i class="fa fa-check"></i><b>6.3</b> Derived Climate Variables</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="analysis.html"><a href="analysis.html#potential-evapotranspiration-1"><i class="fa fa-check"></i><b>6.3.1</b> Potential evapotranspiration</a></li>
+<li class="chapter" data-level="6.3.2" data-path="analysis.html"><a href="analysis.html#water-balance-1"><i class="fa fa-check"></i><b>6.3.2</b> Water balance</a></li>
 </ul></li>
-<li class="chapter" data-level="6.9" data-path="analysis.html"><a href="analysis.html#drought-indices"><i class="fa fa-check"></i><b>6.9</b> Drought indices</a><ul>
-<li class="chapter" data-level="6.9.1" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-index-spi"><i class="fa fa-check"></i><b>6.9.1</b> Standardized precipitation index (SPI)</a></li>
-<li class="chapter" data-level="6.9.2" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-evapotranspiration-index-spei"><i class="fa fa-check"></i><b>6.9.2</b> Standardized precipitation evapotranspiration index (SPEI)</a></li>
-<li class="chapter" data-level="6.9.3" data-path="analysis.html"><a href="analysis.html#decile"><i class="fa fa-check"></i><b>6.9.3</b> Decile</a></li>
+<li class="chapter" data-level="6.4" data-path="analysis.html"><a href="analysis.html#compute-climatologies"><i class="fa fa-check"></i><b>6.4</b> Compute Climatologies</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="analysis.html"><a href="analysis.html#climatologies"><i class="fa fa-check"></i><b>6.4.1</b> Climatologies</a></li>
+<li class="chapter" data-level="6.4.2" data-path="analysis.html"><a href="analysis.html#anomalies"><i class="fa fa-check"></i><b>6.4.2</b> Anomalies</a></li>
 </ul></li>
-<li class="chapter" data-level="6.10" data-path="analysis.html"><a href="analysis.html#exercise-4"><i class="fa fa-check"></i><b>6.10</b> Exercise</a></li>
+<li class="chapter" data-level="6.5" data-path="analysis.html"><a href="analysis.html#spatial-analysis"><i class="fa fa-check"></i><b>6.5</b> Spatial Analysis</a></li>
+<li class="chapter" data-level="6.6" data-path="analysis.html"><a href="analysis.html#daily-rainfall-analysis"><i class="fa fa-check"></i><b>6.6</b> Daily Rainfall Analysis</a></li>
+<li class="chapter" data-level="6.7" data-path="analysis.html"><a href="analysis.html#rainy-season-characteristics"><i class="fa fa-check"></i><b>6.7</b> Rainy Season Characteristics</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="analysis.html"><a href="analysis.html#season-onset"><i class="fa fa-check"></i><b>6.7.1</b> Season onset</a></li>
+<li class="chapter" data-level="6.7.2" data-path="analysis.html"><a href="analysis.html#season-cessation"><i class="fa fa-check"></i><b>6.7.2</b> Season Cessation</a></li>
+<li class="chapter" data-level="6.7.3" data-path="analysis.html"><a href="analysis.html#season-length"><i class="fa fa-check"></i><b>6.7.3</b> Season Length</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="visualization.html"><a href="visualization.html"><i class="fa fa-check"></i><b>7</b> Visualization</a><ul>
-<li class="chapter" data-level="7.1" data-path="visualization.html"><a href="visualization.html#plot-cdt-stations-data"><i class="fa fa-check"></i><b>7.1</b> Plot CDT stations data</a></li>
-<li class="chapter" data-level="7.2" data-path="visualization.html"><a href="visualization.html#plot-cdt-gridded-dataset"><i class="fa fa-check"></i><b>7.2</b> Plot CDT gridded dataset</a></li>
-<li class="chapter" data-level="7.3" data-path="visualization.html"><a href="visualization.html#plot-a-single-netcdf-file"><i class="fa fa-check"></i><b>7.3</b> Plot a single netCDF file</a></li>
-<li class="chapter" data-level="7.4" data-path="visualization.html"><a href="visualization.html#plot-sequential-netcdf-files"><i class="fa fa-check"></i><b>7.4</b> Plot sequential netCDF files</a></li>
-<li class="chapter" data-level="7.5" data-path="visualization.html"><a href="visualization.html#plot-a-netcdf-data-with-multiple-variables"><i class="fa fa-check"></i><b>7.5</b> Plot a netCDF data with multiple variables</a></li>
-<li class="chapter" data-level="7.6" data-path="visualization.html"><a href="visualization.html#plot-multiple-datasets"><i class="fa fa-check"></i><b>7.6</b> Plot multiple datasets</a></li>
-<li class="chapter" data-level="7.7" data-path="visualization.html"><a href="visualization.html#exercise-5"><i class="fa fa-check"></i><b>7.7</b> Exercise</a></li>
+<li class="chapter" data-level="6.8" data-path="analysis.html"><a href="analysis.html#rainy-season-analysis"><i class="fa fa-check"></i><b>6.8</b> Rainy Season Analysis</a></li>
+<li class="chapter" data-level="6.9" data-path="analysis.html"><a href="analysis.html#climate-extreme-indices"><i class="fa fa-check"></i><b>6.9</b> Climate Extreme Indices</a>
+<ul>
+<li class="chapter" data-level="6.9.1" data-path="analysis.html"><a href="analysis.html#extreme-indices-for-rainfall"><i class="fa fa-check"></i><b>6.9.1</b> Extreme Indices for Rainfall</a></li>
+<li class="chapter" data-level="6.9.2" data-path="analysis.html"><a href="analysis.html#extreme-indices-for-temperature"><i class="fa fa-check"></i><b>6.9.2</b> Extreme Indices for Temperature</a></li>
+</ul></li>
+<li class="chapter" data-level="6.10" data-path="analysis.html"><a href="analysis.html#drought-indices"><i class="fa fa-check"></i><b>6.10</b> Drought Indices</a>
+<ul>
+<li class="chapter" data-level="6.10.1" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-index-spi-1"><i class="fa fa-check"></i><b>6.10.1</b> Standardized Precipitation Index (SPI)</a></li>
+<li class="chapter" data-level="6.10.2" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-evapotranspiration-index-spei-1"><i class="fa fa-check"></i><b>6.10.2</b> Standardized Precipitation Evapotranspiration Index (SPEI)</a></li>
+<li class="chapter" data-level="6.10.3" data-path="analysis.html"><a href="analysis.html#deciles-1"><i class="fa fa-check"></i><b>6.10.3</b> Deciles</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="visualization.html"><a href="visualization.html"><i class="fa fa-check"></i><b>7</b> Visualization</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="visualization.html"><a href="visualization.html#plot-cdt-station-data"><i class="fa fa-check"></i><b>7.1</b> Plot CDT Station Data</a></li>
+<li class="chapter" data-level="7.2" data-path="visualization.html"><a href="visualization.html#plot-cdt-gridded-dataset"><i class="fa fa-check"></i><b>7.2</b> Plot CDT Gridded Dataset</a></li>
+<li class="chapter" data-level="7.3" data-path="visualization.html"><a href="visualization.html#plot-netcdf-data-one-file"><i class="fa fa-check"></i><b>7.3</b> Plot NetCDF Data (One File)</a></li>
+<li class="chapter" data-level="7.4" data-path="visualization.html"><a href="visualization.html#plot-netcdf-data-sequential-files"><i class="fa fa-check"></i><b>7.4</b> Plot NetCDF Data (Sequential Files)</a></li>
+<li class="chapter" data-level="7.5" data-path="visualization.html"><a href="visualization.html#plot-netcdf-data-multiple-variables"><i class="fa fa-check"></i><b>7.5</b> Plot NetCDF Data (Multiple Variables)</a></li>
+<li class="chapter" data-level="7.6" data-path="visualization.html"><a href="visualization.html#plot-multiple-data-sets"><i class="fa fa-check"></i><b>7.6</b> Plot multiple data sets</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="case-study.html"><a href="case-study.html"><i class="fa fa-check"></i><b>8</b> Case study</a></li>
 <li class="divider"></li>
@@ -197,27 +257,624 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="quality-control" class="section level1">
+<div id="quality-control" class="section level1" number="3">
 <h1><span class="header-section-number">Chapter 3</span> Quality Control</h1>
-<p>This chapter contains the quality control procedures available in CDT.  </p>
-<p>Topics included in this chapter are:</p>
+<p>Due to error in data recording or systematic errors, station data could suffer from quality issues. These errors could dilute the climate signal that we are trying to detect and in some cases, errors could be larger than the signal leading to an erroneous conclusion. In many countries of Africa, climate data quality is a serious challenge (Dinku. 2019). Thus, it is extremely important to conduct the quality control of station data before starting climate analysis. Quality control is an attempt to identify isolated errors in the station data (Abbott 1986). These errors can stem from different sources such as observation error or defective instruments, transcription or transmission. If the rain gauge gives incorrect measurement, we get observation error while we get transcription and transmission error when the wrong key is typed, or any digit is missed, a column is misplaced in a spreadsheet etc. There can also be systematic errors stemming from the use of wrong units for data, misplacing climate variable(s), using wrong code for missing values etc. There can also be bias or drift in data over a long period of time. To detect these different types of errors, different quality control techniques are employed.</p>
+<p>CDT comes with a suite of quality control options for identifying, and if needed, also fixing errors.It allows the users to inspect different possible errors by showing them in different formats. NMS staffs can easily use it to identify and fix or remove errors from the data. This tool allows to do all of these at different temporal scales of daily, dekadal, and monthly. Once a suspected value is detected, NMS staffs or user can either replace the missing data with a missing value code, replace with correct data, or can just leave the data unchanged.</p>
+<p>The overall process for quality check implemented in CDT include the following steps:</p>
+<ol style="list-style-type: decimal">
+<li>checking for station coordinates;</li>
+<li>checking for false zero values (for rainfall);</li>
+<li>checking for suspicious observations (outliers); and</li>
+<li>checking for homogeneity of climate time series.</li>
+</ol>
+<div id="checking-station-coordinates" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Checking station coordinates</h2>
+<p>This facility allows to check whether the station coordinates are correct. This is done by checking whether the station coordinate is within the country boundary or not. The locations of the stations are displayed on a Google Map. These allow to check whether the stations are correctly located on the map. Further, CDT also allows to check for duplicate and missing coordinates.</p>
+<p>The menu <strong>Quality Control -&gt; Check Station Coordinates</strong> allows to check if there are duplicated and implausible coordinates, or stations outsides a provided shapefile. It will display a tabbed widget on the left panel that allows users to enter the input data and display the results of the checking.</p>
+<p>The tab <strong>Input</strong> allows to enter the inputs data, run the command to check and correct the stations coordinates.</p>
+<p><img src="68_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select the input data format containing the coordinates of the stations to be checked. Available data formats are: <strong>CDT coordinates file</strong>, <strong>CDT stations data format</strong>.</p></li>
+<li><p>Select from the drop-down list the file containing the coordinates of the stations to be checked if it is already loaded, or open it from the browse button <img src="7_1.png" /> on the right.</p></li>
+<li><p>Select the shapefile containing the country boundaries if it is already loaded, or open it from the browse button <img src="7_1.png" /> on the right.</p></li>
+<li><p>Specify a distance (in km) from the country boundaries. This distance will be used to create a buffer around the country outlines. All stations located outside the boundaries, but still located inside the buffer, will be supposed to be part of the network.</p></li>
+<li><p>Type the full path to the folder to save the outputs or browse it.</p></li>
+<li><p>Click the button <strong>Check Coordinates</strong> to check the stations coordinates.</p></li>
+<li><p>Click on the button <strong>View/Edit Results</strong> to view and edit the results of the verification. It will open a table on the right panel displaying the stations with missing, duplicated or invalid coordinates, or stations with coordinates outsides of the boundaries.</p></li>
+</ol>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 3.1: </span>Example table of checking station coordinates in CDT</caption>
+<colgroup>
+<col width="30%" />
+<col width="9%" />
+<col width="16%" />
+<col width="13%" />
+<col width="12%" />
+<col width="13%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">State</th>
+<th align="right">id_wmo</th>
+<th align="left">name</th>
+<th align="right">longitude</th>
+<th align="right">latitude</th>
+<th align="right">Elevation</th>
+<th align="left">X7</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Duplicate Coordinates</td>
+<td align="right">41850</td>
+<td align="left">Tetulia</td>
+<td align="right">88.607</td>
+<td align="right">26.344</td>
+<td align="right"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Duplicate Coordinates</td>
+<td align="right">41220</td>
+<td align="left">Place1</td>
+<td align="right">88.607</td>
+<td align="right">26.344</td>
+<td align="right"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Duplicate Coordinates</td>
+<td align="right">41883</td>
+<td align="left">Bogura</td>
+<td align="right">89.367</td>
+<td align="right">24.850</td>
+<td align="right">17.90</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Duplicate Coordinates</td>
+<td align="right">41121</td>
+<td align="left">Place2</td>
+<td align="right">89.367</td>
+<td align="right">24.850</td>
+<td align="right">17.90</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Coordinates Outside</td>
+<td align="right">40001</td>
+<td align="left">Another</td>
+<td align="right">96.343</td>
+<td align="right">16.337</td>
+<td align="right"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Coordinates Outside</td>
+<td align="right">40002</td>
+<td align="left">Another</td>
+<td align="right">95.123</td>
+<td align="right">17.093</td>
+<td align="right"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Coordinates Outside</td>
+<td align="right">41955</td>
+<td align="left">Saint</td>
+<td align="right">92.328</td>
+<td align="right">20.603</td>
+<td align="right"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Coordinates Outside</td>
+<td align="right">41963</td>
+<td align="left">Hatia</td>
+<td align="right">91.100</td>
+<td align="right">22.433</td>
+<td align="right">2.44</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Coordinates Outside</td>
+<td align="right">41964</td>
+<td align="left">Sandwip</td>
+<td align="right">91.433</td>
+<td align="right">22.433</td>
+<td align="right">2.10</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Coordinates Outside</td>
+<td align="right">41992</td>
+<td align="left">Cox’s Bazar</td>
+<td align="right">91.433</td>
+<td align="right">21.433</td>
+<td align="right">2.10</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Coordinates Outside</td>
+<td align="right">41998</td>
+<td align="left">Teknaf</td>
+<td align="right">92.300</td>
+<td align="right">20.867</td>
+<td align="right">5.00</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<ol start="8" style="list-style-type: decimal">
+<li><p>Click the button Correct Coordinates to correct the wrong coordinates if there are any. To correct the stations coordinates, change the values in the table. To remove a station from the input data, right-click on the column of row number corresponding to this station then from the pop menu click on <strong>Delete Selected Row</strong> as shown in the figure below.</p>
+<p><img src="69_1.png" /></p>
+<p>After editing this table, you have to save the changes you made. You can go to the menu <strong>File -&gt; Save table</strong> or click on the button <img src="70.png" /> in the toolbar to save the table. If the table is saved correctly, you should see an output message “<em>Table saved successfully</em>”.</p></li>
+</ol>
+<p>This creates a folder named <strong>CHECK.COORDS_data</strong> under the folder you provided in (5) to save the results of the verification. Inside this folder 1 directory and 3 files are created:</p>
 <ul>
-<li>Checking station coordinates</li>
-<li>False-zero check for daily rainfall</li>
-<li>Outliers check for rainfalld data</li>
-<li>Homogeneity test</li>
+<li><p><strong>CDTDATASET</strong>: directory containing all the required files used by CDT.</p></li>
+<li><p><strong>CoordinatesCheck.rds</strong>: an index file, you will need to reload the outputs of the verification if you want to view the results or to continue the correction of the coordinates of stations later.</p></li>
+<li><p><strong>Stations_to_Check.csv</strong>: a table containing the information on the stations that need verification.</p></li>
+<li><p><strong>Checked_Coords_<Filename>.csv</strong>: file containing the corrected coordinates, where <Filename> is the input file name you provided in (2)</p></li>
 </ul>
-<div id="what-is-quality-control-and-why-do-we-need-it" class="section level2">
-<h2><span class="header-section-number">3.1</span> What is quality control and why do we need it?</h2>
+<p><strong>Note</strong>: Each time you check the coordinates of the stations, rename the folder <strong>CHECK.COORDS_data</strong> or change the folder to save the outputs because CDT overwrites it.</p>
+<p><img src="71_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>If you want to view or edit the output from a previous stations coordinates checking, you can check this box, the input field below will be activated and you can provide the full path to <strong>CoordinatesCheck.rds</strong> under the folder <strong>CHECK.COORDS_data</strong> by browsing it through the button <img src="7_1.png" /> on the right.</p></li>
+<li><p>Click on <strong>Display Station Coordinates</strong> to display the map of the stations location on the right panel.</p></li>
+</ol>
+<p><img src="72_1.png" /></p>
+<p>Click on the button <strong>Options</strong> on the right to change the color, the symbol and the size of the symbol to be used to display the stations locations; or to change color and the width of the boundaries lines.</p>
+<p><img src="73_1.png" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Click on <strong>Display on Google Maps</strong> to display the map of the stations on Google Maps. This will open your default web browser and display the location of the stations on Google. You need an Internet connection to be able to use this function.</li>
+</ol>
+<p><img src="74_1.png" /></p>
+<p>Click on the pin to get the information about the station. If you want to get a specific location from the map, zoom in to the location and right click on it to get the coordinates.</p>
+<p><img src="75_1.png" /></p>
+<p>You can select and copy the displayed coordinates and use it to correct the coordinates of the station.</p>
+<p>The tab <strong>Zoom</strong> allows to zoom the displayed map.</p>
+<p><img src="76_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Enter here the bounding box of the area to be displayed on the map.</p></li>
+<li><p>After setting the bounding box (1), click this button for the change to take effect.</p></li>
+<li><p>Reset the zoom.</p></li>
+<li><p>Click this + sign to zoom in the map.</p></li>
+<li><p>Click the - sign to Zoom out the map.</p></li>
+<li><p>Click here to draw a rectangle on the map which will zoom in to this rectangle area.</p></li>
+<li><p>After clicking the hand symbol, we can move the displayed map.</p></li>
+</ol>
+<p>Right click on the map to deactivate the active zoom.</p>
 </div>
-<div id="quality-control-in-cdt" class="section level2">
-<h2><span class="header-section-number">3.2</span> Quality control in CDT</h2>
-<div id="checking-station-coordinates" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> Checking station coordinates</h3>
+<div id="false-zero-check-for-daily-rainfall" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> False-zero check for daily rainfall</h2>
+<p>A false zero is an incorrect report of zero precipitation during the rainy season. The false zeros mainly come from the conversion of file with a given format to another file format, in most cases, the missing values from the original file format are not flagged and left blank, when converting the file to the other format the missing values are replaced by zeros. To check the false zeros, the percentage of zero values for each month at the target station is computed and compared to the average of the percentage of zero values for the corresponding month of the neighbor stations. If this percentage is greater than a given threshold, this month is flagged as a month containing false zeros.</p>
+<p>To perform false-zeros check for daily rainfall data, use the menu <strong>Quality Control -&gt; False-Zeros Check for daily rainfall</strong>. It will display a tabbed widget on the left panel, allows to enter the inputs data and parameters.</p>
+<p>The tab <strong>Data and Parameters</strong> allows to enter the inputs data and set the parameters for the QC.</p>
+<p><img src="77_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select from the drop-down list the file containing the daily rainfall station data to be checked if it is already loaded, or open it from the browse button on the right.</p></li>
+<li><p>Click on this button to set the parameters to be used for the false-zeros check. It displays a dialog box</p>
+<p><img src="78_1.png" /></p>
+<ol style="list-style-type: lower-alpha">
+<li>Specify the minimum number of neighbor stations to be used.</li>
+<li>Specify the maximum number of neighbor stations to be used.</li>
+<li>Specify the radius of search (in kilometers) to select the neighbor stations.</li>
+<li>Specify the minimum number of days without missing values for each month.</li>
+<li>Specify the minimum threshold to be used to flag that a month contains a false zero. If the ratio of the percentage of zero at the target station and the average of the percentage of zero of the neighbor stations is greater than this threshold the corresponding month is flagged as suspicious.</li>
+</ol></li>
+<li><p>Specify the folder to save the results by browsing it from the button <img src="7_1.png" /> or typing the full path to the folder.</p></li>
+<li><p>Click the button <strong>Check False-Zeros</strong> to execute.</p></li>
+</ol>
+<p>The tab <strong>False-Zeros Output</strong> allows to view the results of the false zeros check.</p>
+<p><img src="79_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>If you already performed a false zeros check, you do not need to run it again, you can check this box, the input field below will be activated and you can provide the full path to <strong>FalseZeros.rds</strong> under the folder <strong>FALSE.ZEROS.CHECK_data</strong> by browsing it through the button <img src="7_1.png" /> on the right.</p></li>
+<li><p>The stations with a month containing false zeros are listed here. You can select a station and click on the button <strong>View and Edit Result</strong> to view the results. You can use the buttons <img src="80_1.png" /> or <img src="80_2.png" /> to switch to the previous or next station. It will open a table on the right panel showing the output of the false zeros for the selected station.</p></li>
+</ol>
+<table>
+<caption><span id="tab:unnamed-chunk-2">Table 3.2: </span>Table for false-zero check</caption>
+<colgroup>
+<col width="8%" />
+<col width="8%" />
+<col width="12%" />
+<col width="7%" />
+<col width="13%" />
+<col width="11%" />
+<col width="12%" />
+<col width="11%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right">STN.ID</th>
+<th align="right">YYYYMM</th>
+<th align="right">NEAR.STN.</th>
+<th align="right">STN.V</th>
+<th align="right">NEAR.STN.D</th>
+<th align="right">NGBHR.AV</th>
+<th align="right">NGBHR.MAX</th>
+<th align="right">RATIO.NG</th>
+<th align="right">RATIO.NGH</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">11805</td>
+<td align="right">198306</td>
+<td align="right">3</td>
+<td align="right">75</td>
+<td align="right">37</td>
+<td align="right">46</td>
+<td align="right">70</td>
+<td align="right">1.6</td>
+<td align="right">1.5</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: lower-alpha">
+<li><strong>STN.ID</strong> is the ID of the station.</li>
+<li><strong>YYYYMM</strong> shows the year and month on which false zeros have been suspected.</li>
+<li><strong>STN.VAL</strong> is the percentage of zero at the target station.</li>
+<li><strong>NEAR.STN.VAL</strong> is the percentage of zero for the closest neighbor station.</li>
+<li><strong>NEAR.STN.DIST</strong> is the distance in kilometers of the closest neighbor station.</li>
+<li><strong>NGHBR.AVRG</strong> is the average of the percentage of zero for the neighbor stations.</li>
+<li><strong>NGHBR.MAX</strong> is the maximum value of the percentage of zero for the neighbor stations.</li>
+<li><strong>RATIO.NGHBR.AVRG</strong> is the ratio of (c) and (f).</li>
+<li><strong>RATIO.NGHBR.IDW</strong> is the ratio of (c) and the interpolated percentage of zero of the neighbor stations using the method of weighted inverse distance.</li>
+</ol>
+<p>After editing this table, you have to save the changes you made. You can go to the menu <strong>File -&gt; Save table</strong> or click on the button <img src="81_1.png" /> in the toolbar to save the table. If the table is saved correctly, you should see an output message <strong>“Table saved successfully”</strong>.</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Select here the date corresponding to a month with false zeros to display the values of the rainfall data at the target station and the neighbor stations for this month. If you select the date from the drop-down list, click on the button Display to display the table. You can use the buttons <img src="80_1.png" /> or <img src="80_2.png" /> to switch to the previous or next date.</p></li>
+<li><p>After saving the changes you made on the table (2), click on the button Replace False Zeros to replace all the false zeros by missing values.</p></li>
+</ol>
+<p>To replace all the values flagged as suspicious for all stations by missing values, use the following command to the R console:</p>
+<pre><code>indexFZ &lt;- &quot;/&lt;path_to&gt;/FALSE.ZEROS.CHECK_data/FalseZeros.rds&quot;
+CDT:::FalseZerosCheck_replaceAll(indexFZ, action = &quot;all&quot;)</code></pre>
+<p>Change &lt; <strong>path_to</strong>&gt; with the exact path. The corrected data are located under the folder <strong>FALSE.ZEROS.CHECK_data/CDTSTATIONS</strong>.</p>
+</div>
+<div id="outliers-check" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Outliers check</h2>
+<p>Users can also check for outliers in CDT using methods such as limit check, internal consistency check, temporal check, and spatial check. In limit check, an observation is checked to see whether it is inside upper and lower limit for the variable of interest in a specific climate. For example, usually, both minimum and maximum temperature can’t go below 0 over any area in Bangladesh. Similarly, for daily rainfall amounts there could be an upper limit above which rainfall is not expected.</p>
+<p>Internal consistency involves comparing an observation with other meteorological parameters to check whether there are physical and climatological consistency between them. It is done either for the time the observation denotes or for the time series. As some of the meteorological parameters are physically related, checking the consistency between these variables informs us about whether the observation is outlier or not. Right now, CDT allows only one method for internal consistency which is checking to see that minimum temperature is less than maximum temperature.</p>
+<p>Temporal consistency checks an observation of a station for a given month against the long time series for that month. This is done for each of the 12 months separately in CDT to ensure that climatological periods are not compared. The results of these analyses are shown in both tabular and graphical formats, and a user can either keep or change these suspected values by making edit in the table.</p>
+<p>Spatial check compares the observation with data from nearby stations or the expected value at the station under question using data from neighboring stations. It can be done using interpolation by either by checking against numeric values calculated based on the values from surrounding stations, or by comparing statistics. The observations that are significantly different from the expected values are flagged for suspected outliers. The following conditions are checked for rainfall: isolated rainfall (rainfall observed at the given station but surrounding stations reported no rainfall), isolated zero (opposite to isolated rainfall), and outlier (observation deviates too much from surrounding observations). CDT shows the values in both graphical and tabular formats. These values can be vieewed on map along with the options of adding administrative boundaries, digital elevation model, and gridded data. Here, one can add digital elevation model (DEM) for temperature and satellite estimates for rainfall to provide additional insight into data. For example, due to elevation differnece between two neighboring stations, the temperature could be significantly different and adding DEM to the map allows the visual inspection of this.</p>
+<p>The flagged suspected values can be either replaced with missing code, or replace the value with the correct one, if that is the case, or just leave the value as it is. For replacing the value, the user can directly enter the value which will then replace the value in the original database.</p>
+<div id="outliers-check-for-rainfall-data" class="section level3" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Outliers check for rainfall data</h3>
+<p>CDT allows to check outliers in rainfall data for different time frequency (daily, pentad, dekadal, and monthly) both in temporal and spatial dimension.</p>
+<p>To check the outliers for rainfall data, use the menu <strong>Quality Control -&gt; Outliers Check for rainfall data</strong>. It will display a tabbed widget on the left panel which allows to enter the input data and parameters.</p>
+<p>The tab <strong>Data</strong> allows you to enter the input data and set the parameters for the QC.</p>
+<p><img src="82_1.png" /></p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Select the time step of the station data to be checked.</p></li>
+<li><p>Select from the drop-down list the file containing the station data to be checked if it is already loaded, or open it from the browse button <img src="7_1.png" /> on the right.</p></li>
+<li><p>Click on this button to set the parameters to perform the outliers check.</p></li>
+</ol>
+<p><img src="83_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Specify the maximum possible value of rainfall. It depends on the time step of the input data and the region or country.</p></li>
+<li><p>Enter the multiplier of the standard deviation to perform the temporal check. You can use a real number like 3.5. In a normal distribution 99.73% of the data should be within +/- 3 times of the standard deviation around the mean. It will be converted to a confidence level to conduct the test.</p></li>
+<li><p>If you want to use elevation data to select the neighbor stations, check this box and click on the button Settings, it will display a dialog box which allows to specify the elevation data to be used. If the elevation data come from DEM (Digital Elevation Model), <strong>Select Elevation from DEM</strong>, you have to provide the DEM file in NetCDF format, select it from the drop-down list if it is already loaded or open it from the browse button <img src="7_1.png" />. If the elevation data come from the station data select <strong>Elevation from station data</strong>.</p></li>
+</ol>
+<p><img src="84_1.png" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Specify the minimum number of neighbor stations to be used to perform the spatial check.</p></li>
+<li><p>Specify the maximum number of neighbor stations to be used to perform the spatial check.</p></li>
+<li><p>Specify the radius of search (in kilometers) to select the neighbor stations.</p></li>
+<li><p>If using elevation data to select the neighbor stations, specify the maximum altitude difference (in meter) to be used to select the neighbor stations. For example, 800 m means the stations located 400 m above and below the target station will be selected.</p></li>
+</ol>
+<ol start="4" style="list-style-type: lower-alpha">
+<li><p>Type the full path to the folder to save the results of the outliers check, or use the browse button <img src="7_1.png" />.</p></li>
+<li><p>Click the button <strong>Check Outliers</strong> to run the quality control.</p></li>
+</ol>
+<p>This creates a folder named <strong>RR.OUTLIERS.CHECK_data</strong> under the folder you provided (4) to save the results of the outliers check. Inside this folder 2 directories and 1 file are created:</p>
+<ul>
+<li><p><strong>CDTDATASET</strong>: directory containing all the required files used by CDT</p></li>
+<li><p><strong>CDTSTATIONS</strong>: directory containing the checked data, when you did a correction on the suspicious values. The name of the file containing the corrected data is the same as the name of the file from the input (<strong>2</strong>).</p></li>
+<li><p><strong>OutliersCheck.rds</strong>: an index file, you will need to reload the outputs of QC if you want to view the results or to continue the correction of suspicious values later.</p></li>
+</ul>
+<p>The tab QC Outputs allows to view the results of the QC.</p>
+<p><img src="85_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>If you already performed an outliers check, you do not need to run it again, you can check this box, the input field below will be activated and you can provide the full path to <strong>OutliersCheck.rds</strong> under the folder <strong>RR.OUTLIERS.CHECK_data</strong> by browsing it through the button <img src="7_1.png" /> on the right.</p></li>
+<li><p>The stations with suspicious values are listed here. You can select a station and click on the button <strong>View and Edit Result</strong> to view and edit the result of the QC for this station. You can use the buttons <img src="80_1.png" /> or <img src="80_2.png" /> to switch to the previous or next station. It will open a table on the right panel showing the output of the QC for the selected station.</p></li>
+</ol>
+<table>
+<caption><span id="tab:unnamed-chunk-3">Table 3.3: </span>Table for rainfall outlier</caption>
+<colgroup>
+<col width="7%" />
+<col width="10%" />
+<col width="6%" />
+<col width="7%" />
+<col width="10%" />
+<col width="31%" />
+<col width="6%" />
+<col width="8%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="right">STN.ID</th>
+<th align="right">DATE</th>
+<th align="right">STN.V</th>
+<th align="right">STN.TE</th>
+<th align="right">STAT.SPA</th>
+<th align="left">OUT.TEMP</th>
+<th align="left">OUT.S</th>
+<th align="right">NOT.REP</th>
+<th align="left">REPLACE.V</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">10120</td>
+<td align="right">19830724</td>
+<td align="right">200</td>
+<td align="right">1.09</td>
+<td align="right">37</td>
+<td align="left">upper.outliers</td>
+<td align="left">**</td>
+<td align="right">1</td>
+<td align="left">**</td>
+</tr>
+<tr class="even">
+<td align="right">10120</td>
+<td align="right">19950927</td>
+<td align="right">366</td>
+<td align="right">1.72</td>
+<td align="right">**</td>
+<td align="left">greater.than.maximum.values</td>
+<td align="left">**</td>
+<td align="right">**</td>
+<td align="left">**</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: lower-alpha">
+<li><p><strong>STN.ID</strong> shows the ID of the station.</p></li>
+<li><p><strong>DATE</strong> is the dates on which suspicious values are found.</p></li>
+<li><p><strong>STN.VAL</strong> is the observed suspicious values.</p></li>
+<li><p><strong>STAT.TEMPORAL</strong> gives statistics from the temporal check if available.</p></li>
+<li><p><strong>STAT.SPATIAL</strong> is the statistics from the spatial check if available.</p></li>
+<li><p><strong>OUT.TEMPORAL</strong> gives us the description of the suspicious value from temporal check.</p></li>
+</ol>
+<ul>
+<li><p><strong>negative.values</strong>: the value is negative;</p></li>
+<li><p><strong>greater.than.maximum.values</strong>: the value is greater than the maximum possible value you provided when you set the parameters of the QC;</p></li>
+<li><p><strong>upper.outliers</strong>: the value is flagged as too large compared to the time series from this month.</p></li>
+</ul>
+<ol start="7" style="list-style-type: lower-alpha">
+<li><strong>OUT.SPATIAL</strong> provides the description of the suspicious value from spatial check.</li>
+</ol>
+<ul>
+<li><p><strong>spatial.not.outliers</strong>: the value is flagged as upper.outliers from the temporal check but not an outlier when a spatial check is performed;</p></li>
+<li><p><strong>isolated.precipitation</strong>: the value is flagged as isolated precipitation, an observation is implausible and called isolated precipitation if this value is extremely suspicious and very large compared to those of neighboring stations and verifies the following conditions</p></li>
+</ul>
+<p><span class="math display">\[
+Pmax &lt; ISPMAX and Pobs &gt; ISPOBS
+\]</span></p>
+<p>where
+<strong>Pmax</strong>: maximum value of neighboring stations
+<strong>Pobs</strong>: value of target station
+<strong>ISPMAX</strong> and <strong>ISPOBS</strong>: values depend on the climatology of the region and computed by CDT from the station data;</p>
+<ul>
+<li><strong>isolated.dryness</strong>: the value is flagged as <strong>isolated dryness</strong>, an observation is implausible and called <strong>isolated dryness</strong> if this value is extremely suspicious and very small compared to those of neighboring stations and verifies the following conditions</li>
+</ul>
+<p><span class="math display">\[
+Pmin ⩾ ISDMIN; Pobs &lt; ISDOBS and P25 ⩾ ISDQ1
+\]</span></p>
+<p>Where</p>
+<p><strong>Pmin</strong> : minimum value of neighboring stations
+<strong>Pobs</strong> : value of target station
+<strong>P25</strong> : the first quartile of neighboring stations
+<strong>ISDMIN</strong>, <strong>ISDOBS</strong> and <strong>ISDQ1</strong>: values depend on the climatology of the region and computed by CDT from the station data;</p>
+<ul>
+<li><strong>too.large.deviation.above</strong>: the value is flagged very high compared to the values of the neighbor stations, an observation is strongly deviate to the right-tail (too large deviation above) and stated as implausible if</li>
+</ul>
+<p><span class="math display">\[
+            (Pobs - Q50) / IQR &gt; 2 . IQRF and Pobs &gt; ISPBOS
+\]</span>
+Where
+<strong>Pobs</strong>: value of target station
+<strong>Q50</strong>: the median of neighboring stations
+<strong>IQR</strong> : the interquartile range of neighboring stations
+<strong>IQRF</strong>: a multiplier factor of the interquartile range set to 2.8 by default;</p>
+<ul>
+<li><strong>too.large.deviation.below</strong>: the value is flagged very small compared to the values of the neighbor stations, an observation is strongly deviate to the left-tail (too large deviation below) and stated as implausible if</li>
+</ul>
+<p><span class="math display">\[
+(Pobs - Q50) / IQR &lt; -IQRF and Pobs ≤ ISDOBS
+\]</span></p>
+<p><img src="86_1.png" /></p>
+<ol start="8" style="list-style-type: lower-alpha">
+<li>You can specify here an action to take when you want to correct the suspicious value. By default, the value in this column is <strong>1</strong>, this means no correction will be done. If you put a flag <strong>1</strong> in this column, the corresponding value in column (<strong>c</strong>) will be kept. If you leave this column blank, the corresponding value in (c) will be replaced by missing value.</li>
+<li>If you put a value in this column, this value will be taken to replace the value in (<strong>c</strong>). This column takes the priority, whenever you put a flag <strong>1</strong> or leave blank the column (<strong>h</strong>).</li>
+</ol>
+<p>After editing this table, you have to save the changes you made. You can go to the menu <strong>File -&gt; Save table</strong> or click on the button <img src="87_1.png" /> in the toolbar to save the table. If the table is saved correctly, you should see an output message “<em>Table saved successfully</em>”.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Select here the month to display a chart of the time series for this month and the suspicious values detected from the temporal check. If you select the month from the drop-down list, click on the button <strong>PLOT</strong> to display the chart. You can use the buttons <img src="80_1.png" /> and <img src="80_2.png" /> to switch to the previous or next month.</li>
+</ol>
+<p><img src="88_1.png" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Select here the date corresponding to a suspicious value to plot it on a map for this date. If you select the date from the drop-down list, click on the button PLOT to display the map. You can use the buttons <img src="80_1.png" /> and <img src="80_2.png" /> to switch to the previous or next date.</li>
+</ol>
+<p><img src="89_1.png" /></p>
+<ol start="5" style="list-style-type: decimal">
+<li>After saving the changes you made on the table, click on the button Replace Outliers for the changes to take effect.</li>
+</ol>
+<p>To replace all the values flagged as suspicious for all stations by missing values, use the following command to the R console:</p>
+<pre><code>indexQC &lt;- &quot;/&lt;path_to&gt;/RR.OUTLIERS.CHECK_data/OutliersCheck.rds&quot;
+CDT:::QC.RR_replaceAll(indexQC, action = &quot;all&quot;)</code></pre>
+<p>Change &lt;<strong>path_to</strong>&gt; with exact path. The corrected data are located under the folder <strong>RR.OUTLIERS.CHECK_data/CDTSTATIONS</strong>.</p>
+<p>The tab <strong>MixedTemp</strong> allows to verify if a temperature values are found inside the rainfall data for some stations.</p>
+<p><img src="90_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li>The stations with suspected temperature values inside the rainfall data are listed here. You can select a station from the drop-down list, or use the buttons <img src="80_1.png" /> and <img src="80_2.png" /> to switch to the previous or next station.</li>
+<li>Click this button to display a table showing the period when the temperature data are found inside the rainfall.</li>
+<li>Click this button to display the time series of the selected station from (<strong>1</strong>).</li>
+</ol>
+<p><img src="91_1.png" /></p>
+<p>The tab <strong>Zoom</strong> allows you to zoom the displayed map.</p>
+<p><img src="92_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li>Enter here the bounding box of the area to be displayed on the map.</li>
+<li>After setting the bounding box (1), click this button for the change to take effect.</li>
+<li>Reset the zoom.</li>
+<li>Zoom in to the map area</li>
+<li>Zoom out</li>
+<li>Draw a rectangle on the map to zoom in an area.</li>
+<li>Move the displayed map.</li>
+</ol>
+<p>Right click on the map to deactivate the active zoom.</p>
+<p>The tab <strong>Add Layers</strong> allows you to superpose other layers.</p>
+<p><img src="93_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li>Check the box and select the shapefile from the drop-down list or open it from <img src="7_1.png" /> to add boundaries to the active map.</li>
+<li>Check the box and select the NetCDF file containing the DEM (Digital Elevation Model) from the drop-down list or open it from <img src="7_1.png" /> to add elevation data as background to the active map.</li>
+<li>Check the box and enter or browse the full path to the NetCDF data (from satellite or radar) to display. Do not forget to provide a sample file and change the filename format by clicking on the button <strong>Settings</strong>.</li>
+<li>Select the type of the map. You can choose between a pixel-based image or a contour map.</li>
+</ol>
+</div>
+<div id="outliers-check-for-temperatures-data" class="section level3" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Outliers check for temperatures data</h3>
+<p>Similar to precipitation, temperature records can also contain outliers stemming from different sources. CDT also has in-built features for detecting and updating temperature outliers through spatial and temporal checking. Suspicious values can also be plotted in a map as provided by the user.</p>
+<p>To check the outliers for temperatures data, use the menu <strong>Quality Control -&gt; Outliers Check for temperatures data</strong>. This will display a tabbed widget on the left panel, allowing you to enter the inputs data and parameters.</p>
+<p>The tab <strong>Data</strong> allows you to enter the inputs data and set the parameters for the QC.</p>
+<p><img src="94_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select the time step of the station data to be checked. We can use any of these different time periods: daily, pentad, dekadal and monthly.</p></li>
+<li><p>Choose the variable to be checked between the maximum and minimum temperature.</p></li>
+<li><p>Select from the drop-down list the file containing the station data to be checked if it is already loaded, or open it from the browse button <img src="7_1.png" /> on the right.</p>
+<ul>
+<li>If TMAX is selected in (<strong>2</strong>), this should be the file containing the maximum temperature.</li>
+<li>If TMIN is selected in (<strong>2</strong>), this should be the file containing the minimum temperature.</li>
+</ul></li>
+<li><p>Select from the drop-down list the file containing the station data to be used to check if the minimum temperature is greater than the maximum.</p>
+<ul>
+<li>If TMAX is selected in (<strong>2</strong>), this should be the file containing the minimum temperature.</li>
+<li>If TMIN is selected in (<strong>2</strong>), this should be the file containing the maximum temperature.</li>
+</ul></li>
+<li><p>Click on this button to set the parameters to perform the outliers check</p>
+<p><img src="95_1.png" /></p>
+<ol style="list-style-type: lower-alpha">
+<li>Specify the minimum possible value of the temperature. It depends on the time step of the input data and the region or country.</li>
+<li>Specify the maximum possible value of the temperature.</li>
+<li>Length of the time window to be used to perform a sliding regression. The unit is days if the input is a daily data.</li>
+<li>Enter the multiplier of the standard deviation to perform the temporal check. You can use a real number like 3.5. In a normal distribution 99.73% of the data should be within +/- 3 times of the standard deviation around the mean. It will be converted to a confidence level to conduct the test.</li>
+<li>If you want to use elevation data to select the neighbor stations, check this box and click on the button Settings, it will display a dialog box which allows to specify the elevation data to be used.</li>
+</ol>
+<p><img src="96_1.png" /></p>
+<p>If the elevation data come from DEM (Digital Elevation Model), Select <strong>Elevation from DEM</strong>, you have to provide the DEM file in NetCDF format, select it from the drop-down list if it is already loaded or open it from the browse button <img src="7_1.png" />. If the elevation data come from the station data select Elevation from station data.</p>
+<ol start="6" style="list-style-type: lower-alpha">
+<li>Specify the minimum number of neighbor stations to be used to form the predictors for the regression.</li>
+<li>Specify the maximum number of neighbor stations to be used to form the predictors for the regression.</li>
+<li>Specify the radius of search (in kilometers) to select the neighbor stations.</li>
+<li>If using elevation data to select the neighbor stations, specify the maximum altitude difference (in meter) to be used to select the neighbor stations. For example, 800 m means the stations located 400 m above and below the target station will be selected</li>
+</ol></li>
+<li><p>Type the full path to the folder to save the results of the outliers check, or use the browse button <img src="7_1.png" />.</p></li>
+<li><p>Click the button Check Outliers to run the quality control.</p></li>
+</ol>
+<p>This creates a folder named <strong>TMAX.OUTLIERS.CHECK_data</strong> or <strong>TMIN.OUTLIERS.CHECK_data</strong> under the folder you provided (6) to save the results of the outliers check. Inside this folder 2 directories and 1 file are created:</p>
+<ul>
+<li><p><strong>CDTDATASET</strong>: directory containing all the required files used by CDT</p></li>
+<li><p><strong>CDTSTATIONS</strong>: directory containing the checked data, when you did a correction on the suspicious values. The name of the file containing the corrected data is the same as the name of the file from the input (3).</p></li>
+<li><p><strong>OutliersCheck.rds</strong>: an index file, you will need to reload the outputs of QC if you want to view the results or to continue the correction of suspicious values later.</p></li>
+</ul>
+<p>The tab <strong>QC Outputs</strong> allows to view the results of the QC.</p>
+<p><img src="97_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>If you already performed an outliers check, you do not need to run it again, you can check this box, the input field below will be activated and you can provide the full path to <strong>OutliersCheck.rds</strong> under the folder <strong>TMAX.OUTLIERS.CHECK_data</strong> or <strong>TMIN.OUTLIERS.CHECK_data</strong> by browsing it through the button <img src="7_1.png" /> on the right.</p></li>
+<li><p>The stations with suspicious values are listed here. You can select a station and click on the button View and Edit Result to view and edit the result of the QC for this station. You can use the buttons <img src="80_1.png" /> or <img src="80_2.png" /> to switch to the previous or next station. It will open a table on the right panel showing the output of the QC for the selected station.</p></li>
+</ol>
+<p><img src="98_1.png" /></p>
+<ol style="list-style-type: lower-alpha">
+<li>The ID of the station.</li>
+<li>The dates on which suspicious values are found.</li>
+<li>The observed suspicious values.</li>
+<li>Statistics from the temporal check if available.</li>
+<li>Statistics from the spatial check if available.</li>
+<li>Description of the suspicious value from temporal check.</li>
+</ol>
+<ul>
+<li><strong>lower.values</strong>: the value is flagged as too small compared to the time series from this month;</li>
+<li><strong>upper.outliers</strong>: the value is flagged as too large compared to the time series from this month;</li>
+<li><strong>TMIN &gt;= TMAX</strong>: the minimum temperature is greater than the maximum temperature;</li>
+<li><strong>greater.than.maximum.values</strong>: the value is greater than the maximum possible value you provided when you set the parameters of the QC;</li>
+<li><strong>less.than.minimum.values</strong>: the value is less than the minimum possible value specified.</li>
+</ul>
+<ol start="7" style="list-style-type: lower-alpha">
+<li>Description of the suspicious value from spatial check.</li>
+</ol>
+<ul>
+<li><strong>spatial.not.outliers</strong>: the value is flagged as outlier from the temporal check but not an outlier when a spatial check is performed;</li>
+<li><strong>upper.outliers</strong>: the value is flagged very high compared to the values of the neighbor stations;</li>
+<li><strong>lower.outliers</strong>: the value is flagged very small compared to the values of the neighbor stations.</li>
+</ul>
+<ol start="8" style="list-style-type: lower-alpha">
+<li>The estimated value from the regression.</li>
+<li>You can specify here an action to take when you want to correct the suspicious value. By default, the value in this column is 1, this means no correction will be done. If you put a flag 1 in this column, the corresponding value in column (c) will be kept. If you put a flag 2, the corresponding value in column (c) will be replaced by the estimated value in column (h). If you leave this column blank, the corresponding value in (c) will be replaced by missing value.</li>
+<li>If you put a value in this column, this value will be taken to replace the value in (c). This column takes the priority, whenever you put a flag 1, 2 or leave blank the column (i).</li>
+</ol>
+<p>After editing this table, you have to save the changes you made. You can go to the menu <strong>File -&gt; Save table</strong> or click the button <img src="87_1.png" /> in the toolbar to save the table. If the table is saved correctly, you should see an output message “Table saved successfully”.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Select here the month to display a chart of the time series for this month and the suspicious values detected from the temporal check. If you select the month from the drop-down list, click on the button PLOT to display the chart. You can use the buttons <img src="80_1.png" /> and <img src="80_2.png" /> to switch to the previous or next month.</li>
+</ol>
+<p><img src="99_1.png" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Select here the date corresponding to a suspicious value to plot it on a map for this date. If you select the date from the drop-down list, click on the button <strong>PLOT</strong> to display the map. You can use the buttons <img src="80_1.png" /> and <img src="80_2.png" /> to switch to the previous or next date.</p>
+<p><img src="100_1.png" /></p></li>
+<li><p>After saving the changes you made on the table, click on the button <strong>Replace Outliers</strong> for the changes to take effect.</p></li>
+</ol>
+<p>To replace all the values flagged as suspicious for all stations by missing values, use the following command to the R console:</p>
+<pre><code>indexQC &lt;- &quot;/&lt;path_to&gt;/TMAX.OUTLIERS.CHECK_data/OutliersCheck.rds&quot;
+CDT:::QC.TT_replaceAll(indexQC, action = &quot;all&quot;)</code></pre>
+<p>Change <strong><path_to></strong> with exact path. The corrected data are located under the folder <strong>TMAX.OUTLIERS.CHECK_data/CDTSTATIONS</strong>.
+You can do the same for the minimum temperature by replacing <strong>TMAX</strong> by <strong>TMIN</strong>.
+The tab <strong>MixedData</strong> allows the user to see the suspicious equal observations or invalid temperature data in tabular form.</p>
+<p><img src="101_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li>It shows the suspicious equal observations for temperature data. We can use the <img src="80_1.png" /> and <img src="80_2.png" /> buttons to move to the previous or next value. By clicking on Display Table, we can see all the suspicious equal observations in tabular format.</li>
+<li>This shows invalid temperature data and similar to the suspicious equal observations, we can move to previous or next values and can see them in tabular format.</li>
+</ol>
+<p>The tab <strong>Zoom</strong> allows you to zoom the displayed map.</p>
+<p><img src="102_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li>Enter here the bounding box of the area to be displayed on the map.</li>
+<li>After setting the bounding box (1), click this button for the change to take effect.</li>
+<li>Reset the zoom.</li>
+<li>Zoom in</li>
+<li>Zoom out</li>
+<li>Draw a rectangle on the map to zoom in an area.</li>
+<li>Move the displayed map.</li>
+</ol>
+<p>Right click on the map to deactivate the active zoom.</p>
+<p>The tab <strong>Add Layers</strong> allows you to superpose other layers.</p>
+<p><img src="103_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Check the box and select the shapefile from the drop-down list or open it from <img src="7_1.png" /> to add boundaries to the active map.</p></li>
+<li><p>Check the box and select the NetCDF file containing the DEM (Digital Elevation Model) from the drop-down list or open it from <img src="7_1.png" /> to add elevation data as background to the active map.</p></li>
+<li><p>Check the box and enter or browse the full path to the NetCDF data (from satellite or radar) to display. Do not forget to provide a sample file and change the filename format by clicking on the button <strong>Settings</strong>.</p></li>
+<li><p>Select the type of the map. You can choose between a pixel-based image or a contour map.</p></li>
+</ol>
 </div>
 </div>
-<div id="exercise-1" class="section level2">
-<h2><span class="header-section-number">3.3</span> Exercise</h2>
+<div id="homogeneity-test" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Homogeneity test</h2>
+<p>In homogenous climate data, variations in climate data stem from variations in climate only (Shaofeng and Mahmood, 2016). Inhomogeneity in climate data could occur due to changes in instruments, changes in observational routine, relocation of stations etc (Li-Juan and Zhong-Wei, 2012). In the presence of inhomogeneity, calculation of climate trends, variability and climate extreme analysis can be affected leading to erroneous conclusions in meteorological and hydrological studies (Hansel et. al., 2016; Costa and Soares, 2009; Shaofeng and Mahmood, 2016). Thus it is very important to homogenize climate data by removing the inhomogeneity. We do so by detecting breakpoints and removing the inhomogeneity as such. There are many different techniques for detecting irregularity of a station. CDT offers 4 different statistical techniques for detecting irregularity which are Pettitt test, SNHT test (standard normal homogeneity test), CUSUM type test and CUSUM type with trend test (Gallagher, Lund and Robbins, 2013).</p>
+<p>Pettitt test (Pettitt, 1979) is a non-parametric approach to change point detection which can detect abrupt change in the mean value of the distribution of climate variables such as rainfall or precipitation (Xie and Xiong, 2013; Tarhule and Woo, 1998). It is a rank-based non-parametric method to detect change point and test its statistical significance. This test has the null hypothesis that if we randomly split the sample in two segments, the mean value of these two segments is the same.</p>
+<p>SNHT test is used for detecting linear trends of arbitrary length in the time series of climate data (Alexandersson and Moberg, 1997). This test allows you to detect abrupt jumps and thus to homogenize data.</p>
+<p>CUMSUM test is a method to detect a change in the mean of the series. This statistic is calculated using cumulative values up to the changepoint time. Changepoint statistics in data can be used both for data without trends and with trends. CDT allows you to use the CUMSUM test for both of these two cases.</p>
+</div>
+<div id="references-1" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> References</h2>
+<p>Dinku, T. (2019). Challenges with Availability and Quality of Climate Data in Africa. In A. M. Mellese, W. Abtew and G. Senay(ed.) Extreme Hydrology and Climate Variability, Springer book</p>
+<p>Alexandersson H, Moberg A. 1997. Homogenization of Swedish temperature data. Part 1: homogeneity test for linear trends.
+International Journal of Climatology 17: 25–34.</p>
+<p>Pettitt, AN. (1979). A non-parametric approach to the change-point problem. Appl. Stat., 28(2):126–135</p>
+<p>Tarhule, A. and Woo, M. (1998) Changes in Rainfall Characteristics in Northern Nigeria. International Journal of Climatology, 18, 1261-1271</p>
 
 </div>
 </div>
@@ -231,7 +888,6 @@
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -250,6 +906,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -270,6 +927,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -277,6 +938,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

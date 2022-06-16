@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Introduction to CDT | Climate Data Tools (CDT)</title>
   <meta name="description" content="CDT Book" />
-  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Introduction to CDT | Climate Data Tools (CDT)" />
   <meta property="og:type" content="book" />
@@ -33,7 +33,9 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="data-preparation.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,6 +51,8 @@
 
 
 
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 
@@ -70,113 +74,168 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
-<li class="chapter" data-level="1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html"><i class="fa fa-check"></i><b>1</b> Introduction to CDT</a><ul>
-<li class="chapter" data-level="1.1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#what-is-cdt"><i class="fa fa-check"></i><b>1.1</b> What is CDT</a></li>
+<li class="chapter" data-level="1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html"><i class="fa fa-check"></i><b>1</b> Introduction to CDT</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#installation-of-cdt"><i class="fa fa-check"></i><b>1.2</b> Installation of CDT</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#cdt-installation-on-windows"><i class="fa fa-check"></i><b>1.2.1</b> CDT installation on Windows</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#cdt-installation-on-macos-x"><i class="fa fa-check"></i><b>1.2.2</b> CDT installation on MacOS X</a></li>
+<li class="chapter" data-level="1.2.3" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#cdt-installation-on-ubuntu"><i class="fa fa-check"></i><b>1.2.3</b> CDT installation on Ubuntu</a></li>
+<li class="chapter" data-level="1.2.4" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#updating-cdt"><i class="fa fa-check"></i><b>1.2.4</b> Updating CDT</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="data-preparation.html"><a href="data-preparation.html"><i class="fa fa-check"></i><b>2</b> Data Preparation</a><ul>
+<li class="chapter" data-level="1.3" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#getting-to-know-the-graphical-user-interface-of-cdt"><i class="fa fa-check"></i><b>1.3</b> Getting to know the graphical user interface of CDT</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-preparation.html"><a href="data-preparation.html"><i class="fa fa-check"></i><b>2</b> Data preparation</a>
+<ul>
 <li class="chapter" data-level="2.1" data-path="data-preparation.html"><a href="data-preparation.html#cdt-station-data-format"><i class="fa fa-check"></i><b>2.1</b> CDT station data format</a></li>
-<li class="chapter" data-level="2.2" data-path="data-preparation.html"><a href="data-preparation.html#manipulating-cdt-station-data"><i class="fa fa-check"></i><b>2.2</b> Manipulating CDT station data</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="data-preparation.html"><a href="data-preparation.html#merge-two-cdt-station-data"><i class="fa fa-check"></i><b>2.2.1</b> Merge two CDT station data</a></li>
-<li class="chapter" data-level="2.2.2" data-path="data-preparation.html"><a href="data-preparation.html#filtering-cdt-station-data"><i class="fa fa-check"></i><b>2.2.2</b> Filtering CDT station data</a></li>
-<li class="chapter" data-level="2.2.3" data-path="data-preparation.html"><a href="data-preparation.html#selecting-cdt-station-data"><i class="fa fa-check"></i><b>2.2.3</b> Selecting CDT station data</a></li>
+<li class="chapter" data-level="2.2" data-path="data-preparation.html"><a href="data-preparation.html#missing-values-in-cdt"><i class="fa fa-check"></i><b>2.2</b> Missing values in CDT</a></li>
+<li class="chapter" data-level="2.3" data-path="data-preparation.html"><a href="data-preparation.html#date-format"><i class="fa fa-check"></i><b>2.3</b> Date format</a></li>
+<li class="chapter" data-level="2.4" data-path="data-preparation.html"><a href="data-preparation.html#cdt-coordinates-file"><i class="fa fa-check"></i><b>2.4</b> CDT coordinates file</a></li>
+<li class="chapter" data-level="2.5" data-path="data-preparation.html"><a href="data-preparation.html#netcdf-data"><i class="fa fa-check"></i><b>2.5</b> NetCDF data</a></li>
+<li class="chapter" data-level="2.6" data-path="data-preparation.html"><a href="data-preparation.html#format-cdt-input-station-data"><i class="fa fa-check"></i><b>2.6</b> Format CDT input station data</a></li>
+<li class="chapter" data-level="2.7" data-path="data-preparation.html"><a href="data-preparation.html#creating-cdt-station-data-from-multiple-input-files"><i class="fa fa-check"></i><b>2.7</b> Creating CDT station data from multiple input files</a></li>
+<li class="chapter" data-level="2.8" data-path="data-preparation.html"><a href="data-preparation.html#observation-date-types"><i class="fa fa-check"></i><b>2.8</b> Observation date types</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="data-preparation.html"><a href="data-preparation.html#grouped"><i class="fa fa-check"></i><b>2.8.1</b> Grouped</a></li>
+<li class="chapter" data-level="2.8.2" data-path="data-preparation.html"><a href="data-preparation.html#separated"><i class="fa fa-check"></i><b>2.8.2</b> Separated</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="data-preparation.html"><a href="data-preparation.html#assess-data-availability"><i class="fa fa-check"></i><b>2.3</b> Assess data availability</a></li>
-<li class="chapter" data-level="2.4" data-path="data-preparation.html"><a href="data-preparation.html#download-data-using-cdt"><i class="fa fa-check"></i><b>2.4</b> Download data using CDT</a><ul>
-<li class="chapter" data-level="2.4.1" data-path="data-preparation.html"><a href="data-preparation.html#download-digital-elevation-model"><i class="fa fa-check"></i><b>2.4.1</b> Download digital elevation model</a></li>
-<li class="chapter" data-level="2.4.2" data-path="data-preparation.html"><a href="data-preparation.html#download-different-country-administrative-boundaries-or-shapefile"><i class="fa fa-check"></i><b>2.4.2</b> Download different country administrative boundaries or shapefile</a></li>
-<li class="chapter" data-level="2.4.3" data-path="data-preparation.html"><a href="data-preparation.html#download-satellite-rainfall-estimates-data"><i class="fa fa-check"></i><b>2.4.3</b> Download satellite rainfall estimates data</a></li>
-<li class="chapter" data-level="2.4.4" data-path="data-preparation.html"><a href="data-preparation.html#download-reanalysis-data"><i class="fa fa-check"></i><b>2.4.4</b> Download reanalysis data</a></li>
+<li class="chapter" data-level="2.9" data-path="data-preparation.html"><a href="data-preparation.html#single-file"><i class="fa fa-check"></i><b>2.9</b> Single File</a></li>
+<li class="chapter" data-level="2.10" data-path="data-preparation.html"><a href="data-preparation.html#manipulating-cdt-station-data"><i class="fa fa-check"></i><b>2.10</b> Manipulating CDT station data</a></li>
+<li class="chapter" data-level="2.11" data-path="data-preparation.html"><a href="data-preparation.html#merge-two-cdt-station-data"><i class="fa fa-check"></i><b>2.11</b> Merge two CDT station data</a></li>
+<li class="chapter" data-level="2.12" data-path="data-preparation.html"><a href="data-preparation.html#filtering-cdt-station-data"><i class="fa fa-check"></i><b>2.12</b> Filtering CDT station data</a></li>
+<li class="chapter" data-level="2.13" data-path="data-preparation.html"><a href="data-preparation.html#selecting-cdt-station-data"><i class="fa fa-check"></i><b>2.13</b> Selecting CDT station data</a></li>
+<li class="chapter" data-level="2.14" data-path="data-preparation.html"><a href="data-preparation.html#assess-data-availability"><i class="fa fa-check"></i><b>2.14</b> Assess data availability</a></li>
+<li class="chapter" data-level="2.15" data-path="data-preparation.html"><a href="data-preparation.html#download-data-using-cdt"><i class="fa fa-check"></i><b>2.15</b> Download data using CDT</a>
+<ul>
+<li class="chapter" data-level="2.15.1" data-path="data-preparation.html"><a href="data-preparation.html#download-digital-elevation-model"><i class="fa fa-check"></i><b>2.15.1</b> Download Digital Elevation Model</a></li>
+<li class="chapter" data-level="2.15.2" data-path="data-preparation.html"><a href="data-preparation.html#download-different-country-administrative-boundaries-or-shapefile"><i class="fa fa-check"></i><b>2.15.2</b> Download different country administrative boundaries or shapefile</a></li>
+<li class="chapter" data-level="2.15.3" data-path="data-preparation.html"><a href="data-preparation.html#download-proxy-and-ancilliary-data"><i class="fa fa-check"></i><b>2.15.3</b> Download proxy and ancilliary data</a></li>
+<li class="chapter" data-level="2.15.4" data-path="data-preparation.html"><a href="data-preparation.html#download-satellite-rainfall-estimates-data"><i class="fa fa-check"></i><b>2.15.4</b> Download satellite rainfall estimates data</a></li>
+<li class="chapter" data-level="2.15.5" data-path="data-preparation.html"><a href="data-preparation.html#download-reanalysis-data"><i class="fa fa-check"></i><b>2.15.5</b> Download reanalysis data</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="data-preparation.html"><a href="data-preparation.html#aggregate-data"><i class="fa fa-check"></i><b>2.5</b> Aggregate data</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="data-preparation.html"><a href="data-preparation.html#aggregating-time-series"><i class="fa fa-check"></i><b>2.5.1</b> Aggregating time series</a></li>
-<li class="chapter" data-level="2.5.2" data-path="data-preparation.html"><a href="data-preparation.html#aggregatedisaggregate-spatial-netcdf-data"><i class="fa fa-check"></i><b>2.5.2</b> Aggregate/disaggregate spatial NetCDF data</a></li>
+<li class="chapter" data-level="2.16" data-path="data-preparation.html"><a href="data-preparation.html#aggregate-data"><i class="fa fa-check"></i><b>2.16</b> Aggregate data</a>
+<ul>
+<li class="chapter" data-level="2.16.1" data-path="data-preparation.html"><a href="data-preparation.html#aggregating-time-series"><i class="fa fa-check"></i><b>2.16.1</b> Aggregating time series</a></li>
+<li class="chapter" data-level="2.16.2" data-path="data-preparation.html"><a href="data-preparation.html#aggregatedisaggregate-spatial-netcdf-data"><i class="fa fa-check"></i><b>2.16.2</b> Aggregate/disaggregate spatial NetCDF data</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="data-preparation.html"><a href="data-preparation.html#transform-netcdf-files-into-cdt-dataset"><i class="fa fa-check"></i><b>2.6</b> Transform NetCDF files into CDT dataset</a></li>
-<li class="chapter" data-level="2.7" data-path="data-preparation.html"><a href="data-preparation.html#data-extraction"><i class="fa fa-check"></i><b>2.7</b> Data extraction</a></li>
-<li class="chapter" data-level="2.8" data-path="data-preparation.html"><a href="data-preparation.html#split-netcdf-files-into-cdt-netcdf-format"><i class="fa fa-check"></i><b>2.8</b> Split NetCDF files into CDT NetCDF format</a></li>
-<li class="chapter" data-level="2.9" data-path="data-preparation.html"><a href="data-preparation.html#blank-grid-outside-polygons"><i class="fa fa-check"></i><b>2.9</b> Blank grid outside polygons</a></li>
-<li class="chapter" data-level="2.10" data-path="data-preparation.html"><a href="data-preparation.html#data-format-conversion"><i class="fa fa-check"></i><b>2.10</b> Data format conversion</a><ul>
-<li class="chapter" data-level="2.10.1" data-path="data-preparation.html"><a href="data-preparation.html#conversion-to-cpt-format"><i class="fa fa-check"></i><b>2.10.1</b> Conversion to CPT format</a></li>
-<li class="chapter" data-level="2.10.2" data-path="data-preparation.html"><a href="data-preparation.html#converting-netcdfgeotiffesri-.hdr-labelled"><i class="fa fa-check"></i><b>2.10.2</b> Converting NetCDF/GeoTIFF/ESRI .hdr Labelled</a></li>
-<li class="chapter" data-level="2.10.3" data-path="data-preparation.html"><a href="data-preparation.html#fillling-missing-dekadal-temperature-values"><i class="fa fa-check"></i><b>2.10.3</b> Fillling missing dekadal temperature values</a></li>
+<li class="chapter" data-level="2.17" data-path="data-preparation.html"><a href="data-preparation.html#transform-netcdf-files-into-cdt-dataset"><i class="fa fa-check"></i><b>2.17</b> Transform NetCDF files into CDT dataset</a></li>
+<li class="chapter" data-level="2.18" data-path="data-preparation.html"><a href="data-preparation.html#data-extraction"><i class="fa fa-check"></i><b>2.18</b> Data extraction</a></li>
+<li class="chapter" data-level="2.19" data-path="data-preparation.html"><a href="data-preparation.html#split-netcdf-files-into-cdt-netcdf-format"><i class="fa fa-check"></i><b>2.19</b> Split NetCDF files into CDT NetCDF format</a></li>
+<li class="chapter" data-level="2.20" data-path="data-preparation.html"><a href="data-preparation.html#blank-grid-outside-polygons"><i class="fa fa-check"></i><b>2.20</b> Blank grid outside polygons</a></li>
+<li class="chapter" data-level="2.21" data-path="data-preparation.html"><a href="data-preparation.html#data-format-conversion"><i class="fa fa-check"></i><b>2.21</b> Data format conversion</a>
+<ul>
+<li class="chapter" data-level="2.21.1" data-path="data-preparation.html"><a href="data-preparation.html#conversion-to-cpt-format"><i class="fa fa-check"></i><b>2.21.1</b> Conversion to CPT format</a></li>
+<li class="chapter" data-level="2.21.2" data-path="data-preparation.html"><a href="data-preparation.html#converting-netcdfgeotiffesri-.hdr-labelled"><i class="fa fa-check"></i><b>2.21.2</b> Converting NetCDF/GeoTIFF/ESRI .hdr Labelled</a></li>
+<li class="chapter" data-level="2.21.3" data-path="data-preparation.html"><a href="data-preparation.html#converting-netcdfgeotiffesri-.hdr-labelled-1"><i class="fa fa-check"></i><b>2.21.3</b> Converting NetCDF/GeoTIFF/ESRI .hdr Labelled</a></li>
+<li class="chapter" data-level="2.21.4" data-path="data-preparation.html"><a href="data-preparation.html#create-grads-descriptor-file-from-cdt-netcdf-files"><i class="fa fa-check"></i><b>2.21.4</b> Create GrADS Descriptor File from CDT NetCDF files</a></li>
 </ul></li>
-<li class="chapter" data-level="2.11" data-path="data-preparation.html"><a href="data-preparation.html#exercise"><i class="fa fa-check"></i><b>2.11</b> Exercise</a></li>
+<li class="chapter" data-level="2.22" data-path="data-preparation.html"><a href="data-preparation.html#filing-missing-dekadal-temperature-values"><i class="fa fa-check"></i><b>2.22</b> Filing missing dekadal temperature values</a></li>
+<li class="chapter" data-level="2.23" data-path="data-preparation.html"><a href="data-preparation.html#references"><i class="fa fa-check"></i><b>2.23</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="quality-control.html"><a href="quality-control.html"><i class="fa fa-check"></i><b>3</b> Quality Control</a><ul>
-<li class="chapter" data-level="3.1" data-path="quality-control.html"><a href="quality-control.html#what-is-quality-control-and-why-do-we-need-it"><i class="fa fa-check"></i><b>3.1</b> What is quality control and why do we need it?</a></li>
-<li class="chapter" data-level="3.2" data-path="quality-control.html"><a href="quality-control.html#quality-control-in-cdt"><i class="fa fa-check"></i><b>3.2</b> Quality control in CDT</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="quality-control.html"><a href="quality-control.html#checking-station-coordinates"><i class="fa fa-check"></i><b>3.2.1</b> Checking station coordinates</a></li>
+<li class="chapter" data-level="3" data-path="quality-control.html"><a href="quality-control.html"><i class="fa fa-check"></i><b>3</b> Quality Control</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="quality-control.html"><a href="quality-control.html#checking-station-coordinates"><i class="fa fa-check"></i><b>3.1</b> Checking station coordinates</a></li>
+<li class="chapter" data-level="3.2" data-path="quality-control.html"><a href="quality-control.html#false-zero-check-for-daily-rainfall"><i class="fa fa-check"></i><b>3.2</b> False-zero check for daily rainfall</a></li>
+<li class="chapter" data-level="3.3" data-path="quality-control.html"><a href="quality-control.html#outliers-check"><i class="fa fa-check"></i><b>3.3</b> Outliers check</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="quality-control.html"><a href="quality-control.html#outliers-check-for-rainfall-data"><i class="fa fa-check"></i><b>3.3.1</b> Outliers check for rainfall data</a></li>
+<li class="chapter" data-level="3.3.2" data-path="quality-control.html"><a href="quality-control.html#outliers-check-for-temperatures-data"><i class="fa fa-check"></i><b>3.3.2</b> Outliers check for temperatures data</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="quality-control.html"><a href="quality-control.html#exercise-1"><i class="fa fa-check"></i><b>3.3</b> Exercise</a></li>
+<li class="chapter" data-level="3.4" data-path="quality-control.html"><a href="quality-control.html#homogeneity-test"><i class="fa fa-check"></i><b>3.4</b> Homogeneity test</a></li>
+<li class="chapter" data-level="3.5" data-path="quality-control.html"><a href="quality-control.html#references-1"><i class="fa fa-check"></i><b>3.5</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="gridding.html"><a href="gridding.html"><i class="fa fa-check"></i><b>4</b> Gridding</a><ul>
-<li class="chapter" data-level="4.1" data-path="gridding.html"><a href="gridding.html#spatial-interpolation"><i class="fa fa-check"></i><b>4.1</b> Spatial interpolation</a></li>
-<li class="chapter" data-level="4.2" data-path="gridding.html"><a href="gridding.html#merging-rainfall-data"><i class="fa fa-check"></i><b>4.2</b> Merging rainfall data</a><ul>
-<li class="chapter" data-level="4.2.1" data-path="gridding.html"><a href="gridding.html#compute-bias-coefficients"><i class="fa fa-check"></i><b>4.2.1</b> Compute bias coefficients</a></li>
-<li class="chapter" data-level="4.2.2" data-path="gridding.html"><a href="gridding.html#apply-bias-correction"><i class="fa fa-check"></i><b>4.2.2</b> Apply bias correction</a></li>
-<li class="chapter" data-level="4.2.3" data-path="gridding.html"><a href="gridding.html#merging-data"><i class="fa fa-check"></i><b>4.2.3</b> Merging data</a></li>
+<li class="chapter" data-level="4" data-path="gridding.html"><a href="gridding.html"><i class="fa fa-check"></i><b>4</b> Gridding:</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="gridding.html"><a href="gridding.html#spatial-interpolation"><i class="fa fa-check"></i><b>4.1</b> Spatial Interpolation:</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="gridding.html"><a href="gridding.html#inverse-distance-weighting"><i class="fa fa-check"></i><b>4.1.1</b> Inverse Distance Weighting:</a></li>
+<li class="chapter" data-level="4.1.2" data-path="gridding.html"><a href="gridding.html#modified-shephards-method"><i class="fa fa-check"></i><b>4.1.2</b> Modified Shephard’s Method:</a></li>
+<li class="chapter" data-level="4.1.3" data-path="gridding.html"><a href="gridding.html#kriging"><i class="fa fa-check"></i><b>4.1.3</b> Kriging</a></li>
+<li class="chapter" data-level="4.1.4" data-path="gridding.html"><a href="gridding.html#spheremap-interpolation"><i class="fa fa-check"></i><b>4.1.4</b> Spheremap Interpolation</a></li>
+<li class="chapter" data-level="4.1.5" data-path="gridding.html"><a href="gridding.html#nearest-neighbor-and-nearest-neighbor-interpolation-with-elevation"><i class="fa fa-check"></i><b>4.1.5</b> Nearest Neighbor and nearest neighbor interpolation with elevation:</a></li>
 </ul></li>
-<li class="chapter" data-level="4.3" data-path="gridding.html"><a href="gridding.html#merging-tremperature-data"><i class="fa fa-check"></i><b>4.3</b> Merging tremperature data</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="gridding.html"><a href="gridding.html#compute-downscaling-coefficients"><i class="fa fa-check"></i><b>4.3.1</b> Compute downscaling coefficients</a></li>
-<li class="chapter" data-level="4.3.2" data-path="gridding.html"><a href="gridding.html#reanalysis-downscaling"><i class="fa fa-check"></i><b>4.3.2</b> Reanalysis downscaling</a></li>
-<li class="chapter" data-level="4.3.3" data-path="gridding.html"><a href="gridding.html#compute-bias-coefficients-1"><i class="fa fa-check"></i><b>4.3.3</b> Compute bias coefficients</a></li>
-<li class="chapter" data-level="4.3.4" data-path="gridding.html"><a href="gridding.html#apply-bias-correction-1"><i class="fa fa-check"></i><b>4.3.4</b> Apply bias correction</a></li>
-<li class="chapter" data-level="4.3.5" data-path="gridding.html"><a href="gridding.html#merging-data-1"><i class="fa fa-check"></i><b>4.3.5</b> Merging data</a></li>
+<li class="chapter" data-level="4.2" data-path="gridding.html"><a href="gridding.html#merging"><i class="fa fa-check"></i><b>4.2</b> Merging:</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="gridding.html"><a href="gridding.html#downscaling-reanalysis"><i class="fa fa-check"></i><b>4.2.1</b> Downscaling reanalysis</a></li>
+<li class="chapter" data-level="4.2.2" data-path="gridding.html"><a href="gridding.html#bias-adjustment"><i class="fa fa-check"></i><b>4.2.2</b> Bias adjustment</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="gridding.html"><a href="gridding.html#scale-merged-data"><i class="fa fa-check"></i><b>4.4</b> Scale merged data</a></li>
-<li class="chapter" data-level="4.5" data-path="gridding.html"><a href="gridding.html#merging-cross-validation."><i class="fa fa-check"></i><b>4.5</b> Merging cross-validation.</a><ul>
-<li class="chapter" data-level="4.5.1" data-path="gridding.html"><a href="gridding.html#precipitation-data"><i class="fa fa-check"></i><b>4.5.1</b> Precipitation data</a></li>
-<li class="chapter" data-level="4.5.2" data-path="gridding.html"><a href="gridding.html#temperature-data"><i class="fa fa-check"></i><b>4.5.2</b> Temperature data</a></li>
+<li class="chapter" data-level="4.3" data-path="gridding.html"><a href="gridding.html#merging-in-cdt"><i class="fa fa-check"></i><b>4.3</b> Merging in CDT</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="gridding.html"><a href="gridding.html#merging-rainfall-data-with-satellite-data"><i class="fa fa-check"></i><b>4.3.1</b> Merging rainfall data with satellite data</a></li>
 </ul></li>
-<li class="chapter" data-level="4.6" data-path="gridding.html"><a href="gridding.html#exercise-2"><i class="fa fa-check"></i><b>4.6</b> Exercise</a></li>
+<li class="chapter" data-level="4.4" data-path="gridding.html"><a href="gridding.html#references-2"><i class="fa fa-check"></i><b>4.4</b> References</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="validation.html"><a href="validation.html"><i class="fa fa-check"></i><b>5</b> Validation</a><ul>
-<li class="chapter" data-level="5.1" data-path="validation.html"><a href="validation.html#validating-spatial-points-data-in-cdt-format"><i class="fa fa-check"></i><b>5.1</b> Validating spatial points data (in CDT format)</a></li>
-<li class="chapter" data-level="5.2" data-path="validation.html"><a href="validation.html#validating-gridded-data-in-netcdf-format"><i class="fa fa-check"></i><b>5.2</b> Validating gridded data (in netCDF format)</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="validation.html"><a href="validation.html#validating-multiple-datasets"><i class="fa fa-check"></i><b>5.2.1</b> Validating multiple datasets</a></li>
+<li class="chapter" data-level="5" data-path="validation.html"><a href="validation.html"><i class="fa fa-check"></i><b>5</b> Validation</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="validation.html"><a href="validation.html#spatial-points-data-cdt-format"><i class="fa fa-check"></i><b>5.1</b> Spatial Points Data (CDT Format)</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="validation.html"><a href="validation.html#precipitation-data"><i class="fa fa-check"></i><b>5.1.1</b> Precipitation data</a></li>
+<li class="chapter" data-level="5.1.2" data-path="validation.html"><a href="validation.html#temperature-data"><i class="fa fa-check"></i><b>5.1.2</b> Temperature data</a></li>
 </ul></li>
-<li class="chapter" data-level="5.3" data-path="validation.html"><a href="validation.html#exercise-3"><i class="fa fa-check"></i><b>5.3</b> Exercise</a></li>
+<li class="chapter" data-level="5.2" data-path="validation.html"><a href="validation.html#gridded-data-netcdf-format"><i class="fa fa-check"></i><b>5.2</b> Gridded Data (NetCDF Format)</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="validation.html"><a href="validation.html#precipitation-data-1"><i class="fa fa-check"></i><b>5.2.1</b> Precipitation data</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>6</b> Analysis</a><ul>
-<li class="chapter" data-level="6.1" data-path="analysis.html"><a href="analysis.html#calculating-summary-statistics"><i class="fa fa-check"></i><b>6.1</b> Calculating summary statistics</a></li>
-<li class="chapter" data-level="6.2" data-path="analysis.html"><a href="analysis.html#compute-climate-variables"><i class="fa fa-check"></i><b>6.2</b> Compute climate variables</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="analysis.html"><a href="analysis.html#temperature-variables"><i class="fa fa-check"></i><b>6.2.1</b> Temperature variables</a></li>
-<li class="chapter" data-level="6.2.2" data-path="analysis.html"><a href="analysis.html#potential-evapotranspiration"><i class="fa fa-check"></i><b>6.2.2</b> Potential evapotranspiration</a></li>
-<li class="chapter" data-level="6.2.3" data-path="analysis.html"><a href="analysis.html#water-balance"><i class="fa fa-check"></i><b>6.2.3</b> Water balance</a></li>
+<li class="chapter" data-level="5.3" data-path="validation.html"><a href="validation.html#validate-multiple-data-sets"><i class="fa fa-check"></i><b>5.3</b> Validate multiple data sets</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="validation.html"><a href="validation.html#precipitation-data-2"><i class="fa fa-check"></i><b>5.3.1</b> Precipitation Data</a></li>
+<li class="chapter" data-level="5.3.2" data-path="validation.html"><a href="validation.html#temperature-data-1"><i class="fa fa-check"></i><b>5.3.2</b> Temperature Data</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="analysis.html"><a href="analysis.html#compute-climatologies"><i class="fa fa-check"></i><b>6.3</b> Compute climatologies</a><ul>
-<li class="chapter" data-level="6.3.1" data-path="analysis.html"><a href="analysis.html#climatologies"><i class="fa fa-check"></i><b>6.3.1</b> Climatologies</a></li>
-<li class="chapter" data-level="6.3.2" data-path="analysis.html"><a href="analysis.html#compute-anomalies"><i class="fa fa-check"></i><b>6.3.2</b> Compute anomalies</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="analysis.html"><a href="analysis.html#spatial-analysis"><i class="fa fa-check"></i><b>6.4</b> Spatial analysis</a></li>
-<li class="chapter" data-level="6.5" data-path="analysis.html"><a href="analysis.html#daily-rainfall-analysis"><i class="fa fa-check"></i><b>6.5</b> Daily rainfall analysis</a></li>
-<li class="chapter" data-level="6.6" data-path="analysis.html"><a href="analysis.html#rainy-season-characteristics"><i class="fa fa-check"></i><b>6.6</b> Rainy season characteristics</a><ul>
-<li class="chapter" data-level="6.6.1" data-path="analysis.html"><a href="analysis.html#season-onset"><i class="fa fa-check"></i><b>6.6.1</b> Season onset</a></li>
-<li class="chapter" data-level="6.6.2" data-path="analysis.html"><a href="analysis.html#season-cessation"><i class="fa fa-check"></i><b>6.6.2</b> Season cessation</a></li>
-<li class="chapter" data-level="6.6.3" data-path="analysis.html"><a href="analysis.html#season-length"><i class="fa fa-check"></i><b>6.6.3</b> Season length</a></li>
+<li class="chapter" data-level="6" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>6</b> Analysis</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="analysis.html"><a href="analysis.html#potential-evapotranspiration"><i class="fa fa-check"></i><b>6.1</b> Potential evapotranspiration</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="analysis.html"><a href="analysis.html#hargreaves-method"><i class="fa fa-check"></i><b>6.1.1</b> Hargreaves method</a></li>
+<li class="chapter" data-level="6.1.2" data-path="analysis.html"><a href="analysis.html#modified-hargreaves-method"><i class="fa fa-check"></i><b>6.1.2</b> Modified Hargreaves method</a></li>
+<li class="chapter" data-level="6.1.3" data-path="analysis.html"><a href="analysis.html#water-balance"><i class="fa fa-check"></i><b>6.1.3</b> Water balance</a></li>
+<li class="chapter" data-level="6.1.4" data-path="analysis.html"><a href="analysis.html#drought-index"><i class="fa fa-check"></i><b>6.1.4</b> Drought Index</a></li>
+<li class="chapter" data-level="6.1.5" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-index-spi"><i class="fa fa-check"></i><b>6.1.5</b> Standardized precipitation index (SPI)</a></li>
+<li class="chapter" data-level="6.1.6" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-evapotranspiration-index-spei"><i class="fa fa-check"></i><b>6.1.6</b> Standardized precipitation evapotranspiration index (SPEI)</a></li>
+<li class="chapter" data-level="6.1.7" data-path="analysis.html"><a href="analysis.html#extreme-indices"><i class="fa fa-check"></i><b>6.1.7</b> Extreme Indices</a></li>
 </ul></li>
-<li class="chapter" data-level="6.7" data-path="analysis.html"><a href="analysis.html#rainy-season-analysis"><i class="fa fa-check"></i><b>6.7</b> Rainy season analysis</a></li>
-<li class="chapter" data-level="6.8" data-path="analysis.html"><a href="analysis.html#climate-extreme-indices"><i class="fa fa-check"></i><b>6.8</b> Climate extreme indices</a><ul>
-<li class="chapter" data-level="6.8.1" data-path="analysis.html"><a href="analysis.html#precipitation-data-1"><i class="fa fa-check"></i><b>6.8.1</b> Precipitation data</a></li>
-<li class="chapter" data-level="6.8.2" data-path="analysis.html"><a href="analysis.html#temperature-data-1"><i class="fa fa-check"></i><b>6.8.2</b> Temperature data</a></li>
+<li class="chapter" data-level="6.2" data-path="analysis.html"><a href="analysis.html#summary-statistics-in-cdt"><i class="fa fa-check"></i><b>6.2</b> Summary statistics in CDT</a></li>
+<li class="chapter" data-level="6.3" data-path="analysis.html"><a href="analysis.html#derived-climate-variables"><i class="fa fa-check"></i><b>6.3</b> Derived Climate Variables</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="analysis.html"><a href="analysis.html#potential-evapotranspiration-1"><i class="fa fa-check"></i><b>6.3.1</b> Potential evapotranspiration</a></li>
+<li class="chapter" data-level="6.3.2" data-path="analysis.html"><a href="analysis.html#water-balance-1"><i class="fa fa-check"></i><b>6.3.2</b> Water balance</a></li>
 </ul></li>
-<li class="chapter" data-level="6.9" data-path="analysis.html"><a href="analysis.html#drought-indices"><i class="fa fa-check"></i><b>6.9</b> Drought indices</a><ul>
-<li class="chapter" data-level="6.9.1" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-index-spi"><i class="fa fa-check"></i><b>6.9.1</b> Standardized precipitation index (SPI)</a></li>
-<li class="chapter" data-level="6.9.2" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-evapotranspiration-index-spei"><i class="fa fa-check"></i><b>6.9.2</b> Standardized precipitation evapotranspiration index (SPEI)</a></li>
-<li class="chapter" data-level="6.9.3" data-path="analysis.html"><a href="analysis.html#decile"><i class="fa fa-check"></i><b>6.9.3</b> Decile</a></li>
+<li class="chapter" data-level="6.4" data-path="analysis.html"><a href="analysis.html#compute-climatologies"><i class="fa fa-check"></i><b>6.4</b> Compute Climatologies</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="analysis.html"><a href="analysis.html#climatologies"><i class="fa fa-check"></i><b>6.4.1</b> Climatologies</a></li>
+<li class="chapter" data-level="6.4.2" data-path="analysis.html"><a href="analysis.html#anomalies"><i class="fa fa-check"></i><b>6.4.2</b> Anomalies</a></li>
 </ul></li>
-<li class="chapter" data-level="6.10" data-path="analysis.html"><a href="analysis.html#exercise-4"><i class="fa fa-check"></i><b>6.10</b> Exercise</a></li>
+<li class="chapter" data-level="6.5" data-path="analysis.html"><a href="analysis.html#spatial-analysis"><i class="fa fa-check"></i><b>6.5</b> Spatial Analysis</a></li>
+<li class="chapter" data-level="6.6" data-path="analysis.html"><a href="analysis.html#daily-rainfall-analysis"><i class="fa fa-check"></i><b>6.6</b> Daily Rainfall Analysis</a></li>
+<li class="chapter" data-level="6.7" data-path="analysis.html"><a href="analysis.html#rainy-season-characteristics"><i class="fa fa-check"></i><b>6.7</b> Rainy Season Characteristics</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="analysis.html"><a href="analysis.html#season-onset"><i class="fa fa-check"></i><b>6.7.1</b> Season onset</a></li>
+<li class="chapter" data-level="6.7.2" data-path="analysis.html"><a href="analysis.html#season-cessation"><i class="fa fa-check"></i><b>6.7.2</b> Season Cessation</a></li>
+<li class="chapter" data-level="6.7.3" data-path="analysis.html"><a href="analysis.html#season-length"><i class="fa fa-check"></i><b>6.7.3</b> Season Length</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="visualization.html"><a href="visualization.html"><i class="fa fa-check"></i><b>7</b> Visualization</a><ul>
-<li class="chapter" data-level="7.1" data-path="visualization.html"><a href="visualization.html#plot-cdt-stations-data"><i class="fa fa-check"></i><b>7.1</b> Plot CDT stations data</a></li>
-<li class="chapter" data-level="7.2" data-path="visualization.html"><a href="visualization.html#plot-cdt-gridded-dataset"><i class="fa fa-check"></i><b>7.2</b> Plot CDT gridded dataset</a></li>
-<li class="chapter" data-level="7.3" data-path="visualization.html"><a href="visualization.html#plot-a-single-netcdf-file"><i class="fa fa-check"></i><b>7.3</b> Plot a single netCDF file</a></li>
-<li class="chapter" data-level="7.4" data-path="visualization.html"><a href="visualization.html#plot-sequential-netcdf-files"><i class="fa fa-check"></i><b>7.4</b> Plot sequential netCDF files</a></li>
-<li class="chapter" data-level="7.5" data-path="visualization.html"><a href="visualization.html#plot-a-netcdf-data-with-multiple-variables"><i class="fa fa-check"></i><b>7.5</b> Plot a netCDF data with multiple variables</a></li>
-<li class="chapter" data-level="7.6" data-path="visualization.html"><a href="visualization.html#plot-multiple-datasets"><i class="fa fa-check"></i><b>7.6</b> Plot multiple datasets</a></li>
-<li class="chapter" data-level="7.7" data-path="visualization.html"><a href="visualization.html#exercise-5"><i class="fa fa-check"></i><b>7.7</b> Exercise</a></li>
+<li class="chapter" data-level="6.8" data-path="analysis.html"><a href="analysis.html#rainy-season-analysis"><i class="fa fa-check"></i><b>6.8</b> Rainy Season Analysis</a></li>
+<li class="chapter" data-level="6.9" data-path="analysis.html"><a href="analysis.html#climate-extreme-indices"><i class="fa fa-check"></i><b>6.9</b> Climate Extreme Indices</a>
+<ul>
+<li class="chapter" data-level="6.9.1" data-path="analysis.html"><a href="analysis.html#extreme-indices-for-rainfall"><i class="fa fa-check"></i><b>6.9.1</b> Extreme Indices for Rainfall</a></li>
+<li class="chapter" data-level="6.9.2" data-path="analysis.html"><a href="analysis.html#extreme-indices-for-temperature"><i class="fa fa-check"></i><b>6.9.2</b> Extreme Indices for Temperature</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="case-study.html"><a href="case-study.html"><i class="fa fa-check"></i><b>8</b> Case study</a></li>
+<li class="chapter" data-level="6.10" data-path="analysis.html"><a href="analysis.html#drought-indices"><i class="fa fa-check"></i><b>6.10</b> Drought Indices</a>
+<ul>
+<li class="chapter" data-level="6.10.1" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-index-spi-1"><i class="fa fa-check"></i><b>6.10.1</b> Standardized Precipitation Index (SPI)</a></li>
+<li class="chapter" data-level="6.10.2" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-evapotranspiration-index-spei-1"><i class="fa fa-check"></i><b>6.10.2</b> Standardized Precipitation Evapotranspiration Index (SPEI)</a></li>
+<li class="chapter" data-level="6.10.3" data-path="analysis.html"><a href="analysis.html#deciles-1"><i class="fa fa-check"></i><b>6.10.3</b> Deciles</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="visualization.html"><a href="visualization.html"><i class="fa fa-check"></i><b>7</b> Visualization</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="visualization.html"><a href="visualization.html#plot-cdt-station-data"><i class="fa fa-check"></i><b>7.1</b> Plot CDT Station Data</a></li>
+<li class="chapter" data-level="7.2" data-path="visualization.html"><a href="visualization.html#plot-cdt-gridded-dataset"><i class="fa fa-check"></i><b>7.2</b> Plot CDT Gridded Dataset</a></li>
+<li class="chapter" data-level="7.3" data-path="visualization.html"><a href="visualization.html#plot-netcdf-data-one-file"><i class="fa fa-check"></i><b>7.3</b> Plot NetCDF Data (One File)</a></li>
+<li class="chapter" data-level="7.4" data-path="visualization.html"><a href="visualization.html#plot-netcdf-data-sequential-files"><i class="fa fa-check"></i><b>7.4</b> Plot NetCDF Data (Sequential Files)</a></li>
+<li class="chapter" data-level="7.5" data-path="visualization.html"><a href="visualization.html#plot-netcdf-data-multiple-variables"><i class="fa fa-check"></i><b>7.5</b> Plot NetCDF Data (Multiple Variables)</a></li>
+<li class="chapter" data-level="7.6" data-path="visualization.html"><a href="visualization.html#plot-multiple-data-sets"><i class="fa fa-check"></i><b>7.6</b> Plot multiple data sets</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://iri.columbia.edu/our-expertise/climate/tools/cdt/" target="blank">Published by IRI</a></li>
 
@@ -197,11 +256,209 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction-to-cdt" class="section level1">
+<div id="introduction-to-cdt" class="section level1" number="1">
 <h1><span class="header-section-number">Chapter 1</span> Introduction to CDT</h1>
-<div id="what-is-cdt" class="section level2">
-<h2><span class="header-section-number">1.1</span> What is CDT</h2>
-<p>This book contains snapshots of differnt options available with hands-on practice with some fake or other data. Using a set of differnt dataset we will show how a user can utilize these options.</p>
+<div id="introduction" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> Introduction</h2>
+<p>Climate services can help in ex-ante decision making in climate-sensitive sectors such as agriculture, health, early warning system, water management etc. Use of climate data and hence the availability and generation of it are prerequisites to ensure climate services for different sectors. Availability of and access to high quality climate data itself is a challenge in Africa due to a limited number of weather stations and the declining number of this over time. A number of reasons such as national data policies, lack of finance and dissemination tools make the access to climate data challenging and expensive. To address this issue, the International Research Institute for Climate and Society (IRI) at Columbia University is leading The Enhancing National Climate Services (ENACTS) initiative whereby it is working with different National Meteorological Services (NMS) in Africa and in other developing countries to develop high resolution, quality controlled climate data accessible to the users. Generation of high quality resolution data can be done by first quality control the data and then merging the observation or station data with satellite data. Doing these require access to a tool that offers all of these functionalities along with minimum, or even zero cost associated with it. Keeping this in mind, IRI developed Climate Data Tool (CDT), an open-source R-based software that comes with intuitive and user friendly graphical user interface (GUI). CDT offers many basic functionalities such as organizing data, validating data, analyzing data besides quality control and data merging. This book describes all of these basic functionalities and how to use these in CDT.</p>
+<p>Climate variability and changing climate play a crucial role in the socio-economic development and well-being of people. According to the AR5 Synthesis report by IPCC (IPCC, 2014), development gains could be impeded or undone by climate change through extreme climate events, suitability zones shifting for crops and disease and sea-level rise. These changes can prove to be very damaging for many different sectors such as water resources, forestry, energy, health, tourism, transportation and agriculture, in particular, as rain-fed land is about eighty percent of the total cultivable land (UNESCO, 2009). In this backdrop, effective use of climate information can play a pivotal role in addressing the risks by informing the agricultural practitioners at different levels. This can help them in making agriculture more resilient to erratic climatic patterns by making decisions according to this information such as when to cut the harvest or when to plant.</p>
+<p>Effective use of climate information requires it to be useful, usable and to be used in helping climate sensitive decision making and management. In this regard, climate services is defined by the Climate Services Partnership (2021) as “production, translation, transfer, and use of climate knowledge and information in climate-informed decision making and climate-smart policy and planning, …”. Thus, generation of climate data is not itself sufficient, rather it should be immediately accompanied with translation of the climate knowledge into information relevant to a sector such as agriculture. Although researchers and meteorological agencies are working on producing information according to users’ need, there still might be significant hindrance preventing potentially “useful” information from becoming “usable” (McNie, 2013; Vincent et al., 2018). One of the bottlenecks is associated with how relevant the information is which is further compounded by the problems with the data itself including the spatial scale of the data, the quality of it, and in some cases, even the presence of it.</p>
+<p>In most of the African countries, there has been inadequate collection of climate data and even when it is available, there is poor access to it (Dinku, 2019). In case of its availability, it suffers from having poor or inconsistent quality making it difficult to be used for decision-making at different levels to adapt to changing and varying climate. The Enhancing National Climate Services (ENACTS) initiative by the International Research Institute for Climate and Society (IRI), Columbia University, has been working to address such gaps in data quantity and quality, in addition to ensuring access to and use of climate information products in different countries by working closely with National Meteorological Services (NMS) in many countries in Africa and beyond. (Dinku et al., 2018, 2014). NMS being the primary provider of weather and climate information, and warnings of any damaging climatic events, it is paramount that they have no limitations in data. The ENACTS approach exactly works in this space by working with NMS in Africa and other developing countries on data quality and availability issues. In doing so, quality-controlled data from met NMS are combined with either satellite estimates for rainfall or reanalysis products for temperature (Dinku et al., 2018; Dinku et al., 2013). This merging process involves many tasks including the organization of station and proxy data, quality control of the station and proxy data, merging quality-controlled station data with proxies, evaluation of the combined data, and further analysis and visualization of station and combined data.</p>
+<p>Many NMS, however, don’t have access to easy-to-use and freely available tool for performing such tasks. To address such cases, the Climate Data Tool (CDT), an R-based software package with an easy-to-use graphical user interface (GUI) was developed in-house by the IRI. CDT can be run in multiple operating systems such as Windows and Linux. CDT went through five years of evolution during which iterative feedback from NMS around Africa further helped it to become more powerful, dynamic intuitive, and user-friendly tool. Further, CDT can also be run at script level if a user requires more flexibility.</p>
+<p>CDT is now being used by different met agencies around the world for conducting the quality control of station data, generating merged data by merging station data with satellite or reanalysis data, conducting different climate data validation, analyses and visualizations. The features available in CDT can prove to be very helpful for researchers working in climate, hydrology, geography and other domains who have to work with climate data for doing their analyses.</p>
+<p>This book contains snapshots of different options available with hands-on practice with some fake or some pseudo data. Using a set of different datasets we will show how a user can utilize these options.</p>
+<p>CDT broadly offers the following functionalities:</p>
+<p>• Preparing station and proxy data;
+• Assessing data availability;
+• Quality control of data;
+• Blending or merging observation or station data with proxies;
+• Validation of data;
+• Analysis of data; and
+• Visualization of data.</p>
+</div>
+<div id="installation-of-cdt" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Installation of CDT</h2>
+<div id="cdt-installation-on-windows" class="section level3" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> CDT installation on Windows</h3>
+<div id="install-r" class="section level4" number="1.2.1.1">
+<h4><span class="header-section-number">1.2.1.1</span> Install R</h4>
+<p>Go to the CRAN website <a href="https://cran.r-project.org/">CRAN</a>. Then click on the link <a href="https://cran.r-project.org/bin/windows/">Download R for Windows</a> and <a href="https://cran.r-project.org/bin/windows/base/">base</a>. Download the latest version of R. For example: <a href="https://cran.r-project.org/bin/windows/base/R-4.0.3-win.exe">Download R 3.6.2 for Windows</a> (85 megabytes, 32/64 bit). Install the downloaded file (example: R-3.6.2-win.exe). Perform a default installation (Just click on Next).</p>
+</div>
+<div id="install-rtools" class="section level4" number="1.2.1.2">
+<h4><span class="header-section-number">1.2.1.2</span> Install Rtools</h4>
+<p>Go to the CRAN website <a href="https://cran.r-project.org/">CRAN</a>. Then click on the link <a href="https://cran.r-project.org/bin/windows/">Download R for Windows</a> and <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>. Download the recommended version of Rtools. Install the downloaded file. Follow the installation instructions on <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>.</p>
+</div>
+<div id="install-cdt" class="section level4" number="1.2.1.3">
+<h4><span class="header-section-number">1.2.1.3</span> Install CDT</h4>
+<p>Open R and install devtools package with:</p>
+<p><code>install.packages("devtools")</code></p>
+<p>Now, you can install the the development version of CDT from GitHub with:</p>
+<p><code>library(devtools)</code></p>
+<p><code>install_github("rijaf-iri/CDT")</code></p>
+</div>
+</div>
+<div id="cdt-installation-on-macos-x" class="section level3" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> CDT installation on MacOS X</h3>
+<div id="install-xquartz" class="section level4" number="1.2.2.1">
+<h4><span class="header-section-number">1.2.2.1</span> Install XQuartz</h4>
+<p>Type XQuartz in Apple’s search, if you don’t find it, it means XQuartz is not already installed. It’s better to update XQuartz to the latest version if it is already installed.
+Download and install it from <a href="https://www.xquartz.org" class="uri">https://www.xquartz.org</a>.
+Restart your computer.</p>
+</div>
+<div id="install-tcltk" class="section level4" number="1.2.2.2">
+<h4><span class="header-section-number">1.2.2.2</span> Install Tcl/Tk</h4>
+<p><strong>Check Tcl/Tk installation</strong></p>
+<p>Check if the Tcl/Tk libraries are already installed in your computer. Open a terminal and run the following command:</p>
+<p><code>echo 'puts $tcl_library;exit 0' | tclsh</code></p>
+<p>If Tcl/Tk libraries are installed in your computer, you should get the path to the Tcl library like this: <code>/usr/local/lib/tcl8.6</code>.</p>
+<p>If Tcl/Tk libraries are not yet installed in your computer, you can install ActiveTcl®. Go directly to the ActiveTcl® installation below.</p>
+<p><strong>Check Tktable package</strong></p>
+<p>Check if the package Tktable is installed. Run the following command from terminal:</p>
+<p><code>echo 'puts [package require Tktable];exit 0' | tclsh</code></p>
+<p>If the package is installed, you should have the version number of the package. If Tktable is not installed, you can download it from <a href="https://sourceforge.net/projects/tktable/files/tktable/2.10/Tktable2.10.tar.gz/download">here</a>.</p>
+<p>Change to the directory where you downloaded the <code>Tktable</code> archive file.</p>
+<p><code>cd ~/path/to/Tktable/archive</code></p>
+<p>Uncompressed the archive file.</p>
+<p><code>tar -zxvf Tktable2.10.tar.gz</code></p>
+<p>This will create a subdirectory <code>Tktable2.10</code> with all the files in it. Change to this directory.</p>
+<p><code>cd Tktable2.10</code></p>
+<p>The default installation path of <code>Tktable</code> is under <code>/usr/local</code>. If the Tcl Library Path directory is under this directory, you can install <code>Tktable</code> by default using the following commands:</p>
+<p><code>./configure</code></p>
+<p><code>make install</code></p>
+<p>If Tcl Library Path directory is anywhere else. Check the <code>auto_path</code> global variable using the following command</p>
+<p><code>echo 'puts $auto_path;exit 0' | tclsh</code></p>
+<p>You should have a list of directories like this: <code>/usr/local/lib/tcl8.6 /usr/local/lib</code>. You need to set the <code>--prefix</code> option of configure</p>
+<p><code>./configure --prefix=/usr/local</code></p>
+<p><code>make install</code></p>
+<p><strong>Check BWidget package</strong></p>
+<p>Check if the package BWidget is installed. Run the following command from terminal:</p>
+<p><code>echo 'puts [package require BWidget];exit 0' | tclsh</code></p>
+<p>If the package is installed, you should have the version number of the package. If <code>BWidget</code> is not installed, you can download it from <a href="https://sourceforge.net/projects/tcllib/files/BWidget/1.9.12/bwidget-1.9.12.zip/download">here</a>. Unzip the file <code>bwidget-1.9.12.zip</code> and copy it under the Tcl Library Path directory. Copy the bwidget directory <code>bwidget-1.9.12</code> under one of the <code>auto_path</code> global variable directories.</p>
+<p>Note If you install <code>Tktable</code> and <code>BWidget</code> anywhere else, remember the path you put the packages, you will need it when you install <code>CDT</code>.</p>
+<p><strong>Install ActiveTcl®</strong></p>
+<p>Download ActiveTcl® from <a href="https://www.activestate.com/products/activetcl/downloads/" class="uri">https://www.activestate.com/products/activetcl/downloads/</a>.
+ActiveTcl® executables will be installed (<em>wish</em>, <em>tclsh</em> and <em>tkcon</em>) in <code>/usr/local/bin</code> and the library will be put in <code>/usr/local/lib/tcl8.6</code> or <code>/usr/local/lib/tcl8.5</code> depending on the version.
+<em>Tktable</em> will be put in <code>/Library/Tcl/teapot/package/macosx10.5-i386-x86_64/lib/Tktable2.11</code> and <em>BWidget</em> in <code>/Library/Tcl/teapot/package/tcl/lib/BWidget1.9.8</code>.</p>
+</div>
+<div id="install-gdalgeosproj.4" class="section level4" number="1.2.2.3">
+<h4><span class="header-section-number">1.2.2.3</span> Install GDAL/GEOS/PROJ.4</h4>
+<p>Download and install GDAL binaries from <a href="http://www.kyngchaos.com/software/frameworks" class="uri">http://www.kyngchaos.com/software/frameworks</a>. Install the latest version of GDAL Complete.
+<em>GDAL</em> will be installed in <code>/Library/Frameworks/GDAL.framework</code>,
+<em>GEOS</em> in <code>/Library/Frameworks/GEOS.framework</code>
+and <em>PROJ</em> in <code>/Library/Frameworks/PROJ.framework</code>.
+The configuration files are located in
+<code>GEOS: /Library/Frameworks/GEOS.framework/unix/bin/geos-config</code>
+<code>GDAL: /Library/Frameworks/GDAL.framework/unix/bin/gdal-config</code>
+And <em>PROJ include</em> and <em>lib</em> are located in <code>/Library/Frameworks/PROJ.framework/unix/include</code> and <code>/Library/Frameworks/PROJ.framework/unix/lib</code> respectively.</p>
+<p>Remember these paths, you will need them when you install the package <em>rgdal</em> and <em>rgeos</em> on R.</p>
+</div>
+<div id="install-r-1" class="section level4" number="1.2.2.4">
+<h4><span class="header-section-number">1.2.2.4</span> Install R</h4>
+<p>Download and install R binary for your MacOS X version from <a href="https://cran.r-project.org/bin/macosx" class="uri">https://cran.r-project.org/bin/macosx</a></p>
+<p><code>CDT requires R version 3.5.0 or higher. We recommend that you have the latest version of R.</code></p>
+</div>
+<div id="install-rgeos-and-rgdal" class="section level4" number="1.2.2.5">
+<h4><span class="header-section-number">1.2.2.5</span> Install <em>rgeos</em> and <em>rgdal</em></h4>
+<p>Open R and install <em>rgdal</em> package with:</p>
+<p><code>install.packages("rgdal", type = "source",  configure.args = c(    "--with-proj-include=/Library/Frameworks/PROJ.framework/unix/include",     "--with-proj-lib=/Library/Frameworks/PROJ.framework/unix/lib",     "--with-gdal-config=/Library/Frameworks/GDAL.framework/unix/bin/gdal-config"   ) )</code>
+Install <em>rgeos</em> package with:</p>
+<p><code>install.packages("rgeos", type = "source",  configure.args =     "--with-geos-config=/Library/Frameworks/GEOS.framework/unix/bin/geos-config" )</code></p>
+</div>
+<div id="install-cdt-1" class="section level4" number="1.2.2.6">
+<h4><span class="header-section-number">1.2.2.6</span> Install CDT</h4>
+<p>Open R and install <em>devtools</em> package with:</p>
+<p><code>install.packages("devtools")</code></p>
+<p>Now, you can install the development version of CDT from GitHub with:
+<code>library(devtools)</code>
+<code>install_github("rijaf-iri/CDT")</code></p>
+<p>If you get a warning message telling you that <em>Tktable</em> or <em>BWidget</em> not found, you need to edit CDT’s local configuration for Tcl: <em>~/Library/Application Support/CDT/config/Tcl_config.json</em>. Go to the MacOS configuration and change <em>Tktable.auto</em> or <em>Bwidget.auto</em> to false, then set the full path to Tktable or BWidget directory with <em>Tktable.path</em> or <em>Bwidget.path</em>, as shown in the following example:</p>
+<p><code>"MacOS": {     "Tktable.auto": false,     "Tktable.path": "/Library/Tcl/teapot/package/macosx10.5-i386-x86_64/lib/Tktable2.11",     "Bwidget.auto": false,     "Bwidget.path": "/Library/Tcl/teapot/package/tcl/lib/BWidget1.9.8"   },</code></p>
+<p>After editing <em>Tcl_config.json</em>, save it. Open a new R session and load and start CDT.</p>
+</div>
+</div>
+<div id="cdt-installation-on-ubuntu" class="section level3" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> CDT installation on Ubuntu</h3>
+<div id="install-tcltk-1" class="section level4" number="1.2.3.1">
+<h4><span class="header-section-number">1.2.3.1</span> Install Tcl/Tk</h4>
+<p>Check if the <em>Tcl/Tk</em> libraries are already installed in your computer, make sure that the **-dev* packages are installed. If not, you can install it with:
+<code>sudo apt-get install tk-dev tcl-dev</code></p>
+<p>Check if the Tcl package <em>Tktable</em> is installed. If it is not installed, you can download it from <a href="https://sourceforge.net/projects/tktable/files/tktable/2.10/Tktable2.10.tar.gz/download">here</a>.</p>
+<p>Check if the Tcl package BWidget is installed. If it is not installed, you can download it from <a href="https://sourceforge.net/projects/tcllib/files/BWidget/1.9.12/bwidget-1.9.12.zip/download">here</a>.</p>
+<p>Note See MacOS X <em>Tktable</em> and <em>BWidget</em> installation.</p>
+</div>
+<div id="install-gdalogr" class="section level4" number="1.2.3.2">
+<h4><span class="header-section-number">1.2.3.2</span> Install GDAL/OGR</h4>
+<p>Add the <em>PPA</em> to your sources</p>
+<p><code>sudo add-apt-repository ppa:ubuntugis/ppa</code>
+<code>sudo apt-get update &amp;&amp; sudo apt-get upgrade</code></p>
+<p>Install GDAL</p>
+<p><code>sudo apt-get install gdal-bin libgdal-dev</code></p>
+<p>Verify the installation with</p>
+<p><code>ogrinfo</code></p>
+<p>Get the installation path of <em>gdal-config</em> and <em>geos-config</em>. Save these paths somewhere, you will need it later when installing the R packages <em>rgdal</em> and <em>rgeos</em>.</p>
+</div>
+<div id="install-netcdf" class="section level4" number="1.2.3.3">
+<h4><span class="header-section-number">1.2.3.3</span> Install NetCDF</h4>
+<p><code>sudo apt-get install netcdf-bin libnetcdf-dev</code></p>
+</div>
+<div id="install-r-2" class="section level4" number="1.2.3.4">
+<h4><span class="header-section-number">1.2.3.4</span> Install R</h4>
+<p>Install R if not installed yet. Add the R repository to your sources</p>
+<p><em>CDT requires R version 3.5.0 or higher. We recommend that you have the latest version of R, this implies that you have to install R from source.</em></p>
+<p><code>sudo add-apt-repository "deb http://cran.rstudio.com/bin/linux/ubuntu</code>
+<code>$(lsb_release -sc)/"</code>
+<code>sudo apt-get update</code></p>
+<p>Add GPG key</p>
+<p><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9</code></p>
+<p>Install R</p>
+<p><code>sudo apt-get install r-base r-base-dev</code></p>
+</div>
+<div id="install-r-package-ncdf4" class="section level4" number="1.2.3.5">
+<h4><span class="header-section-number">1.2.3.5</span> Install R package ncdf4</h4>
+<p><code>sudo apt-get install r-cran-ncdf4</code></p>
+<p>You can install ncdf4 package with:</p>
+<p><code>nc_config &lt;- '/usr/bin/nc-config' # edit the path</code></p>
+<p><code>install.packages('ncdf4', type = "source", configure.args = paste0('--with-nc-config=', nc_config))</code></p>
+</div>
+<div id="install-rgeos-and-rgdal-1" class="section level4" number="1.2.3.6">
+<h4><span class="header-section-number">1.2.3.6</span> Install rgeos and rgdal</h4>
+<p>Open R and install rgdal package with:</p>
+<p><code>gdal_config &lt;- '/usr/bin/gdal-config' ## edit the path</code></p>
+<p><code>proj_include &lt;- '/usr/include'</code></p>
+<p><code>proj_lib &lt;- '/usr/lib'</code></p>
+<p><code>install.packages("rgdal", type = "source",           configure.args = c(                        paste0('--with-proj-include=', proj_include),                         paste0('--with-proj-lib=', proj_lib),                         paste0('--with-gdal-config=', gdal_config)                       )                   )</code></p>
+<p>Install rgeos package with:</p>
+<p><code>geos_config &lt;- '/usr/bin/geos-config' ## edit the path</code></p>
+<p><code>install.packages("rgeos", type = "source",         configure.args = paste0('--with-geos-config=', geos_config)        )</code></p>
+</div>
+<div id="install-cdt-2" class="section level4" number="1.2.3.7">
+<h4><span class="header-section-number">1.2.3.7</span> Install CDT</h4>
+<p>Open R and install <em>devtools</em> package with:</p>
+<p><code>install.packages("devtools")</code></p>
+<p>Now, you can install the development version of CDT from GitHub with:</p>
+<p><code>devtools::install_github("rijaf-iri/CDT")</code></p>
+<p>If you get a warning message telling you that Tktable or BWidget not found, you need to edit CDT’s local configuration for Tcl: <code>~/.local/CDT/config/Tcl_config.json</code> Go to the Linux configuration and change <em>Tktable.auto</em> or <em>Bwidget.auto</em> to <em>false</em>, then set the full path to <em>Tktable</em> or <em>BWidget</em> directory with <em>Tktable.path</em> or <em>Bwidget.path</em>.</p>
+<p><strong>Usage</strong></p>
+<p><code>library(CDT) # Load  CDT library</code>
+<code>startCDT() # Starting CDT</code></p>
+</div>
+</div>
+<div id="updating-cdt" class="section level3" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> Updating CDT</h3>
+<p>To only update CDT without updating all dependencies packages, enter the following command on R console</p>
+<p><code>devtools::install_github("rijaf-iri/CDT", dependencies = FALSE, upgrade_dependencies = FALSE, force = TRUE)</code></p>
+<p>To update CDT and all dependencies packages, use</p>
+<p><code>update.packages(ask = FALSE)</code></p>
+<p><code>devtools::install_github("rijaf-iri/CDT")</code></p>
+</div>
+</div>
+<div id="getting-to-know-the-graphical-user-interface-of-cdt" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Getting to know the graphical user interface of CDT</h2>
+<p>Once we open CDT, we will see CDT GUI like below.</p>
+<p><img src="1.png" /></p>
+<p>The top Menu Bar holds all the major functions under different menus. When we choose a function from the Menu Bar, different options for doing the analyses are listed in the left portion of the GUI or Workspace in the left of the CDT. The right part of the window, or the Output area, shows different tabulation, visualizations and maps according to different functions that we choose to use. Status area at the bottom shows whether a task is correctly executed or not, the progress of a task and error message, if there is any.</p>
+<p>It will be convenient for the users to set the working directory as without setting it whenever we will try to use any data, it will always open the default working directory. We can set our data directory so as not to browse to our data directory every time we select different functions. For doing this, we click <em>File -&gt; Configuration</em>. After that, one needs to click on <strong>Set working directory</strong> to select our data directory. Then click on <strong>Save</strong> and then restart CDT to make this change into effect.</p>
+<p><img src="2_2.png" /></p>
 
 </div>
 </div>
@@ -215,7 +472,6 @@
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -234,6 +490,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -254,6 +511,10 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
