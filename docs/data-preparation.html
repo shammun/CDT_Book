@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Data preparation | Climate Data Tools (CDT)</title>
+  <meta name="description" content="CDT Book" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Data preparation | Climate Data Tools (CDT)" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://iri.columbia.edu/our-expertise/climate/tools/cdt/" />
+  
+  <meta property="og:description" content="CDT Book" />
+  <meta name="github-repo" content="shammun/CDT-Book" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Data preparation | Climate Data Tools (CDT)" />
+  
+  <meta name="twitter:description" content="CDT Book" />
+  
+
+<meta name="author" content="Shammunul Islam, Tufa Dinku, Rija Faniriantsoa" />
+
+
+<meta name="date" content="2022-06-16" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction-to-cdt.html"/>
+<link rel="next" href="quality-control.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">CDT Book</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html"><i class="fa fa-check"></i><b>1</b> Introduction to CDT</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#introduction"><i class="fa fa-check"></i><b>1.1</b> Introduction</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#installation-of-cdt"><i class="fa fa-check"></i><b>1.2</b> Installation of CDT</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#cdt-installation-on-windows"><i class="fa fa-check"></i><b>1.2.1</b> CDT installation on Windows</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#cdt-installation-on-macos-x"><i class="fa fa-check"></i><b>1.2.2</b> CDT installation on MacOS X</a></li>
+<li class="chapter" data-level="1.2.3" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#cdt-installation-on-ubuntu"><i class="fa fa-check"></i><b>1.2.3</b> CDT installation on Ubuntu</a></li>
+<li class="chapter" data-level="1.2.4" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#updating-cdt"><i class="fa fa-check"></i><b>1.2.4</b> Updating CDT</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction-to-cdt.html"><a href="introduction-to-cdt.html#getting-to-know-the-graphical-user-interface-of-cdt"><i class="fa fa-check"></i><b>1.3</b> Getting to know the graphical user interface of CDT</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-preparation.html"><a href="data-preparation.html"><i class="fa fa-check"></i><b>2</b> Data preparation</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data-preparation.html"><a href="data-preparation.html#cdt-station-data-format"><i class="fa fa-check"></i><b>2.1</b> CDT station data format</a></li>
+<li class="chapter" data-level="2.2" data-path="data-preparation.html"><a href="data-preparation.html#missing-values-in-cdt"><i class="fa fa-check"></i><b>2.2</b> Missing values in CDT</a></li>
+<li class="chapter" data-level="2.3" data-path="data-preparation.html"><a href="data-preparation.html#date-format"><i class="fa fa-check"></i><b>2.3</b> Date format</a></li>
+<li class="chapter" data-level="2.4" data-path="data-preparation.html"><a href="data-preparation.html#cdt-coordinates-file"><i class="fa fa-check"></i><b>2.4</b> CDT coordinates file</a></li>
+<li class="chapter" data-level="2.5" data-path="data-preparation.html"><a href="data-preparation.html#netcdf-data"><i class="fa fa-check"></i><b>2.5</b> NetCDF data</a></li>
+<li class="chapter" data-level="2.6" data-path="data-preparation.html"><a href="data-preparation.html#format-cdt-input-station-data"><i class="fa fa-check"></i><b>2.6</b> Format CDT input station data</a></li>
+<li class="chapter" data-level="2.7" data-path="data-preparation.html"><a href="data-preparation.html#creating-cdt-station-data-from-multiple-input-files"><i class="fa fa-check"></i><b>2.7</b> Creating CDT station data from multiple input files</a></li>
+<li class="chapter" data-level="2.8" data-path="data-preparation.html"><a href="data-preparation.html#observation-date-types"><i class="fa fa-check"></i><b>2.8</b> Observation date types</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="data-preparation.html"><a href="data-preparation.html#grouped"><i class="fa fa-check"></i><b>2.8.1</b> Grouped</a></li>
+<li class="chapter" data-level="2.8.2" data-path="data-preparation.html"><a href="data-preparation.html#separated"><i class="fa fa-check"></i><b>2.8.2</b> Separated</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="data-preparation.html"><a href="data-preparation.html#single-file"><i class="fa fa-check"></i><b>2.9</b> Single File</a></li>
+<li class="chapter" data-level="2.10" data-path="data-preparation.html"><a href="data-preparation.html#manipulating-cdt-station-data"><i class="fa fa-check"></i><b>2.10</b> Manipulating CDT station data</a></li>
+<li class="chapter" data-level="2.11" data-path="data-preparation.html"><a href="data-preparation.html#merge-two-cdt-station-data"><i class="fa fa-check"></i><b>2.11</b> Merge two CDT station data</a></li>
+<li class="chapter" data-level="2.12" data-path="data-preparation.html"><a href="data-preparation.html#filtering-cdt-station-data"><i class="fa fa-check"></i><b>2.12</b> Filtering CDT station data</a></li>
+<li class="chapter" data-level="2.13" data-path="data-preparation.html"><a href="data-preparation.html#selecting-cdt-station-data"><i class="fa fa-check"></i><b>2.13</b> Selecting CDT station data</a></li>
+<li class="chapter" data-level="2.14" data-path="data-preparation.html"><a href="data-preparation.html#assess-data-availability"><i class="fa fa-check"></i><b>2.14</b> Assess data availability</a></li>
+<li class="chapter" data-level="2.15" data-path="data-preparation.html"><a href="data-preparation.html#download-data-using-cdt"><i class="fa fa-check"></i><b>2.15</b> Download data using CDT</a>
+<ul>
+<li class="chapter" data-level="2.15.1" data-path="data-preparation.html"><a href="data-preparation.html#download-digital-elevation-model"><i class="fa fa-check"></i><b>2.15.1</b> Download Digital Elevation Model</a></li>
+<li class="chapter" data-level="2.15.2" data-path="data-preparation.html"><a href="data-preparation.html#download-different-country-administrative-boundaries-or-shapefile"><i class="fa fa-check"></i><b>2.15.2</b> Download different country administrative boundaries or shapefile</a></li>
+<li class="chapter" data-level="2.15.3" data-path="data-preparation.html"><a href="data-preparation.html#download-proxy-and-ancilliary-data"><i class="fa fa-check"></i><b>2.15.3</b> Download proxy and ancilliary data</a></li>
+<li class="chapter" data-level="2.15.4" data-path="data-preparation.html"><a href="data-preparation.html#download-satellite-rainfall-estimates-data"><i class="fa fa-check"></i><b>2.15.4</b> Download satellite rainfall estimates data</a></li>
+<li class="chapter" data-level="2.15.5" data-path="data-preparation.html"><a href="data-preparation.html#download-reanalysis-data"><i class="fa fa-check"></i><b>2.15.5</b> Download reanalysis data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.16" data-path="data-preparation.html"><a href="data-preparation.html#aggregate-data"><i class="fa fa-check"></i><b>2.16</b> Aggregate data</a>
+<ul>
+<li class="chapter" data-level="2.16.1" data-path="data-preparation.html"><a href="data-preparation.html#aggregating-time-series"><i class="fa fa-check"></i><b>2.16.1</b> Aggregating time series</a></li>
+<li class="chapter" data-level="2.16.2" data-path="data-preparation.html"><a href="data-preparation.html#aggregatedisaggregate-spatial-netcdf-data"><i class="fa fa-check"></i><b>2.16.2</b> Aggregate/disaggregate spatial NetCDF data</a></li>
+</ul></li>
+<li class="chapter" data-level="2.17" data-path="data-preparation.html"><a href="data-preparation.html#transform-netcdf-files-into-cdt-dataset"><i class="fa fa-check"></i><b>2.17</b> Transform NetCDF files into CDT dataset</a></li>
+<li class="chapter" data-level="2.18" data-path="data-preparation.html"><a href="data-preparation.html#data-extraction"><i class="fa fa-check"></i><b>2.18</b> Data extraction</a></li>
+<li class="chapter" data-level="2.19" data-path="data-preparation.html"><a href="data-preparation.html#split-netcdf-files-into-cdt-netcdf-format"><i class="fa fa-check"></i><b>2.19</b> Split NetCDF files into CDT NetCDF format</a></li>
+<li class="chapter" data-level="2.20" data-path="data-preparation.html"><a href="data-preparation.html#blank-grid-outside-polygons"><i class="fa fa-check"></i><b>2.20</b> Blank grid outside polygons</a></li>
+<li class="chapter" data-level="2.21" data-path="data-preparation.html"><a href="data-preparation.html#data-format-conversion"><i class="fa fa-check"></i><b>2.21</b> Data format conversion</a>
+<ul>
+<li class="chapter" data-level="2.21.1" data-path="data-preparation.html"><a href="data-preparation.html#conversion-to-cpt-format"><i class="fa fa-check"></i><b>2.21.1</b> Conversion to CPT format</a></li>
+<li class="chapter" data-level="2.21.2" data-path="data-preparation.html"><a href="data-preparation.html#converting-netcdfgeotiffesri-.hdr-labelled"><i class="fa fa-check"></i><b>2.21.2</b> Converting NetCDF/GeoTIFF/ESRI .hdr Labelled</a></li>
+<li class="chapter" data-level="2.21.3" data-path="data-preparation.html"><a href="data-preparation.html#converting-netcdfgeotiffesri-.hdr-labelled-1"><i class="fa fa-check"></i><b>2.21.3</b> Converting NetCDF/GeoTIFF/ESRI .hdr Labelled</a></li>
+<li class="chapter" data-level="2.21.4" data-path="data-preparation.html"><a href="data-preparation.html#create-grads-descriptor-file-from-cdt-netcdf-files"><i class="fa fa-check"></i><b>2.21.4</b> Create GrADS Descriptor File from CDT NetCDF files</a></li>
+</ul></li>
+<li class="chapter" data-level="2.22" data-path="data-preparation.html"><a href="data-preparation.html#filing-missing-dekadal-temperature-values"><i class="fa fa-check"></i><b>2.22</b> Filing missing dekadal temperature values</a></li>
+<li class="chapter" data-level="2.23" data-path="data-preparation.html"><a href="data-preparation.html#references"><i class="fa fa-check"></i><b>2.23</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="quality-control.html"><a href="quality-control.html"><i class="fa fa-check"></i><b>3</b> Quality Control</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="quality-control.html"><a href="quality-control.html#checking-station-coordinates"><i class="fa fa-check"></i><b>3.1</b> Checking station coordinates</a></li>
+<li class="chapter" data-level="3.2" data-path="quality-control.html"><a href="quality-control.html#false-zero-check-for-daily-rainfall"><i class="fa fa-check"></i><b>3.2</b> False-zero check for daily rainfall</a></li>
+<li class="chapter" data-level="3.3" data-path="quality-control.html"><a href="quality-control.html#outliers-check"><i class="fa fa-check"></i><b>3.3</b> Outliers check</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="quality-control.html"><a href="quality-control.html#outliers-check-for-rainfall-data"><i class="fa fa-check"></i><b>3.3.1</b> Outliers check for rainfall data</a></li>
+<li class="chapter" data-level="3.3.2" data-path="quality-control.html"><a href="quality-control.html#outliers-check-for-temperatures-data"><i class="fa fa-check"></i><b>3.3.2</b> Outliers check for temperatures data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="quality-control.html"><a href="quality-control.html#homogeneity-test"><i class="fa fa-check"></i><b>3.4</b> Homogeneity test</a></li>
+<li class="chapter" data-level="3.5" data-path="quality-control.html"><a href="quality-control.html#references-1"><i class="fa fa-check"></i><b>3.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="gridding.html"><a href="gridding.html"><i class="fa fa-check"></i><b>4</b> Gridding:</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="gridding.html"><a href="gridding.html#spatial-interpolation"><i class="fa fa-check"></i><b>4.1</b> Spatial Interpolation:</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="gridding.html"><a href="gridding.html#inverse-distance-weighting"><i class="fa fa-check"></i><b>4.1.1</b> Inverse Distance Weighting:</a></li>
+<li class="chapter" data-level="4.1.2" data-path="gridding.html"><a href="gridding.html#modified-shephards-method"><i class="fa fa-check"></i><b>4.1.2</b> Modified Shephard’s Method:</a></li>
+<li class="chapter" data-level="4.1.3" data-path="gridding.html"><a href="gridding.html#kriging"><i class="fa fa-check"></i><b>4.1.3</b> Kriging</a></li>
+<li class="chapter" data-level="4.1.4" data-path="gridding.html"><a href="gridding.html#spheremap-interpolation"><i class="fa fa-check"></i><b>4.1.4</b> Spheremap Interpolation</a></li>
+<li class="chapter" data-level="4.1.5" data-path="gridding.html"><a href="gridding.html#nearest-neighbor-and-nearest-neighbor-interpolation-with-elevation"><i class="fa fa-check"></i><b>4.1.5</b> Nearest Neighbor and nearest neighbor interpolation with elevation:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="gridding.html"><a href="gridding.html#merging"><i class="fa fa-check"></i><b>4.2</b> Merging:</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="gridding.html"><a href="gridding.html#downscaling-reanalysis"><i class="fa fa-check"></i><b>4.2.1</b> Downscaling reanalysis</a></li>
+<li class="chapter" data-level="4.2.2" data-path="gridding.html"><a href="gridding.html#bias-adjustment"><i class="fa fa-check"></i><b>4.2.2</b> Bias adjustment</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="gridding.html"><a href="gridding.html#merging-in-cdt"><i class="fa fa-check"></i><b>4.3</b> Merging in CDT</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="gridding.html"><a href="gridding.html#merging-rainfall-data-with-satellite-data"><i class="fa fa-check"></i><b>4.3.1</b> Merging rainfall data with satellite data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="gridding.html"><a href="gridding.html#references-2"><i class="fa fa-check"></i><b>4.4</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="validation.html"><a href="validation.html"><i class="fa fa-check"></i><b>5</b> Validation</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="validation.html"><a href="validation.html#spatial-points-data-cdt-format"><i class="fa fa-check"></i><b>5.1</b> Spatial Points Data (CDT Format)</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="validation.html"><a href="validation.html#precipitation-data"><i class="fa fa-check"></i><b>5.1.1</b> Precipitation data</a></li>
+<li class="chapter" data-level="5.1.2" data-path="validation.html"><a href="validation.html#temperature-data"><i class="fa fa-check"></i><b>5.1.2</b> Temperature data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="validation.html"><a href="validation.html#gridded-data-netcdf-format"><i class="fa fa-check"></i><b>5.2</b> Gridded Data (NetCDF Format)</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="validation.html"><a href="validation.html#precipitation-data-1"><i class="fa fa-check"></i><b>5.2.1</b> Precipitation data</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="validation.html"><a href="validation.html#validate-multiple-data-sets"><i class="fa fa-check"></i><b>5.3</b> Validate multiple data sets</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="validation.html"><a href="validation.html#precipitation-data-2"><i class="fa fa-check"></i><b>5.3.1</b> Precipitation Data</a></li>
+<li class="chapter" data-level="5.3.2" data-path="validation.html"><a href="validation.html#temperature-data-1"><i class="fa fa-check"></i><b>5.3.2</b> Temperature Data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>6</b> Analysis</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="analysis.html"><a href="analysis.html#potential-evapotranspiration"><i class="fa fa-check"></i><b>6.1</b> Potential evapotranspiration</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="analysis.html"><a href="analysis.html#hargreaves-method"><i class="fa fa-check"></i><b>6.1.1</b> Hargreaves method</a></li>
+<li class="chapter" data-level="6.1.2" data-path="analysis.html"><a href="analysis.html#modified-hargreaves-method"><i class="fa fa-check"></i><b>6.1.2</b> Modified Hargreaves method</a></li>
+<li class="chapter" data-level="6.1.3" data-path="analysis.html"><a href="analysis.html#water-balance"><i class="fa fa-check"></i><b>6.1.3</b> Water balance</a></li>
+<li class="chapter" data-level="6.1.4" data-path="analysis.html"><a href="analysis.html#drought-index"><i class="fa fa-check"></i><b>6.1.4</b> Drought Index</a></li>
+<li class="chapter" data-level="6.1.5" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-index-spi"><i class="fa fa-check"></i><b>6.1.5</b> Standardized precipitation index (SPI)</a></li>
+<li class="chapter" data-level="6.1.6" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-evapotranspiration-index-spei"><i class="fa fa-check"></i><b>6.1.6</b> Standardized precipitation evapotranspiration index (SPEI)</a></li>
+<li class="chapter" data-level="6.1.7" data-path="analysis.html"><a href="analysis.html#extreme-indices"><i class="fa fa-check"></i><b>6.1.7</b> Extreme Indices</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="analysis.html"><a href="analysis.html#summary-statistics-in-cdt"><i class="fa fa-check"></i><b>6.2</b> Summary statistics in CDT</a></li>
+<li class="chapter" data-level="6.3" data-path="analysis.html"><a href="analysis.html#derived-climate-variables"><i class="fa fa-check"></i><b>6.3</b> Derived Climate Variables</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="analysis.html"><a href="analysis.html#potential-evapotranspiration-1"><i class="fa fa-check"></i><b>6.3.1</b> Potential evapotranspiration</a></li>
+<li class="chapter" data-level="6.3.2" data-path="analysis.html"><a href="analysis.html#water-balance-1"><i class="fa fa-check"></i><b>6.3.2</b> Water balance</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="analysis.html"><a href="analysis.html#compute-climatologies"><i class="fa fa-check"></i><b>6.4</b> Compute Climatologies</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="analysis.html"><a href="analysis.html#climatologies"><i class="fa fa-check"></i><b>6.4.1</b> Climatologies</a></li>
+<li class="chapter" data-level="6.4.2" data-path="analysis.html"><a href="analysis.html#anomalies"><i class="fa fa-check"></i><b>6.4.2</b> Anomalies</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="analysis.html"><a href="analysis.html#spatial-analysis"><i class="fa fa-check"></i><b>6.5</b> Spatial Analysis</a></li>
+<li class="chapter" data-level="6.6" data-path="analysis.html"><a href="analysis.html#daily-rainfall-analysis"><i class="fa fa-check"></i><b>6.6</b> Daily Rainfall Analysis</a></li>
+<li class="chapter" data-level="6.7" data-path="analysis.html"><a href="analysis.html#rainy-season-characteristics"><i class="fa fa-check"></i><b>6.7</b> Rainy Season Characteristics</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="analysis.html"><a href="analysis.html#season-onset"><i class="fa fa-check"></i><b>6.7.1</b> Season onset</a></li>
+<li class="chapter" data-level="6.7.2" data-path="analysis.html"><a href="analysis.html#season-cessation"><i class="fa fa-check"></i><b>6.7.2</b> Season Cessation</a></li>
+<li class="chapter" data-level="6.7.3" data-path="analysis.html"><a href="analysis.html#season-length"><i class="fa fa-check"></i><b>6.7.3</b> Season Length</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="analysis.html"><a href="analysis.html#rainy-season-analysis"><i class="fa fa-check"></i><b>6.8</b> Rainy Season Analysis</a></li>
+<li class="chapter" data-level="6.9" data-path="analysis.html"><a href="analysis.html#climate-extreme-indices"><i class="fa fa-check"></i><b>6.9</b> Climate Extreme Indices</a>
+<ul>
+<li class="chapter" data-level="6.9.1" data-path="analysis.html"><a href="analysis.html#extreme-indices-for-rainfall"><i class="fa fa-check"></i><b>6.9.1</b> Extreme Indices for Rainfall</a></li>
+<li class="chapter" data-level="6.9.2" data-path="analysis.html"><a href="analysis.html#extreme-indices-for-temperature"><i class="fa fa-check"></i><b>6.9.2</b> Extreme Indices for Temperature</a></li>
+</ul></li>
+<li class="chapter" data-level="6.10" data-path="analysis.html"><a href="analysis.html#drought-indices"><i class="fa fa-check"></i><b>6.10</b> Drought Indices</a>
+<ul>
+<li class="chapter" data-level="6.10.1" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-index-spi-1"><i class="fa fa-check"></i><b>6.10.1</b> Standardized Precipitation Index (SPI)</a></li>
+<li class="chapter" data-level="6.10.2" data-path="analysis.html"><a href="analysis.html#standardized-precipitation-evapotranspiration-index-spei-1"><i class="fa fa-check"></i><b>6.10.2</b> Standardized Precipitation Evapotranspiration Index (SPEI)</a></li>
+<li class="chapter" data-level="6.10.3" data-path="analysis.html"><a href="analysis.html#deciles-1"><i class="fa fa-check"></i><b>6.10.3</b> Deciles</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="visualization.html"><a href="visualization.html"><i class="fa fa-check"></i><b>7</b> Visualization</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="visualization.html"><a href="visualization.html#plot-cdt-station-data"><i class="fa fa-check"></i><b>7.1</b> Plot CDT Station Data</a></li>
+<li class="chapter" data-level="7.2" data-path="visualization.html"><a href="visualization.html#plot-cdt-gridded-dataset"><i class="fa fa-check"></i><b>7.2</b> Plot CDT Gridded Dataset</a></li>
+<li class="chapter" data-level="7.3" data-path="visualization.html"><a href="visualization.html#plot-netcdf-data-one-file"><i class="fa fa-check"></i><b>7.3</b> Plot NetCDF Data (One File)</a></li>
+<li class="chapter" data-level="7.4" data-path="visualization.html"><a href="visualization.html#plot-netcdf-data-sequential-files"><i class="fa fa-check"></i><b>7.4</b> Plot NetCDF Data (Sequential Files)</a></li>
+<li class="chapter" data-level="7.5" data-path="visualization.html"><a href="visualization.html#plot-netcdf-data-multiple-variables"><i class="fa fa-check"></i><b>7.5</b> Plot NetCDF Data (Multiple Variables)</a></li>
+<li class="chapter" data-level="7.6" data-path="visualization.html"><a href="visualization.html#plot-multiple-data-sets"><i class="fa fa-check"></i><b>7.6</b> Plot multiple data sets</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://iri.columbia.edu/our-expertise/climate/tools/cdt/" target="blank">Published by IRI</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Climate Data Tools (CDT)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-preparation" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Data preparation</h1>
+<p>The CDT has a number of operation geared towards data preparation including organizing station data, assessing availability of observations, downloading and processing proxy data such as satellite rainfall estimates and climate model reanalysis products. Climate data are stored in several different formats and they can have different spatial and temporal dimensions. This makes dealing with climate data somewhat challenging as a user might be required to resort to different tools for cross-platform data type matching. CDT doesn’t completely do away with this, but it allows users to convert data with different spatial and temporal dimension to the dimension preferred or needed by the user. CDT has its own data type, and a user can convert his/her data in different format to CDT data type, if required, as some functions in CDT will strictly require CDT data format. Station data can be uploaded into CDT in in text and comma-separated-values (CSV) formats. Data from the WMO-supported climate data management systems (CDMS) used by NMS in Africa is also supported in the CDT. Station data needs to be converted to CDT format and once it is done, we can manipulate station data, merge two CDT station data, filter a particular CDT station data, select CDT stations according to the percentage of non-missing data, access data availability in different stations etc. We can download and process different proxy and anciliary data including digital elevation model, shapefile, satellite rainfall estimates data and reanalysis data inside CDT. You can also download different data products by specifying your area of interest and CDT will download automatically these for you. CDT can also access data from Climsoft without needing any conversion while it can also access data from CLISYS and CLIDAT but then it needs to be converted to text or CSV format files. Sometimes you need to aggregate data to perform different tasks and thus CDT also allows you to aggregate time series, aggregate or disaggregate spatial NetCDF data etc. CDT also allows you to extract point data from gridded data (NetCDF file) where these points could be stations or any other locations according to a user’s need. CDT also has many other features for converting data from one format such as NetCDF format into other format such as CDT NetCDF format.</p>
+<div id="cdt-station-data-format" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> CDT station data format</h2>
+<p>Meteorological data from different met services can come at different temporal dimensions such as hourly, daily, pentad (5-days), dekadal (10-days) or monthly and CDT can handle all of these different series. Each of the input stations data should be stored in a text/ASCII or CSV (Comma-separated values) format file.</p>
+<p>All the series from different stations for one variable are put together on a single file. It is the standard input data format used by CDT, in which the first line is the ID or name of the stations (avoid putting space in stations name), the second and third lines are longitude and latitude of the stations, and the fourth line is elevation data in meter (if it exists), and the following lines contain the observations, and the first column is the date of observations. The following tables show the format of the data.</p>
+<p><img src="3_2.png" /></p>
+<p><img src="4.png" /></p>
+</div>
+<div id="missing-values-in-cdt" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Missing values in CDT</h2>
+<p>CDT use “-99” to flag missing values in the data series and “-9999” for anomalies data. You can use your own missing values flag (the missing values code you provided must be exactly the same as used in the data; for example, “-99.” and “-99.0” are different; you can not use “-99.” when “-99.0” is used in the input data series; it will produce some odd results).</p>
+</div>
+<div id="date-format" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Date format</h2>
+<p>Date format must be grouped and there are several options available for specifying dates. For representational convenience, we represent years with 4 digit numbers denoted as YYYY, months as 2 digit numbers denoted as MM (between 01 and 12), the hour of day as also 2 digit numbers denoted as HH ranging between 00 and 23. Pentad divides every month into 6 parts where pentad 1 represents days between day 1 and 5, pentad 2 represents days between 6 and 10, pentad 3 represents days between 11 and 15, pentad 4 represents days between 16 and 20, pentad 5 represents days between 21 and 25, and pentad 5 represents days between 26 and the end of the month. Pentad is denoted as P. There are 3 dekads in a month where dekad 1 represents days between 1 and 10, dekad 2 represents days between 11 and 20, and dekad 3 represents days between 21 and the end of the month. Let dekad be denoted as D. The allowed date formats in CDT are shown in the table below.</p>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Date series</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Hourly</td>
+<td>Daily</td>
+<td>Pentad</td>
+<td>Dekadal</td>
+<td>Monthly</td>
+</tr>
+<tr class="even">
+<td>Format</td>
+<td>YYYYMMDDHH</td>
+<td>YYYYMMDD</td>
+<td>YYYYMMP</td>
+<td>YYYYMMD</td>
+<td>YYYYMM</td>
+</tr>
+<tr class="odd">
+<td>Example</td>
+<td>2020022823 for 23th hour of February 28th, 2020</td>
+<td>20200228 for February 28th, 2020</td>
+<td>1981126 for 6th pentad of December, 1981</td>
+<td>2001023 for 3rd dekad of February, 2001</td>
+<td>202105 for May, 2021</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="cdt-coordinates-file" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> CDT coordinates file</h2>
+<p>Sometimes CDT asks for the coordinates of the stations if it is not included in the file containing the data, i.e., the coordinates are stored in a separate file. CDT has a specific format to store the coordinates, in which the first column contains the ID or name of the stations (avoid putting space), the second column is for the long name of the stations, the third and fourth are longitude and latitude of the stations, the fifth column contains the elevation data in meter, and the following columns can contain any information about the stations.</p>
+<p>You can edit the coordinates file on Excel spreadsheet and save it as a Comma Separated Values (CSV) file. It is useful for working on empty cells. If you edit the coordinates on Excel spreadsheet, you can leave blank the cells with missing values or fill it with missing values flag.</p>
+<p><img src="5_2.png" /></p>
+<p><strong>Note:</strong> The columns 1 to 5 must be present in the coordinates file and the order must be respected. The column containing the ID or name of the stations must be complete, this column shall not contain blank or missing values. The columns containing longitude and latitude of the stations shall not contain blank if you edit the coordinates file on Excel spreadsheet, you have to fill the blank with missing value code. You can leave blank the columns containing the long name and the elevation if they are not available.</p>
+<p>You can add a header to this file, and specify it when you import the data to CDT.</p>
+</div>
+<div id="netcdf-data" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> NetCDF data</h2>
+<p>NetCDF files contain one or more variables, which are usually structured as regular multi-dimensional arrays. CDT can handle 2D (lat/lon) NetCDF data with several variables, in other words data for each date should be stored in a separate file, and a file may contain only data for one hour, day, pentad, dekad or month. For example, if we have a dekadal rainfall series, then the data for each dekad should be stored in a separate file as shown in the table below:</p>
+<p><img src="5_3.png" /></p>
+</div>
+<div id="format-cdt-input-station-data" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Format CDT input station data</h2>
+<p>To perform different analyses and to use different functionalities available in CDT, you first need to convert row or station data to CDT station data format. To do this, in the Menu bar, click this path Data Preparation -&gt; Format CDT Input Station Data.</p>
+<p>Using CDT, we can format these two types of input files:</p>
+<ul>
+<li>Data for different stations are already grouped in a single file but not in CDT station format</li>
+<li>Each station has its data stored in a separate file</li>
+</ul>
+<p><img src="6_2.png" /></p>
+<ol style="list-style-type: decimal">
+<li>Select the temporal frequency of your data. CDT gives three options: daily, dekadal and monthly data.</li>
+<li>Select the time period for the final CDT station data output, even if different stations have different data ranges. If there are missing dates for some stations that do not match the selected period, the values for those dates will be filled with missing values.</li>
+<li>Enter the minimum percentage of non-missing values from a station to be selected for the selected period for the CDT station data output. If a station has a lower percentage of non-missing values than the specified percentage, it will be dropped in the CDT station data output.</li>
+<li>If the station data you have are in multiple files corresponding to multiple stations, select Multiple Files. If all the station data are in a single file, select Single File.</li>
+<li>Click on Input File Setting to set the required parameters for the input file.</li>
+<li>We can either type or click on <img src="7_1.png" /> to set the full path of the CDT station data output file. In case of the latter, a file dialog will open where we can write or select the full path of the output file. You can save it either as txt or CSV (comma separated values) file.</li>
+</ol>
+</div>
+<div id="creating-cdt-station-data-from-multiple-input-files" class="section level2" number="2.7">
+<h2><span class="header-section-number">2.7</span> Creating CDT station data from multiple input files</h2>
+<p>In this case, each station has its own separate file. Several formats are possible, the data can either have header (the column names) or not and can contain one or three variables in the following order: <em>precipitation - maximum temperature - minimum temperature</em>. Observations dates can be grouped or separated. The following examples give us an overview of possibility.</p>
+<p><img src="8.png" /></p>
+</div>
+<div id="observation-date-types" class="section level2" number="2.8">
+<h2><span class="header-section-number">2.8</span> Observation date types</h2>
+<p>Observations dates can have two types of template formats: grouped and separated. These are discussed below.</p>
+<div id="grouped" class="section level3" number="2.8.1">
+<h3><span class="header-section-number">2.8.1</span> Grouped</h3>
+<p>There is no space between the years (YYYY), months (MM), dekads (D) or the days (DD).</p>
+<p><strong>Daily series:</strong> YYYYMMDD; YYYY: year, MM: month (01-12), DD: day (01-31)</p>
+<p><strong>Dekadal series:</strong> YYYYMMD; YYYY: year, MM: month (01-12), D: dekad (1-3)</p>
+<p><strong>Monthly series:</strong> YYYYMM; YYYY: year, MM: month (01-12)</p>
+</div>
+<div id="separated" class="section level3" number="2.8.2">
+<h3><span class="header-section-number">2.8.2</span> Separated</h3>
+<p>Date separation depends on the field separator character of the file (space, tabs, comma, semicolon, …), the month and day format can be one or two digits.</p>
+<p><strong>Daily series:</strong> YYYY MM DD</p>
+<p><strong>Dekadal series:</strong> YYYY MM D</p>
+<p><strong>Monthly series:</strong> YYYY MM</p>
+<p><strong>Example:</strong></p>
+<p>As a simple illustration, suppose we have a daily precipitation data for 5 stations, each station has its own file and the name of each file should be the IDs of the station.</p>
+<p><img src="8_2.png" /></p>
+<p>The format of data for each station must be the same. If we have a daily time series with separated date, the format of data in each file should be as follows</p>
+<p><img src="8_3.png" width="250" /></p>
+<p>And the coordinates of the stations are saved in a separate file and in the format CDT coordinates file which we discussed before.</p>
+<p><img src="9.png" /></p>
+<p>To provide all of this information to CDT, click on the button Input File Setting, it displays a dialog box</p>
+<p><img src="10_2.png" /></p>
+<ol style="list-style-type: decimal">
+<li>Enter the full path to directory containing the station files, or browse through <img src="7_1.png" /></li>
+<li>Provide a sample of the data. Click on <img src="7_1.png" /> and then click on one of the files.</li>
+</ol>
+<p><img src="11_1.png" /></p>
+<p>As we click on Open, we will see a dialog box similar to the following image. Note that we selected <strong>Space</strong> as <strong>Delimiters</strong> and <strong>FALSE</strong> for <strong>First row as header</strong>. Then click <strong>OK</strong>.</p>
+<p><img src="11_2.png" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Select the file containing the station coordinates, if it is not opened yet, open it from <img src="7_1.png" />
+Once we select and open this file, we will see another dialog box. Note that, as there is a header in this file, we selected <strong>TRUE</strong> for <strong>First row as header</strong> and selected <strong>Comma</strong> for <strong>Delimiters</strong>. Then click OK.</li>
+</ol>
+<p><img src="11_4.png" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Check this box, if you want to include the elevation data to the final CDT station data output, the CDT coordinates file must have a non-missing elevation data.</p></li>
+<li><p>Choose the number of climate variables in the file. In our example, we have only one variable (daily rainfall).</p></li>
+<li><p>Choose the format of date (grouped or separated). In our example, the date is separated with the format <em>YYYY MM DD</em>.</p></li>
+<li><p>Click on OK.</p></li>
+</ol>
+<p>After that, click on <img src="12.png" /> in the Tool bar to generate CDT station data from multiple station files.</p>
+</div>
+</div>
+<div id="single-file" class="section level2" number="2.9">
+<h2><span class="header-section-number">2.9</span> Single File</h2>
+<p>This time, all station data are already put together in a single file with a specific format which are described below. After selecting <strong>Single File</strong> from the drop-down list <strong>Format of input files</strong> and clicking the button <strong>Input File Setting</strong>, the following dialog box will appear.</p>
+<p><img src="13_2.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select the file containing the station data to be formatted, if the file is not loaded yet and therefore not listed, use <img src="7_1.png" /> to open it.</p></li>
+<li><p>Check this box, if the coordinates of the station are included in the data.</p></li>
+<li><p>Select the file containing the station coordinates, if it is not included in the file containing the data. If the file is not loaded yet and therefore not listed, use <img src="7_1.png" /> to open it.</p></li>
+<li><p>Check this box, if you want to include the elevation data to the final CDT station data output, provided that the data file contains an elevation data or the elevation data is not missing on the coordinates file.</p></li>
+<li><p>Specify the column number for:</p>
+<ol style="list-style-type: lower-alpha">
+<li><strong>COL.ID</strong>: stations IDs</li>
+<li><strong>COL.LON</strong>: longitude</li>
+<li><strong>COL.LAT</strong>: latitude</li>
+<li><strong>COL.ELEV</strong>: elevation data</li>
+<li><strong>COL.YEAR</strong>: column containing the year</li>
+<li><strong>COL.MONTH</strong>: month</li>
+<li><strong>COL.DAY/DEK</strong>: column containing the day or dekad</li>
+<li><strong>COL.DATA</strong>: column containing the climate variable or from which climate variable starts</li>
+</ol></li>
+<li><p>Select the number of columns containing the climate variable.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>For daily data, there are 2 possible formats:</p>
+<ul>
+<li>1 column: the climate variable is placed in a single column.</li>
+</ul>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 2.1: </span>Daily data: 1 column format</caption>
+<thead>
+<tr class="header">
+<th align="right">STATION_ID</th>
+<th align="right">LONGITUDE</th>
+<th align="right">LATITUDE</th>
+<th align="right">YEAR</th>
+<th align="right">MONTH</th>
+<th align="right">DAY</th>
+<th align="right">PRECIP</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">102001</td>
+<td align="right">29.40</td>
+<td align="right">-1.90</td>
+<td align="right">2004</td>
+<td align="right">7</td>
+<td align="right">1</td>
+<td align="right">-99.0</td>
+</tr>
+<tr class="even">
+<td align="right">102001</td>
+<td align="right">29.40</td>
+<td align="right">-1.90</td>
+<td align="right">2004</td>
+<td align="right">7</td>
+<td align="right">2</td>
+<td align="right">0.0</td>
+</tr>
+<tr class="odd">
+<td align="right">102001</td>
+<td align="right">29.40</td>
+<td align="right">-1.90</td>
+<td align="right">2004</td>
+<td align="right">7</td>
+<td align="right">3</td>
+<td align="right">10.6</td>
+</tr>
+<tr class="even">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="odd">
+<td align="right">102001</td>
+<td align="right">29.40</td>
+<td align="right">-1.90</td>
+<td align="right">2005</td>
+<td align="right">3</td>
+<td align="right">30</td>
+<td align="right">2.0</td>
+</tr>
+<tr class="even">
+<td align="right">102001</td>
+<td align="right">29.40</td>
+<td align="right">-1.90</td>
+<td align="right">2005</td>
+<td align="right">3</td>
+<td align="right">31</td>
+<td align="right">0.0</td>
+</tr>
+<tr class="odd">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="even">
+<td align="right">102305</td>
+<td align="right">28.75</td>
+<td align="right">-2.28</td>
+<td align="right">2004</td>
+<td align="right">10</td>
+<td align="right">1</td>
+<td align="right">-99.0</td>
+</tr>
+<tr class="odd">
+<td align="right">102305</td>
+<td align="right">28.75</td>
+<td align="right">-2.28</td>
+<td align="right">2004</td>
+<td align="right">10</td>
+<td align="right">2</td>
+<td align="right">0.5</td>
+</tr>
+<tr class="even">
+<td align="right">102305</td>
+<td align="right">29.75</td>
+<td align="right">-2.28</td>
+<td align="right">2004</td>
+<td align="right">10</td>
+<td align="right">3</td>
+<td align="right">0.0</td>
+</tr>
+<tr class="odd">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="even">
+<td align="right">102304</td>
+<td align="right">29.91</td>
+<td align="right">1.05</td>
+<td align="right">2004</td>
+<td align="right">7</td>
+<td align="right">1</td>
+<td align="right">-99.0</td>
+</tr>
+<tr class="odd">
+<td align="right">102304</td>
+<td align="right">29.91</td>
+<td align="right">1.05</td>
+<td align="right">2004</td>
+<td align="right">7</td>
+<td align="right">2</td>
+<td align="right">-99.0</td>
+</tr>
+<tr class="even">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>31 columns: each month the climate variable is placed in 31 columns, one column is equivalent to one day.</li>
+</ul>
+<table style="width:100%;">
+<colgroup>
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+<col width="4%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>station ID</th>
+<th>station name</th>
+<th>Abbreviation</th>
+<th>longitude</th>
+<th>latitude</th>
+<th>elevation</th>
+<th>district</th>
+<th>Year</th>
+<th>Month</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>…</th>
+<th>26</th>
+<th>27</th>
+<th>28</th>
+<th>29</th>
+<th>30</th>
+<th>31</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>10201</td>
+<td>AZONTO</td>
+<td>Prec</td>
+<td>29.4</td>
+<td>-1.9</td>
+<td>1675</td>
+<td>ARLOT</td>
+<td>2004</td>
+<td>7</td>
+<td>-99</td>
+<td>0</td>
+<td>10.6</td>
+<td>0</td>
+<td>0</td>
+<td>…</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>8.5</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>10201</td>
+<td>AZONTO</td>
+<td>Prec</td>
+<td>29.4</td>
+<td>-1.9</td>
+<td>1675</td>
+<td>ARLOT</td>
+<td>2004</td>
+<td>8</td>
+<td>16.1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>…</td>
+<td>0</td>
+<td>10.1</td>
+<td>0</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Format of data: 31 columns, coordinates included</p>
+<p><img src="15_1.png" /></p>
+<p>Format of data: 31 columns, coordinates on a separate file</p>
+<p><img src="16_1.png" /></p></li>
+</ol></li>
+</ol>
+<p><strong>Note</strong></p>
+<p>If you edit the data on Excel spreadsheet, you can leave blank the cells with missing values or fill it with missing values flag, then save it as a Comma Separated Values (CSV) file.</p>
+<p>In addition, you can leave empty a whole line.</p>
+<p>For dekadal data, there are 3 possible formats:</p>
+<ul>
+<li>1 column: the climate variable is placed in a single column and the coordinates are included.</li>
+</ul>
+<table>
+<caption><span id="tab:unnamed-chunk-2">Table 2.2: </span>Climate variable in a single column</caption>
+<thead>
+<tr class="header">
+<th align="right">STATION_ID</th>
+<th align="right">LONGITUDE</th>
+<th align="right">LATITUDE</th>
+<th align="right">YEAR</th>
+<th align="right">MONTH</th>
+<th align="right">DEKAD</th>
+<th align="right">PRECIP</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">102001</td>
+<td align="right">29.40</td>
+<td align="right">-1.90</td>
+<td align="right">2004</td>
+<td align="right">7</td>
+<td align="right">1</td>
+<td align="right">-99.0</td>
+</tr>
+<tr class="even">
+<td align="right">102001</td>
+<td align="right">29.40</td>
+<td align="right">-1.90</td>
+<td align="right">2004</td>
+<td align="right">7</td>
+<td align="right">2</td>
+<td align="right">0.0</td>
+</tr>
+<tr class="odd">
+<td align="right">102001</td>
+<td align="right">29.40</td>
+<td align="right">-1.90</td>
+<td align="right">2004</td>
+<td align="right">7</td>
+<td align="right">3</td>
+<td align="right">10.6</td>
+</tr>
+<tr class="even">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="odd">
+<td align="right">102305</td>
+<td align="right">28.75</td>
+<td align="right">-2.28</td>
+<td align="right">2004</td>
+<td align="right">12</td>
+<td align="right">3</td>
+<td align="right">2.0</td>
+</tr>
+<tr class="even">
+<td align="right">102305</td>
+<td align="right">28.75</td>
+<td align="right">-2.28</td>
+<td align="right">2005</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">0.0</td>
+</tr>
+<tr class="odd">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="even">
+<td align="right">102304</td>
+<td align="right">29.91</td>
+<td align="right">1.05</td>
+<td align="right">2004</td>
+<td align="right">7</td>
+<td align="right">3</td>
+<td align="right">-99.0</td>
+</tr>
+<tr class="odd">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="even">
+<td align="right">102021</td>
+<td align="right">30.20</td>
+<td align="right">0.90</td>
+<td align="right">2004</td>
+<td align="right">9</td>
+<td align="right">3</td>
+<td align="right">-99.0</td>
+</tr>
+<tr class="odd">
+<td align="right">102021</td>
+<td align="right">30.20</td>
+<td align="right">0.90</td>
+<td align="right">2004</td>
+<td align="right">10</td>
+<td align="right">1</td>
+<td align="right">31.3</td>
+</tr>
+<tr class="even">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="odd">
+<td align="right">102308</td>
+<td align="right">28.50</td>
+<td align="right">-1.30</td>
+<td align="right">2005</td>
+<td align="right">6</td>
+<td align="right">2</td>
+<td align="right">84.0</td>
+</tr>
+<tr class="even">
+<td align="right">102308</td>
+<td align="right">28.50</td>
+<td align="right">-1.30</td>
+<td align="right">2005</td>
+<td align="right">6</td>
+<td align="right">3</td>
+<td align="right">42.6</td>
+</tr>
+<tr class="odd">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>3 columns: each month the climate variable is placed in 3 columns, one column is equivalent to one dekad.</li>
+</ul>
+<table>
+<caption><span id="tab:unnamed-chunk-3">Table 2.3: </span>Each month the climate variable is placed in 3 columns</caption>
+<thead>
+<tr class="header">
+<th align="right">STATION_ID</th>
+<th align="right">LONGITUDE</th>
+<th align="right">LATITUDE</th>
+<th align="right">YEAR</th>
+<th align="right">MONTH</th>
+<th align="right">dekad1</th>
+<th align="right">dekad2</th>
+<th align="right">dekad3</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">102001</td>
+<td align="right">29.40</td>
+<td align="right">-1.90</td>
+<td align="right">2004</td>
+<td align="right">7</td>
+<td align="right">31.3</td>
+<td align="right">14.6</td>
+<td align="right">19.3</td>
+</tr>
+<tr class="even">
+<td align="right">102001</td>
+<td align="right">29.40</td>
+<td align="right">-1.90</td>
+<td align="right">2004</td>
+<td align="right">8</td>
+<td align="right">53.2</td>
+<td align="right">10.1</td>
+<td align="right">20.1</td>
+</tr>
+<tr class="odd">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="even">
+<td align="right">102305</td>
+<td align="right">28.75</td>
+<td align="right">-2.28</td>
+<td align="right">2004</td>
+<td align="right">11</td>
+<td align="right">25.8</td>
+<td align="right">6.2</td>
+<td align="right">5.3</td>
+</tr>
+<tr class="odd">
+<td align="right">102305</td>
+<td align="right">28.75</td>
+<td align="right">-2.28</td>
+<td align="right">2004</td>
+<td align="right">12</td>
+<td align="right">0.7</td>
+<td align="right">0.0</td>
+<td align="right">12.0</td>
+</tr>
+<tr class="even">
+<td align="right">102305</td>
+<td align="right">28.75</td>
+<td align="right">-2.28</td>
+<td align="right">2005</td>
+<td align="right">1</td>
+<td align="right">12.5</td>
+<td align="right">16.6</td>
+<td align="right">61.0</td>
+</tr>
+<tr class="odd">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="even">
+<td align="right">102304</td>
+<td align="right">29.91</td>
+<td align="right">1.05</td>
+<td align="right">2004</td>
+<td align="right">10</td>
+<td align="right">1.0</td>
+<td align="right">2.8</td>
+<td align="right">7.0</td>
+</tr>
+<tr class="odd">
+<td align="right">102304</td>
+<td align="right">29.91</td>
+<td align="right">1.05</td>
+<td align="right">2004</td>
+<td align="right">11</td>
+<td align="right">-99.0</td>
+<td align="right">-99.0</td>
+<td align="right">-99.0</td>
+</tr>
+<tr class="even">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="odd">
+<td align="right">102021</td>
+<td align="right">30.20</td>
+<td align="right">0.90</td>
+<td align="right">2004</td>
+<td align="right">9</td>
+<td align="right">-99.0</td>
+<td align="right">-99.0</td>
+<td align="right">-99.0</td>
+</tr>
+<tr class="even">
+<td align="right">102021</td>
+<td align="right">30.20</td>
+<td align="right">0.90</td>
+<td align="right">2004</td>
+<td align="right">10</td>
+<td align="right">31.3</td>
+<td align="right">14.6</td>
+<td align="right">19.3</td>
+</tr>
+<tr class="odd">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="even">
+<td align="right">102308</td>
+<td align="right">28.50</td>
+<td align="right">-1.30</td>
+<td align="right">2004</td>
+<td align="right">9</td>
+<td align="right">-99.0</td>
+<td align="right">-99.0</td>
+<td align="right">**</td>
+</tr>
+<tr class="odd">
+<td align="right">102308</td>
+<td align="right">28.50</td>
+<td align="right">-1.30</td>
+<td align="right">2004</td>
+<td align="right">10</td>
+<td align="right">1.0</td>
+<td align="right">2.8</td>
+<td align="right">7.0</td>
+</tr>
+<tr class="even">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>36 columns: In this case, each year the climate variable is placed in 36 columns where one column is equivalent to one dekad. Here, the coordinates are also included.</li>
+</ul>
+<p><img src="19_1.png" /></p>
+<p>For dealing with monthly data, there are 2 possible formats that can be used in CDT.</p>
+<ul>
+<li>1 column: In this case, the climate variable is placed in a single column.</li>
+</ul>
+<table>
+<caption><span id="tab:unnamed-chunk-4">Table 2.4: </span>Monthly data placed in a single column</caption>
+<thead>
+<tr class="header">
+<th align="right">STATION_ID</th>
+<th align="right">LONGITUDE</th>
+<th align="right">LATITUDE</th>
+<th align="right">YEAR</th>
+<th align="right">MONTH</th>
+<th align="right">precip</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">102001</td>
+<td align="right">29.40</td>
+<td align="right">-1.90</td>
+<td align="right">2004</td>
+<td align="right">7</td>
+<td align="right">65.2</td>
+</tr>
+<tr class="even">
+<td align="right">102001</td>
+<td align="right">29.40</td>
+<td align="right">-1.90</td>
+<td align="right">2004</td>
+<td align="right">8</td>
+<td align="right">83.4</td>
+</tr>
+<tr class="odd">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="even">
+<td align="right">102001</td>
+<td align="right">30.20</td>
+<td align="right">0.90</td>
+<td align="right">2004</td>
+<td align="right">12</td>
+<td align="right">193.8</td>
+</tr>
+<tr class="odd">
+<td align="right">102001</td>
+<td align="right">30.20</td>
+<td align="right">0.90</td>
+<td align="right">2005</td>
+<td align="right">1</td>
+<td align="right">18.1</td>
+</tr>
+<tr class="even">
+<td align="right">102001</td>
+<td align="right">30.20</td>
+<td align="right">0.90</td>
+<td align="right">2005</td>
+<td align="right">2</td>
+<td align="right">69.3</td>
+</tr>
+<tr class="odd">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="even">
+<td align="right">102305</td>
+<td align="right">28.75</td>
+<td align="right">-2.28</td>
+<td align="right">2004</td>
+<td align="right">9</td>
+<td align="right">-99.0</td>
+</tr>
+<tr class="odd">
+<td align="right">102305</td>
+<td align="right">28.75</td>
+<td align="right">-2.28</td>
+<td align="right">2004</td>
+<td align="right">10</td>
+<td align="right">10.8</td>
+</tr>
+<tr class="even">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="odd">
+<td align="right">102308</td>
+<td align="right">28.50</td>
+<td align="right">-1.30</td>
+<td align="right">2005</td>
+<td align="right">5</td>
+<td align="right">27.0</td>
+</tr>
+<tr class="even">
+<td align="right">102308</td>
+<td align="right">28.50</td>
+<td align="right">-1.30</td>
+<td align="right">2005</td>
+<td align="right">6</td>
+<td align="right">183.6</td>
+</tr>
+<tr class="odd">
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+<td align="right">**</td>
+</tr>
+<tr class="even">
+<td align="right">102304</td>
+<td align="right">29.91</td>
+<td align="right">1.05</td>
+<td align="right">2005</td>
+<td align="right">3</td>
+<td align="right">183.6</td>
+</tr>
+<tr class="odd">
+<td align="right">102304</td>
+<td align="right">29.91</td>
+<td align="right">1.05</td>
+<td align="right">2005</td>
+<td align="right">4</td>
+<td align="right">-99.0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>12 columns: Here, each year the climate variable is placed in 12 columns where one column is equivalent to one month.</p>
+<p><img src="21_1.png" /></p></li>
+</ul>
+<p>Click on the button <img src="12.png" /> in the <em>Tool bar</em> to execute.</p>
+</div>
+<div id="manipulating-cdt-station-data" class="section level2" number="2.10">
+<h2><span class="header-section-number">2.10</span> Manipulating CDT station data</h2>
+<p>This section of the CDT allows you to merge two CDT stations data, filter CDT station data and select CDT station data by excluding one station data from another. These features are available under the Menu <strong>Data Preparation -&gt; Manipulating CDT Station Data</strong>.</p>
+</div>
+<div id="merge-two-cdt-station-data" class="section level2" number="2.11">
+<h2><span class="header-section-number">2.11</span> Merge two CDT station data</h2>
+<p>To merge CDT station data from two different files into one file, use <strong>Data Preparation -&gt; Manipulating CDT Station Data -&gt; Merge two CDT station data</strong>. This will display a dialog box like the following.</p>
+<p><img src="22_3.png" /></p>
+<ol style="list-style-type: decimal">
+<li>Select the first CDT station data with the drop down list if it is already loaded, or open it through <img src="7_1.png" /></li>
+<li>Similarly, select the second CDT station data either using drop down if it was loaded before or using <img src="7_1.png" /></li>
+<li>Enter the name of the file to save the merged CDT station data or the full path to the file. You can also click on <img src="7_1.png" />, it opens a file dialog where you can select or type the name, path and type of file, either txt or csv.</li>
+<li>Now, click <strong>OK</strong>. This will close the dialog box.</li>
+</ol>
+<p>Now, click on the button <img src="12.png" /> in the Tool bar to execute the merging of these two CDT files. After it is executed, a new file will be created in the specified folder as you selected in step 3.</p>
+</div>
+<div id="filtering-cdt-station-data" class="section level2" number="2.12">
+<h2><span class="header-section-number">2.12</span> Filtering CDT station data</h2>
+<p>In the CDT station data, if you want to include only the stations that have a given percentage of available data, use <strong>Data Preparation -&gt; Manipulating CDT Station Data -&gt; Filtering CDT Station Data</strong>. It will display a dialog box like below.</p>
+<p><img src="23_3.png" /></p>
+<ol style="list-style-type: decimal">
+<li>Select the file containing the station data to be filtered, if the file is not loaded yet and therefore not listed, use <img src="7_1.png" /> to open it.</li>
+<li>Select from the drop down list the operator to be used. You can use any of the following operators: <strong>&gt;=</strong> (greater than or equal to), <strong>&gt;</strong> (greater than), <strong>&lt;=</strong> (less than or equal to), <strong>&lt;</strong> (less than), and then enter the percentage of data to be filtered.</li>
+<li>Enter the name of the file to save the filtered stations data or the full path to the file. You can also click on <img src="7_1.png" />, it opens a file dialog where you can select or type the name, path and type of the file, either txt or csv.</li>
+<li>Now, click <strong>OK</strong>. This will close the dialog box.</li>
+</ol>
+<p>Now, click on the button <img src="12.png" /> in the Tool bar to execute filtering the CDT station data. After it is executed, a new file will be created with only those stations that meet the requirement specified in step 2.</p>
+</div>
+<div id="selecting-cdt-station-data" class="section level2" number="2.13">
+<h2><span class="header-section-number">2.13</span> Selecting CDT station data</h2>
+<p>Use <strong>Data Preparation -&gt; Manipulating CDT Station Data -&gt; Selecting CDT station data</strong>
+to use this feature. This option allows to select some stations with a given percentage of available data from a CDT station data format and these stations are not included in other CDT station data.</p>
+<p><img src="24_2.png" />
+1. Select the file containing the station data in which some stations will be selected, if the file is not loaded yet and therefore not listed, use <img src="7_1.png" /> to open it.
+2. Select the file containing the station data that will not be included on the output. These stations are included in (<strong>1</strong>), but will be excluded when filtering the data from (<strong>1</strong>).
+3. Select from the drop down list the operator to be used. You can use any of the following operators: <strong>&gt;=</strong> (greater than or equal to), <strong>&gt;</strong> (greater than), <strong>&lt;=</strong> (less than or equal to), <strong>&lt;</strong> (less than), and then enter the percentage of data to be filtered.
+4. Enter the name of the file to save the selected stations data or the full path to the file. You can also click on <img src="7_1.png" />, it opens a file dialog where you can select or type the name, path and type of file (txt or csv).
+5. Now, click <strong>OK</strong>. This will close the dialog box.</p>
+<p>Now, click on the button <img src="12.png" /> in the Tool bar to execute selecting the CDT station data by excluding some CDT station data as specified in step 2 and also excluding the stations that did not meet the filter criteria as specified in step 3. After it is executed, a new file will be created with only those stations that meet the requirement.</p>
+</div>
+<div id="assess-data-availability" class="section level2" number="2.14">
+<h2><span class="header-section-number">2.14</span> Assess data availability</h2>
+<p>Using this feature, we can check both the spatial and temporal availability of station data. We can avail this using the menu <strong>Data Preparation -&gt; Assess Data Availability</strong>. This will open a widget in the Workspace in the left panel. Using this widget, you can enter or specify your input data, parameters and select different output options which will show output accordingly in the <strong>Output area</strong>.</p>
+<p>The tab <strong>Input Data</strong> allows to specify the input station data.</p>
+<p><img src="25_2.png" /></p>
+<ol style="list-style-type: decimal">
+<li>Select the time step of the station data to assess. You can choose from 4 different time steps which are daily, pentad, dekadal and monthly.</li>
+<li>Select from the drop-down list the file containing the station data if it is already loaded, or open it from the browse button on the right.</li>
+<li>Type the full path to the folder to save the outputs, or use the browse button <img src="7_1.png" />.</li>
+<li>Click the button <strong>Assess Data Availability</strong> to run the assessment.</li>
+</ol>
+<p>This creates a folder named <strong>ASSESS.DATA.AVAILABILITY_data</strong> under the folder you provided (3) to save the results of the assessment. Inside this folder 2 directories and 1 file are created:</p>
+<ul>
+<li><strong>CDTDATASET</strong>: directory containing all the required files used by CDT</li>
+<li><strong>CDTSTATIONS</strong>: directory containing 4 CSV files, Annual_Average_number-stations.csv: yearly average, minimum and maximum number of stations reporting data, DataAvailability_percentage.csv: percentage of non missing values for each station in CDT station data format, Monthly_non-missing.csv: number of non missing data for each station and each month in CDT station format. Yearly_non-missing.csv: number of non missing data for each station and each year in CDT station format.</li>
+<li><strong>AssessDataAvailability.rds</strong>: an index file, you will need to reload the outputs of the assessment if you want to visualize the results later.</li>
+</ul>
+<p><strong>Note</strong>: Each time you perform a station data availability assessment, rename the folder <strong>ASSESS.DATA.AVAILABILITY_data</strong> or change the folder to save the outputs because CDT overwrites it.</p>
+<p>The tab <strong>Maps</strong> allows to display a map of the percentage of non-missing values and the number of non-missing values for each year.</p>
+<p><img src="26_2.png" /></p>
+<ol style="list-style-type: decimal">
+<li>If you already performed a station data availability assessment, you do not need to run it again, you can check this box, the input field below will be activated and you can provide the full path to <strong>AssessDataAvailability.rds</strong> under the folder <strong>ASSESS.DATA.AVAILABILITY_data</strong> by browsing to it through the button on the right.</li>
+<li>Click on the button <strong>PLOT</strong> to display a map of the percentage of available data. The button <strong>Options</strong> allows you to change the colorkey settings, the label of the axis and the title of the map.</li>
+</ol>
+<p><img src="27_1.png" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>To display a map of the number of non-missing values for each year, enter the year to be displayed then click on the button <strong>PLOT</strong>. You can use the buttons <strong>&lt;&lt;</strong> and <strong>&gt;&gt;</strong> to switch to the previous or next year. The button <strong>Options</strong> allows you to change the colorkey settings, the label of the axis and the title of the map etc.</li>
+</ol>
+<p><img src="28_3.png" /></p>
+<p>The tab <strong>Graphs</strong> allows to display a chart or table of available data, the annual average of station reporting data, and a distance-correlation graphic.</p>
+<p><img src="29_2.png" /></p>
+<ol style="list-style-type: decimal">
+<li>Select here the station you want to display the chart or the table of available data. If you select the station from the drop-down list, click on the button <strong>PLOT</strong> to display the chart and <strong>DISPLAY</strong> for table. You can use the buttons <strong>&lt;&lt;</strong> and <strong>&gt;&gt;</strong> to switch to the previous or next station.</li>
+<li>Select what you want to display, <strong>Chart</strong> or <strong>Table</strong>.
+The chart displays the number of non-missing value for each year</li>
+</ol>
+<p><img src="30_1.png" /></p>
+<p>The table displays the number of non-missing value for each month.</p>
+<p><img src="31_1.png" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Click the button Non-Missing Data Annual Average to display a graphic of the average number of stations reporting data each year.</li>
+</ol>
+<p><img src="32_1.png" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Click the button <strong>Non-Missing Data Summary</strong> to display a graphic of the activities of the stations. The pink area represents the number of station reporting data and the cyan area represents the number of station with missing values (the stations are supposed to be in running but not report data).</li>
+</ol>
+<p><img src="33_1.png" /></p>
+<ol start="5" style="list-style-type: decimal">
+<li>The button <strong>Distance -&gt; Correlation</strong> displays a graphic based on distance and correlation. It allows you to have an overview on the quality of the spatial interpolation when you want to interpolate those stations data.</li>
+</ol>
+<p><img src="34_1.png" /></p>
+<p>The tab <strong>Boundaries</strong> allows to add a shapefile on the map.</p>
+<p><img src="35_1.png" /></p>
+<p>Check the box and select the shapefile from the drop-down list or open it from to add boundaries to the active map. Click on the button <strong>Options</strong> to change the width and of the color of the lines.</p>
+</div>
+<div id="download-data-using-cdt" class="section level2" number="2.15">
+<h2><span class="header-section-number">2.15</span> Download data using CDT</h2>
+<p>Users can download different data including digital elevation model, shapefile, satellite rainfall estimates data and reanalysis data inside CDT for meteorological and climatological analysis. We can specify the spatial domain (area of interest), temporal domain and time domain of interest and CDT will download accordingly these for us. Using IRI data library, many of these data products can be downloaded from either the IRI Data Library (Blumenthal et al., 2014) or from the original source for the respective data product.</p>
+<p>The following eight rainfall estimates are available through CDT:</p>
+<ul>
+<li>ARC (Africa Rainfall Climatology; Novella and Thiaw, 2013);</li>
+<li>CHIRP/S (the Climate Hazards Group Infrared Precipitation and combined with station data; Funk et al., 2015).</li>
+<li>CMORPH [Climate Prediction Center (CPC) Morphing Techniques; Joyce et al., 2004],</li>
+<li>GPM (Global Precipitation Measurement Mission; Hou et al., 2014)</li>
+<li>PERSIANN (Precipitation Estimation from Remotely Sensed Information using Artificial Neural Networks; Nguyen et al., 2018)</li>
+<li>RFE [Famine Early Warning System NETwork (FEWS NET) satellite rainfall estimate; Xie et al., 2017],</li>
+<li>TAMSAT [Tropical Applications of Meteorology using SATellite and ground-based observations (TAMSAT); Grimes et al., 1999; Thorne et al., 2001]</li>
+<li>TMPA (TRMM Multi- Satellite Precipitation Analysis; Huffman et al., 2010).</li>
+</ul>
+<p>For temperature data, three different climate reanalysis products are available:</p>
+<ul>
+<li>Japanese 55-year Reanalysis (JRA55);</li>
+<li>Modern-Era Retrospective Analysis 2 (MERRA2); and</li>
+<li>European Center for Medium-Range Weather Forecasts (ECMWF-ERA5).</li>
+</ul>
+<p>CDT also allows users to download ancillary data such as digital elevation models and country administrative boundaries as shapefiles. Once data is downloaded, it can be further processed using different aggregation functions such as sum, average, minimum, maximum, count, etc. NetCDF format is the native gridded data format used by CDT and it can export data to different formats such as Climate Predictability Tool (CPT), GeoTiff, and GrADS.</p>
+<div id="download-digital-elevation-model" class="section level3" number="2.15.1">
+<h3><span class="header-section-number">2.15.1</span> Download Digital Elevation Model</h3>
+<p>Using the menu <strong>Data Preparation -&gt; Download Digital Elevation Model</strong> will open a dialog box using which we can download digital elevation model with a spatial resolution of 1 and 2 arc-minute for different areas as specified by you.</p>
+<p><img src="36_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li>Set the bounding box of the area to be downloaded. Type in the fields the minimum and maximum of the longitude and latitude in degree decimal.</li>
+<li>Specify the folder to save the downloaded DEM by browsing it from the button or typing the full path to the folder.</li>
+</ol>
+<p>Two files in NetCDF format will be downloaded into the folder you specified in (2):</p>
+<ol style="list-style-type: decimal">
+<li>DEM_1_Arc-Minute.nc: ETOPO1 Grid Registered 1 Arc-Minute Global Relief Model.</li>
+<li>DEM_2_Arc-Minute.nc: ETOPO2v2c Global Gridded 2-minute elevation and bathymetric data.</li>
+</ol>
+</div>
+<div id="download-different-country-administrative-boundaries-or-shapefile" class="section level3" number="2.15.2">
+<h3><span class="header-section-number">2.15.2</span> Download different country administrative boundaries or shapefile</h3>
+<p>The menu <strong>Data Preparation -&gt; Download Country boundary</strong> allows to download the country outlines and administrative subdivisions for countries from one of the three continents, namely, Africa, South East Asia and South-Central America and Caribbean from <a href="https://gadm.org/index.html">GADM</a> data.</p>
+<p><img src="37_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li>Select the region where the country is located</li>
+<li>Select the country from the drop-down list.</li>
+<li>Select the administrative subdivisions to download. 0 is the country boundaries, 1 is the first subdivision (example: Region), 2 is the second subdivision (example: District), 3 is the third subdivision (example: Sub-district), and so on.</li>
+<li>Specify the folder to save the downloaded ESRI shapefile by browsing it from the button or typing the full path to the folder.</li>
+<li>Click on Download to download the shapefile according to the specifications.</li>
+</ol>
+</div>
+<div id="download-proxy-and-ancilliary-data" class="section level3" number="2.15.3">
+<h3><span class="header-section-number">2.15.3</span> Download proxy and ancilliary data</h3>
+<p>Using CDT, users can download and process different proxy and ancilliary data for meteorological and climatological analysis. For rainfall, satellite rainfall estimates are available whereas for temperature, renaalysis products are available through CDT. The following eight rainfall estimates are available through CDT:</p>
+<ul>
+<li>ARC (Africa Rainfall Climatology; Novella and Thiaw, 2013);</li>
+<li>CHIRP/S (the Climate Hazards Group Infrared Precipitation and combined with station data; Funk et al., 2015).</li>
+<li>CMORPH [Climate Prediction Center (CPC) Morphing Techniques; Joyce et al., 2004],</li>
+<li>GPM (Global Precipitation Measurement Mission; Hou et al., 2014)</li>
+<li>PERSIANN (Precipitation Estimation from Remotely Sensed Information using Artificial Neural Networks; Nguyen et al., 2018)</li>
+<li>RFE [Famine Early Warning System NETwork (FEWS NET) satellite rainfall estimate; Xie et al., 2017],</li>
+<li>TAMSAT [Tropical Applications of Meteorology using SATellite and ground-based observations (TAMSAT); Grimes et al., 1999; Thorne et al., 2001]</li>
+<li>TMPA (TRMM Multi- Satellite Precipitation Analysis; Huffman et al., 2010).</li>
+</ul>
+<p>For temperature data, three different climate reanalysis products are available:</p>
+<ul>
+<li>Japanese 55-year Reanalysis (JRA55);</li>
+<li>Modern-Era Retrospective Analysis 2 (MERRA2); and</li>
+<li>European Center for Medium-Range Weather Forecasts (ECMWF-ERA5).</li>
+</ul>
+<p>The CDT allows users to download data according to the spatial and temporal dimension of their interest, thus allowing the users to subset according to their needs. These datasets can also be downloaded using IRI Data Library (Blumenthal et al., 2014)</p>
+</div>
+<div id="download-satellite-rainfall-estimates-data" class="section level3" number="2.15.4">
+<h3><span class="header-section-number">2.15.4</span> Download satellite rainfall estimates data</h3>
+<p>The menu <strong>Data Preparation -&gt; Download Data -&gt; Download Satellite Rainfall Estimates</strong> data allows to download satellite rainfall products from 30 minutes to monthly temporal resolution.</p>
+<p><img src="38_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select the temporal resolution of the satellite rainfall estimate product to download. Different options available for time resolution are: minutes data, hourly data, daily data, pentad data, dekadal data and monthly data.</p></li>
+<li><p>In case of minutes or hourly data, select here the time step.</p></li>
+<li><p>Select the satellite rainfall estimate product to download. There are different options available according to different time resolutions.</p></li>
+<li><p>Set the date and time range of the data to download. See Setting date range for more details.</p></li>
+<li><p>If the satellite rainfall estimate product requires a login to download the data, enter here the user name and the password you use to log in to your account. The URL of the website for login is displayed next to the label Login to. If you do not have an account yet, you can sign up to this URL.</p></li>
+<li><p>Click this button to display the information about the data. It will open your default web browser and display the link to the data or relevant information about the data.</p></li>
+<li><p>In case of this checkbox is activated, check it if you want to download the data from the Data Library of IRI. The IRI Data Library allows you to subset the data before downloading it into your computer, and it makes the download faster.</p></li>
+<li><p>Set the bounding box of the area to be downloaded. Type in the fields the minimum and maximum of the longitude and latitude in degree decimal.</p></li>
+<li><p>Specify the folder to save the downloaded rainfall data by browsing it from the button or typing the full path to the folder. Click Download to start downloading data according to the specifications you provided.</p></li>
+</ol>
+<p>A folder containing the downloaded data will be created under the directory you provided in (9). This folder is created from the name of the satellite rainfall estimate product and the time step of the data. For the example shown in the figure, a new folder named <strong>CHIRP_dekadal</strong> will be created as CHIRP (Global) with dekadal time step was selected.</p>
+</div>
+<div id="download-reanalysis-data" class="section level3" number="2.15.5">
+<h3><span class="header-section-number">2.15.5</span> Download reanalysis data</h3>
+<p>The menu <strong>Data Preparation -&gt; Download Data -&gt; Download Reanalysis data</strong> allows to download the minimum and maximum temperature data from different reanalysis products.</p>
+<p><img src="39_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select the variable you want to download. For the moment CDT allows you to download 2 variables minimum and maximum temperature.</p></li>
+<li><p>Select the reanalysis product. CDT allows you to get the data from 3 reanalysis products: JRA-55 (3 hourly temporal resolution), MERRA-2 (daily temporal resolution) and ERA5 (still under construction).</p></li>
+<li><p>Select the data portal you want to use to download the data.</p>
+<p><strong>Note for JRA-55</strong></p>
+<p>The portal rda.ucar.edu is updated every 6 month, use this portal if you want to download a long series of data.</p>
+<p>The portal jra.kishou.go.jp is updated every 3 hour with approximately 2 days latency, use this portal if you want to download the latest available data.</p></li>
+<li><p>Set the date and time range of the data to download. See Setting date range for more details.</p></li>
+<li><p>If the data portal requires a login to download the data, enter here the user name and the password you use to log in to your account. The URL of the data portal is displayed next to the label Login to. If you do not have an account yet, you can sign up to this URL.</p></li>
+<li><p>Click this button to display the information about the data. It will open your default web browser and display the link to the data portal.</p></li>
+<li><p>In case this field is activated, enter here the full path to the executable of the software (GrADS or python) displayed on the label above to be used to format and extract the data. Check it if you want to download the data from the Data Library of IRI. The IRI Data Library allows you to subset the data before downloading it into your computer, and it makes the download faster.</p></li>
+<li><p>Set the bounding box of the area to be downloaded. Type in the fields the minimum and maximum of the longitude and latitude in degree decimal.</p></li>
+<li><p>Specify the folder to save the downloaded data by browsing it from the button or typing the full path to the folder.</p></li>
+</ol>
+<p>A folder containing the downloaded data will be created under the directory you provided in (9). This folder is created from the name of the reanalysis product and the time step of the data.</p>
+</div>
+</div>
+<div id="aggregate-data" class="section level2" number="2.16">
+<h2><span class="header-section-number">2.16</span> Aggregate data</h2>
+<div id="aggregating-time-series" class="section level3" number="2.16.1">
+<h3><span class="header-section-number">2.16.1</span> Aggregating time series</h3>
+<p>The menu <strong>Data Preparation -&gt; Aggregate Data -&gt; Aggregating Time Series</strong> allows to perform a temporal aggregation. For example, if you have daily data, you can aggregate into pentad, dekadal, monthly or seasonal data.</p>
+<p><img src="40_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select the temporal resolution of the input data to aggregate. Valid options: minutes, hourly, daily, pentad, dekadal or monthly data.</p></li>
+<li><p>In case of minutes and hourly, select here the time step of the input data.</p></li>
+<li><p>Select the time step in which the data will be aggregated.</p>
+<p>Minutes: If the time step of input is minutes (5, 10, 15 and 30), you can aggregate it to a minutes data with a time step greater than the input.</p>
+<p>Hourly: If the time step of input is minutes (5, 10, 15 and 30) or hourly (1, 3, 6 and 12), you can aggregate it to a hourly data with a time step greater than the input for hourly input data.
+Daily: If the time step of input is minutes (5, 10, 15 and 30) or hourly (1, 3, 6 and 12), you can aggregate it to a daily data.
+Pentad: There are 6 pentads in a calendar month. The pentad must be 1, 2, 3, 4, 5 or 6; pentad 1 (contains the days from the 1st to 5th), pentad 2 (6th to 10th), pentad 3 (11th to 15th), pentad 4 (16th to 20th), pentad 5 (21st to 25th) and pentad 6 (26th to the end of the month).
+Dekadal: There are 3 dekads in a calendar month. The dekad must be 1, 2 or 3; dekad 1 (contains the days from the 1st to 10th), dekad 2 (11th to 20th) and dekad 3 (21st to the end of the month).
+Monthly: The data will be aggregated monthly.
+Annual: The data will be aggregated from January to December for each year.
+Seasonal: The data will be aggregated for each season of the year. The length of the season varies from 2 to 12 months.
+Rolling Seasonal: The data will be aggregated over a rolling season. For example, for a seasonal data with 3 months length, the following seasons will be calculated for each year: JFM, FMA, MAM, AMJ, MJJ, JJA, JAS, ASO, SON, OND, NDJ, DJF.</p></li>
+<li><p>If the outputs are minutes or hourly, select the time step of the aggregated data.</p></li>
+<li><p>If the inputs are minutes (5, 10, 15 and 30) or hourly (1 and 3) and the output time step is daily, specify here the observation hour to compute the daily data. For example: the cumulative rainfall recorded on 2018-07-30 at 9:00 is the rainfall for the day 2018-07-29.</p></li>
+<li><p>If the outputs are seasonal, select the start month of the season.</p></li>
+<li><p>If the outputs are seasonal or rolling seasonal, select the length of the season.</p></li>
+<li><p>Select the input data format to convert. Available data formats are: CDT stations data format, CDT dataset format (gridded) and NetCDF gridded data.</p></li>
+<li><p>If the input data is a CDT station data format, select from the drop-down list the file containing the station data to be converted if it is already loaded, or open it from the browse button on the right. If the input data is a CDT dataset format (gridded), type the full path to the index file of the CDT dataset or browse it. In case of NetCDF gridded data, type the full path to the folder containing the NetCDF files or browse it.</p></li>
+<li><p>In case of NetCDF gridded data, click on the button Settings. A dialog box will be displayed in which you can set the date range, provide a sample file and change the filename format of the NetCDF file.</p></li>
+</ol>
+<p><img src="41_1.png" />
+a. Set the date range of the data to be aggregated. See Setting date range for more details.
+b. Provide a NetCDF sample file.
+c. Change the filename format to conform with the NetCDF files name. See NetCDF filename format for more details.</p>
+<ol start="11" style="list-style-type: decimal">
+<li><p>Select the function to use to aggregate the data. Valid options: mean (average), sum (total), max (maximum) or min (minimum). If the time step of the input data is daily, a function count is available which allows to compute the number of days when a variable is less or greater than a given threshold.</p></li>
+<li><p>Minimum fraction of available data that must be present within each output time step (otherwise result is missing).</p></li>
+<li><p>In case of the function count, select the operator to be applied.</p></li>
+<li><p>In case of the function count, specify the threshold to be used.</p></li>
+<li><p>If the input data is a CDT station data format, type the name of the file to save the aggregated data or the full path to the file or browse it from the button on the right. For CDT dataset format (gridded) and NetCDF gridded data, type the full path to the folder to save the aggregated data or browse it.</p></li>
+</ol>
+<p>Click on the button <img src="12.png" /> to aggregate the data.</p>
+<p>For CDT dataset format (gridded) and NetCDF gridded data, the aggregated data are saved in a new folder named Aggregated_Data under the folder you provided to save the output in (15).</p>
+</div>
+<div id="aggregatedisaggregate-spatial-netcdf-data" class="section level3" number="2.16.2">
+<h3><span class="header-section-number">2.16.2</span> Aggregate/disaggregate spatial NetCDF data</h3>
+<p>The menu <strong>Data Preparation -&gt; Aggregate Data -&gt; Aggregate/Disaggregate Spatial NetCDF data</strong> allows to perform spatial aggregation and disaggregation, or, regridding. Regridding is the process of interpolating from one grid resolution to a different grid resolution. For example, if you have a file with 5 km by 5km resolution and you want to covert this to 10 km by 10km resolution, then the process of converting from 5km resolution to 10km resolution is called regridding. Similarly, if you have a file with 5 km resolution and you want to get it in a finer, say, 2km resolution, then this is also called regridding.</p>
+<p><img src="42_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select the number of files to regrid. Valid options: One NetCDF file or Multiple NetCDF files.</p></li>
+<li><p>If you want to regrid one NetCDF file, select the file from the drop-down list if it is already loaded or open it from the button on the right. In case of multiple NetCDF files, type the full path to the folder containing the NetCDF files or browse it.</p></li>
+<li><p>In case of multiple NetCDF files, provide a NetCDF sample file.</p></li>
+<li><p>The bounding box and the resolution of the data will be displayed in this area.</p></li>
+<li><p>Check this box if the grid points to be used for the regridding are from other NetCDF file.</p></li>
+<li><p>Provide the NetCDF file whose grid will be used to regrid the data.</p></li>
+<li><p>Select the regridding to use. Valid options:</p></li>
+</ol>
+<ul>
+<li>Aggregate: Regrid data from high resolution into coarse resolution.</li>
+<li>Disaggregate: Regrid data from coarse resolution into high resolution. Spatial disaggregation should be used and interpreted with the utmost caution. No additional information other than what is already contained in the original data is obtained.</li>
+</ul>
+<ol start="8" style="list-style-type: decimal">
+<li><p>In case of aggregation, if you set yourself the new grid, two interpolation methods are available: mean and bilinear interpolation. The mean method consist in averaging the values from the old grid points which are included in the new grid point. This method is usually used to aggregate elevation data from a high resolution Digital Elevation Model. If you use a grid points from other NetCDF file, the bilinear method only is available. For disaggregation, only the bilinear method is available.</p></li>
+<li><p>If a grid from other NetCDF data is not used to regrid, (5 is not checked), specify here the bounding box and the resolution of the new grid.</p></li>
+<li><p>Type the full path to the folder to save the regridded data or browse it.</p></li>
+<li><p>If (5) is checked, check this box if you want to change the names of the variable and dimensions of the regridded NetCDF files to be the same as the NetCDF file used for regridding.</p></li>
+</ol>
+<p>Click on the button <img src="12.png" /> to regrid the data.</p>
+<p>The regridded data are saved in a new folder named <strong>Regrided_NetCDF</strong> under the folder you provided to save the output in (10).</p>
+</div>
+</div>
+<div id="transform-netcdf-files-into-cdt-dataset" class="section level2" number="2.17">
+<h2><span class="header-section-number">2.17</span> Transform NetCDF files into CDT dataset</h2>
+<p>The menu <strong>Data Preparation -&gt; Transform NetCDF files into CDT Dataset</strong> allows to transform a NetCDF dataset into CDT gridded dataset format. See CDT dataset format for more details.</p>
+<p><img src="43_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select the time step of the NetCDF data.</p></li>
+<li><p>Set the date range of the data to be converted. See Setting date range for more details.</p></li>
+<li><p>Type the full path to the folder containing the NetCDF files or browse it from the button on the right.</p></li>
+<li><p>Provide a sample and change the filename format of the NetCDF file by clicking on the button Settings (see Setting NetCDF data for more details).</p></li>
+<li><p>If you already have a CDT dataset format and you want to add a new data, check this box.</p></li>
+<li><p>If the box in (5) is cheked, type here the full path to the index file of the CDT dataset or browse it from the button on the right. The index file is in the form &lt;Dataset name.rds&gt;, see below for an example.</p></li>
+<li><p>Type the full path to the folder to save the CDT dataset, or use the browse button .</p></li>
+<li><p>Specify the name of the dataset.</p></li>
+</ol>
+<p>Click on the button <img src="12.png" /> to execute.</p>
+<p>A folder with the name of the CDT dataset (8) is created under the folder you provided (7). If the name of the CDT dataset is <strong>PRECIP</strong>, the directory tree structure of this CDT dataset would be as follows</p>
+<p><img src="44_1.png" /></p>
+<p><strong>PRECIP.rds</strong> is the index file.</p>
+</div>
+<div id="data-extraction" class="section level2" number="2.18">
+<h2><span class="header-section-number">2.18</span> Data extraction</h2>
+<p>CDT allows users to extract data from NetCDF gridded data. We can extract data by coordinates of a single point, by coordinates of multiple points, by rectangle, by one polygon or even by multiple polygons. We show here how to extract data using all these options.</p>
+<p>To extract data from a NetCDF dataset readable by CDT to a given spatial support such as a points, polygons or rectangle, use the menu <strong>Data Preparation -&gt; Data Extraction</strong>. It will display a tabbed widget on the left panel, allows to enter the inputs data and parameters.</p>
+<p>The tab <strong>Input</strong> allows to enter the inputs NetCDF data and the shapefile.</p>
+<p><img src="45_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select the temporal resolution of the input NetCDF dataset to extarct. Valid options: minutes, hourly, daily, pentad, dekadal or monthly data.</p></li>
+<li><p>In case of minutes and hourly, select here the time step of the input data.</p></li>
+<li><p>Select the format of the input data. Available data formats are: <strong>NetCDF gridded data</strong> and <strong>CDT dataset format (gridded)</strong></p></li>
+<li><p>In case of NetCDF gridded data, type the full path to the folder containing the NetCDF files or browse it, and click on the button Settings. A dialog box will be displayed in which you can provide a sample file and change the filename format of the NetCDF file. If the input data is a <em>CDT dataset format (gridded)</em>, type the full path to the index file of the CDT dataset or browse it.</p></li>
+<li><p>If you want to display a map to select the location to extract the data, provide here the shapefile to be displayed on the map. Select it from the drop-down list if it is already loaded, or open it from the browse button <img src="7_1.png" /> on the right.</p></li>
+<li><p>Select the attribute to display on the status bar or to use when the extraction support is polygons.</p></li>
+<li><p>Click Display Map to display the map on the right panel. When you move the cursor over the map, the longitude, latitude and the name of the polygon (depending on the attribute field selected in 6) at the cursor position will be displayed on the status bar.</p></li>
+<li><p>Click Open Attribute Table to display a table of the attributes containing inside the shapefile on the right panel.</p></li>
+</ol>
+<p><img src="46_1.png" /></p>
+<p>The tab Locations allows to specify the support on which the data will be extracted.</p>
+<p><img src="47_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>If a map is displayed, you can use these buttons to zoom in and out, or to specify the region to be displayed by entering its bounding box in the entry fields. Right click on the map to deactivate the zoom’s button.</p></li>
+<li><p>Select the support on which you want to extract the data. Valid options are: <em>One Point</em>, <em>Multiple Points</em>, <em>Rectangle</em>, <em>One Polygon</em> and <em>Multiple Polygons</em>.</p></li>
+</ol>
+<ul>
+<li><p>One Point: allows to extract data on a single point.
+<img src="48_1.png" /></p>
+<p>To get the location you want to extract the data, you can enter the longitude and latitude of this location (when using this method, you do not need to provide a shapefile and display the map), or you can click on the button GET when it turns red click on the map to get the point.</p>
+<p>Instead of extracting the data on the exact grid, you can perform a spatial average over the grid surrounding the target grid by setting the <strong>Pad</strong> entries. For example, if you want to extract a spatial average of the data over all grids located within a distance 0.1 degree on the longitude and 0.2 degree on the latitude from the coordinates you provided, enter 0.1 on the column <strong>Pad</strong> corresponding to the longitude and 0.2 for latitude.</p></li>
+<li><p>Multiple Points: allows to extract data over multiple locations.</p>
+<p><img src="49_1.png" /></p>
+<p>It will display the dialog box below.</p>
+<p><img src="50_1.png" /></p>
+<ol style="list-style-type: upper-alpha">
+<li><p>Input file to use to get the coordinates of the locations to be extracted, see below for more details. If you use this option, you do not need to provide a shapefile and display the map.</p></li>
+<li><p>Click this button to reset all selected locations.</p></li>
+<li><p>All selected locations will be displayed here.</p></li>
+</ol></li>
+</ul>
+<p>There are several ways to extract the data over a multiple points.</p>
+<ul>
+<li><p>You can enter the longitude and latitude of one location then click on ADD to add the point on the list in (C).</p></li>
+<li><p>You can click on the button GET and when it turns red click on the map to get the point, when ADD turns red click on it to add the selected point on the list in (C).</p></li>
+<li><p>You can get the coordinates of the locations from a CDT coordinates file. Select CDT coordinates file on (A) then select the file from the drop-down list if it is already loaded, or open it from the browse button on the right. All the locations will be displayed in (C).</p></li>
+<li><p>You can get the coordinates of the locations from a CDT stations data format file. Select CDT stations data format on (A) then select the file from the drop-down list if it is already loaded, or open it from the browse button on the right. All the locations will be displayed in (C).</p></li>
+</ul>
+<p>The same as a single point, you can spatially average the data over the grid surrounding each location by providing the <strong>Pad</strong>.
+If you got all the locations you want click <strong>OK</strong>.</p>
+<ul>
+<li>Rectangle: allows to extract data over a selected rectangular area.</li>
+</ul>
+<p><img src="51_1.png" /></p>
+<p>To select the area you want to extract the data, you can do as follow</p>
+<ul>
+<li>specify the bounding box of the rectangle by entering the minimum and maximum longitude and latitude (when using this method, you do not need to provide a shapefile and display the map),</li>
+<li>click on the button <strong>GET</strong> when it turns red drag the cursor on the map to get the desired rectangle.</li>
+</ul>
+<p><img src="52_1.png" /></p>
+<ul>
+<li><p>One Polygon: allows to extract data over a selected polygon.</p>
+<p><img src="53_1.png" /></p></li>
+</ul>
+<p>To select the polygon you want to extract the data, you can do as follow</p>
+<ul>
+<li><p>select the name of the polygon from the drop-down list, the name listed here is corresponding to the attribute field you have selected from the tab <strong>Input</strong> number (6),</p></li>
+<li><p>click on the button <strong>GET</strong> when it turns click on the map to select the desired polygon.</p>
+<p><img src="54_1.png" /></p></li>
+<li><p>Multiple Polygons: allows to extract data over multiple polygons.</p>
+<p><img src="55_1.png" /></p></li>
+</ul>
+<p>The name of the polygons listed in the drop-down list are from the attribute field you have selected from the tab <strong>Input</strong> number (6).</p>
+<p>It will display the dialog box below.</p>
+<p><img src="56_1.png" /></p>
+<ul>
+<li><ol style="list-style-type: upper-alpha">
+<li>Button to get all the polygons from the shapefile, see below for more details.</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: upper-alpha">
+<li>Click this button to reset all selected polygons.</li>
+</ol></li>
+<li><ol start="3" style="list-style-type: upper-alpha">
+<li>All selected polygons will be displayed here.</li>
+</ol></li>
+</ul>
+<p>There are three ways to extract the data over a multiple polygons.</p>
+<ul>
+<li><p>You can select the name of the polygon from the drop-down list then click on ADD to add it on the list in (C).</p></li>
+<li><p>You can click on the button GET and when it turns red click on the map to select the desired polygon, when ADD turns red click on it to add the selected polygon on the list in (C).</p></li>
+<li><p>You can get the all the polygons from the shapefile by clicking the button Get All Polygons on (A). The name of the polygons will be displayed in (C).</p></li>
+</ul>
+<p>If you got all the polygons you want click <strong>OK</strong>.
+The tab <strong>Output</strong> allows to specify the date range, the format of the extracted data.</p>
+<p><img src="57_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Set the date and time range of the data to extract. See <strong>Setting date range</strong> for more details.</p></li>
+<li><p>Select the start and end month you want to extract.</p></li>
+<li><p>Select the format of the extracted data. Available data formats are: <em>CDT Stations Data Format</em>, <em>CPT File Format</em>, <em>NetCDF Files</em> and <em>Time|Lat|Lon|Value</em> Format. The formats listed here depend on the extraction support you have selected from the tab <strong>Locations</strong>. The Time|Lat|Lon|Value Format format is a format of data with 4 columns, the 1st column is for the date or time, the 2nd column the latitude, the 3rd column the longitude, and the 4th column contains the value of the extracted data.</p></li>
+<li><p>When activated, check the box if you want to perform a spatial average of the data over the selected area or polygon. If this option is deactivated and the box is checked, this means that the data is spatially averaged over the selected area or polygon. If the box is unchecked, you get a gridded data.</p></li>
+<li><p>Specify the folder or the name of the file (depend on the data output format) to save the extracted data by browsing it from the button or typing the full path to the folder or the file.</p></li>
+<li><p>Click on <strong>EXTRACT DATA</strong> to start the extraction.</p></li>
+</ol>
+</div>
+<div id="split-netcdf-files-into-cdt-netcdf-format" class="section level2" number="2.19">
+<h2><span class="header-section-number">2.19</span> Split NetCDF files into CDT NetCDF format</h2>
+<p>Sometimes NetCDF files have many more dimensions, for example, one NetCDF file might contain values for multiple years in a single file.</p>
+<p>The menu <strong>Data Preparation -&gt; Split NetCDF files into CDT NetCDF format</strong> allows splitting a multidimensional NetCDF data into a NetCDF data readable by CDT.</p>
+<p><img src="58_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select the number of files to split. Valid options: <em>One NetCDF file</em> or <em>Several NetCDF files</em>.</p></li>
+<li><p>Click the button <strong>OPEN</strong> to open the NetCDF file (for One NetCDF file) or a sample from the NetCDF files (for Several NetCDF files). It will open a dialog box allowing you to select the variable to be extracted and specify the dimensions.</p>
+<p><img src="59_1.png" /></p>
+<ul>
+<li><ol style="list-style-type: lower-alpha">
+<li>Select the variable to extract.</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-alpha">
+<li>select the dimension for longitude.</li>
+</ol></li>
+<li><ol start="3" style="list-style-type: lower-alpha">
+<li>select the dimension for latitude.</li>
+</ol></li>
+<li><ol start="4" style="list-style-type: lower-alpha">
+<li>select the dimension for time.</li>
+</ol></li>
+<li><ol start="5" style="list-style-type: lower-alpha">
+<li>If the variable has more than 3 dimensions, the additional dimensions will be displayed here.</li>
+</ol></li>
+<li><ol start="6" style="list-style-type: lower-alpha">
+<li>Select at which value or level of the additional dimension the selected variable in (1) should be extracted.</li>
+</ol></li>
+<li><ol start="7" style="list-style-type: lower-alpha">
+<li>all information concerning the variables and dimensions inside the NetCDF file are displayed here.</li>
+</ol></li>
+</ul></li>
+<li><p>In the case of Several NetCDF files, change the filename format to conform with the NetCDF files name. Replace the string linking all NetCDF files by %S. For example, if you have a NetCDF files as follows</p>
+<p><img src="60_1.png" /></p>
+<p>The format of the filename must be precip_%S.nc.</p></li>
+<li><p>Type the full path to the folder to save the converted NetCDF files or browse it.</p></li>
+</ol>
+<p>Click on the button <img src="12.png" /> to split the data.</p>
+<p>The converted NetCDF data are saved in a new folder named <strong>CDT_NetCDF_Format</strong> under the folder you provided to save the output in (<strong>4</strong>).</p>
+</div>
+<div id="blank-grid-outside-polygons" class="section level2" number="2.20">
+<h2><span class="header-section-number">2.20</span> Blank grid outside polygons</h2>
+<p>Suppose you have a single or multiple netCDF file/files where you want to make all the values outside an area of your interest to be blank. CDT allows users to do this by using <strong>Data Preparation -&gt; Blank Grid Outside Polygons</strong>.</p>
+<p><img src="61_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>You can select either a single file or multiple NetCDF files.</p></li>
+<li><p>If you selected <strong>One NetCDF file</strong> in step 1, browse to or specify the full path of the file. If <strong>Multiple NetCDF files</strong> was selected, specify the folder containing the NetCDF files.</p></li>
+<li><p>If <strong>Multiple NetCDF files</strong> was selected in step 1, this field will be activated, otherwise it will be deactivated. Specify a sample file by browsing to one of the NetCDF files in case of the selection of <strong>Multiple NetCDF files</strong> in step 1.</p></li>
+<li><p>Browse to or specify the full path of the shapefile to be used for blanking. In this case, for the NetCDF file/files, the areas that are outside your specified shapefile, will have blank values.</p></li>
+<li><p>Click OK.</p></li>
+</ol>
+<p>Now, click on <img src="12.png" /> to blank NetCDF file/files outside the shapefile.</p>
+</div>
+<div id="data-format-conversion" class="section level2" number="2.21">
+<h2><span class="header-section-number">2.21</span> Data format conversion</h2>
+<div id="conversion-to-cpt-format" class="section level3" number="2.21.1">
+<h3><span class="header-section-number">2.21.1</span> Conversion to CPT format</h3>
+<p>We can convert both CDT stations data and NetCDF gridded data to CPT format.</p>
+</div>
+<div id="converting-netcdfgeotiffesri-.hdr-labelled" class="section level3" number="2.21.2">
+<h3><span class="header-section-number">2.21.2</span> Converting NetCDF/GeoTIFF/ESRI .hdr Labelled</h3>
+<p>Here, we will see how CDT allows a user to convert raster data from one format to another. If you want to convert CDT station data format or a NetCDF dataset into CPT station or gridded data format, use <strong>Data Preparation -&gt; Data Format Conversion -&gt; Conversion to CPT data format</strong>, it will display a dialog box.</p>
+<p><img src="62_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select the input data format to convert. Available data formats are: CDT stations data format, NetCDF gridded data.</p></li>
+<li><p>If the input data is a CDT station data format, select from the drop-down list the file containing the station data to be converted if it is already loaded, or open it from the browse button <img src="7_1.png" /> on the right. In case of NetCDF gridded data, type the full path to the folder containing the NetCDF files or browse it from the button <img src="7_1.png" /> on the right. Then click on the button <strong>Settings</strong>. A dialog box will be displayed in which you can provide a sample file and change the filename format of the NetCDF file.</p>
+<p><img src="63_1.png" /></p>
+<ul>
+<li><ol style="list-style-type: lower-alpha">
+<li>Provide a NetCDF sample file.</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-alpha">
+<li>Change the filename format to conform with the NetCDF files name. You have to replace the year, month, dekad, pentad or day in the NetCDF file name as follow</li>
+</ol>
+<ul>
+<li>Year: %Y</li>
+<li>Month: %M</li>
+<li>Dekad: %T</li>
+<li>Pentad: %P</li>
+<li>Day: %D
+<strong>Example</strong>: If you have a NetCDF dataset with the file name outTS_2017-12_2018-02.nc, the format should be like this outTS_%Y-%M_%Y-%M.nc.
+If the file name is onset_20181201.nc, the format should be like this onset_%Y%M%D.nc.</li>
+</ul></li>
+</ul></li>
+<li><p>Specify the CPT tags.</p>
+<ul>
+<li>Field Name: the CPT tag cpt:field representing the abbreviated name of the field variable.</li>
+<li>Field Units: the CPT tag cpt:units for the units in which the data are stored.</li>
+<li>Missing Value: the CPT tag cpt:missing for the missing value code.</li>
+</ul></li>
+<li><p>Type the name of the file to save the converted data or the full path to the file. You can also click on <img src="7_1.png" /> on the right, it opens a file dialog where you can select and/or type the name, the path and the file extension.</p></li>
+</ol>
+<p>Click on the button <img src="12.png" /> to start the conversion</p>
+</div>
+<div id="converting-netcdfgeotiffesri-.hdr-labelled-1" class="section level3" number="2.21.3">
+<h3><span class="header-section-number">2.21.3</span> Converting NetCDF/GeoTIFF/ESRI .hdr Labelled</h3>
+<p>The menu <strong>Data Preparation -&gt; Data Format Conversion -&gt; Converting NetCDF/GeoTIFF/ESRI .hdr Labelled</strong> allows to convert NetCDF, GeoTIFF, ESRI .hdr Labelled (.bil and .hdr) files to other format.</p>
+<p><img src="64_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select the format of the data to convert and the format in which the data will be converted.</p></li>
+<li><p>Type the full path to the folder containing the files to convert or browse it from the button <img src="7_1.png" /> on the right.</p></li>
+<li><p>Type the full path to the folder to save the converted files or browse it using the button <img src="7_1.png" />.</p></li>
+<li><p>If the output files are in NetCDF format, all these fields will be activated allow you to define the NetCDF variable. Take a look at the function ncvar_def of the R package ncdf4 for more details.</p></li>
+</ol>
+<p>Click on the button <img src="12.png" /> to start the conversion</p>
+</div>
+<div id="create-grads-descriptor-file-from-cdt-netcdf-files" class="section level3" number="2.21.4">
+<h3><span class="header-section-number">2.21.4</span> Create GrADS Descriptor File from CDT NetCDF files</h3>
+<p>As CDT can only handle a NetCDF data with a separate file for each time step, you need to create a Data Descriptor File to be able to display CDT output NetCDF in GrADS. You can use the menu <strong>Data Preparation -&gt; Data Format Conversion -&gt; Create GrADS Descriptor File from CDT NetCDF files</strong> to create the data descriptor file.</p>
+<p><img src="65_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select the time step of the NetCDF data.</p></li>
+<li><p>Set the date range you want to include to the data descriptor file. See Setting date range for more details.</p></li>
+<li><p>Type the full path to the folder containing the NetCDF files or browse it from the button <img src="7_1.png" /> on the right. Then click on the button <strong>Settings</strong>. A dialog box will be displayed in which you can provide a sample file and change the filename format of the NetCDF file.</p>
+<p><img src="66_1.png" /></p>
+<ul>
+<li><ol style="list-style-type: lower-alpha">
+<li>Provide a NetCDF sample file.</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-alpha">
+<li>Change the filename format to conform with the NetCDF files name. You have to replace the year, month or day in the NetCDF file name as follow</li>
+</ol>
+<ul>
+<li>Year: %Y</li>
+<li>Month: %M</li>
+<li>Day: %D
+Example: If you have a NetCDF dataset with the file name <strong>rr_mrg_20180121_ALL.nc</strong>, the format should be like this <strong>rr_mrg_%Y%M%D_ALL.nc</strong>.
+If the file name is <strong>rfe_201801.nc</strong>, the format should be like this <strong>rfe_%Y%M.nc</strong>.</li>
+</ul></li>
+</ul></li>
+<li><p>Type the name of the file to save the data descriptor file or the full path to the file. You can also click on on the right, it opens a file dialog where you can select and/or type the name, the path and the file extension.</p></li>
+</ol>
+<p>Click on the button <img src="12.png" /> to create the data descriptor file.</p>
+</div>
+</div>
+<div id="filing-missing-dekadal-temperature-values" class="section level2" number="2.22">
+<h2><span class="header-section-number">2.22</span> Filing missing dekadal temperature values</h2>
+<p>The menu <strong>Data Preparation -&gt; Filing missing dekadal temperature values</strong> allows to fill out the missing values of dekadal temperature data in CDT station data format with an adjusted reanalysis dekadal temperature data by a regression.</p>
+<p>The reanalysis data are extracted at the station locations, then a regression between the station and the extracted adjusted reanalysis is performed by using the series of dekad corresponding to the missing dekad to be filled out. The length of the series is limited to 21 dekads centered at the missing dekad.</p>
+<p><img src="67_1.png" /></p>
+<ol style="list-style-type: decimal">
+<li><p>Select from the drop-down list the file (in CDT station data format) containing the dekadal temperature data to be filled if it is already loaded, or open it from the browse button <img src="7_1.png" /> on the right.</p></li>
+<li><p>Type the full path to the folder containing the adjusted reanalysis files (in NetCDF format) or browse it from the button <img src="7_1.png" /> on the right. Do not forget to provide a sample file and change the filename format of the NetCDF file by clicking on the button Settings (see Setting NetCDF data for more details).</p></li>
+<li><p>Minimum length (between 10 and 20) of non missing data to be used to perform the regression.</p></li>
+<li><p>Set the date range of the data to be filled. See Setting date range for more details.</p></li>
+<li><p>Type the name of the file to save the filled data or the full path to the file. You can also click on <img src="7_1.png" /> on the right, it opens a file dialog where you can select and/or type the name, the path and the file format (txt or csv).</p></li>
+</ol>
+<p>Click on the button <img src="12.png" /> to execute.</p>
+</div>
+<div id="references" class="section level2" number="2.23">
+<h2><span class="header-section-number">2.23</span> References</h2>
+<p>Blumenthal, M.B., Bell, M., Del Corral, J., Cousin, R., Khomyakov, I. (2014). IRI Data Library: Enhancing Accessibility of Climate Knowledge: The International Research Institute for Climate &amp; Society: Shaping the Landscape of Climate Services. Earth Perspectives: Transdisciplinarity Enabled, 1: 19.</p>
+<p>Funk, C., Peterson, P., Landsfeld, M., Pedreros, D., Verdin, J., Shukla, S., … Michaelsen, J. (2015). The climate hazards infrared precipitation with stations—a new environmental record for monitoring extremes. Scientific Data, 2, 150066. <a href="https://doi.org/10.1038/sdata.2015.6" class="uri">https://doi.org/10.1038/sdata.2015.6</a></p>
+<p>Grimes, D. I. F., Pardo-Igúzquiza, E., &amp; Bonifacio, R. (1999). Optimal areal rainfall estimation using raingauges and satellite data. Journal of Hydrology, 222(1), 93–108. <a href="https://doi.org/10.1016/S0022-1694(99)00092-X" class="uri">https://doi.org/10.1016/S0022-1694(99)00092-X</a>.</p>
+<p>Hou, A. Y., Kakar, R. K., Neeck, S., Azarbarzin, A. A., Kummerow, C. D., Kojima, M., … Iguchi, T. (2014). The Global Precipitation Measurement Mission. Bulletin of the American Meteorological Society, 95(5), 701–722. <a href="https://doi.org/10.1175/BAMS-D-13-00164.1" class="uri">https://doi.org/10.1175/BAMS-D-13-00164.1</a></p>
+<p>Huffman, G. J., Adler, R. F., Bolvin, D. T., &amp; Nelkin, E. J. (2010). The TRMM Multi-Satellite Precipitation Analysis (TMPA). In M. Gebremichael &amp; F. Hossain (Eds.), Satellite Rainfall Applications for Surface Hydrology (pp. 3–22). <a href="https://doi.org/10.1007/978-90-481-2915-7_1" class="uri">https://doi.org/10.1007/978-90-481-2915-7_1</a></p>
+<p>Joyce, R. J., Janowiak, J. E., Arkin, P. A., &amp; Xie, P. (2004). CMORPH: A Method that Produces Global Precipitation Estimates from Passive Microwave and Infrared Data at High Spatial and Temporal Resolution. Journal of Hydrometeorology, 5(3), 487–503. <a href="https://doi.org/10.1175/1525-7541(2004)005" class="uri">https://doi.org/10.1175/1525-7541(2004)005</a>&lt;0487:CAMTPG&gt;2.0.CO;2</p>
+<p>Nguyen, P., Ombadi, M., Sorooshian, S., Hsu, K., AghaKouchak, A., Braithwaite, D., … Thorstensen, A. R. (2018). The PERSIANN family of global satellite precipitation data: a review and evaluation of products. Hydrology and Earth System Sciences, 22(11), 5801–5816. <a href="https://doi.org/10.5194/hess-22-5801-2018" class="uri">https://doi.org/10.5194/hess-22-5801-2018</a></p>
+<p>Novella, N. S., &amp; Thiaw, W. M. (2013). African Rainfall Climatology Version 2 for Famine Early Warning Systems. Journal of Applied Meteorology and Climatology, 52(3), 588–606. <a href="https://doi.org/10.1175/JAMC-D-11-0238.1" class="uri">https://doi.org/10.1175/JAMC-D-11-0238.1</a></p>
+<p>Thorne, V., Coakeley, P., Grimes, D., &amp; Dugdale, G. (2001). Comparison of TAMSAT and CPC rainfall estimates with raingauges, for southern Africa. International Journal of Remote Sensing, 22(10), 1951–1974. <a href="https://doi.org/10.1080/01431160118816" class="uri">https://doi.org/10.1080/01431160118816</a></p>
+<p>Xie, P., Joyce, R., Wu, S., Yoo, S.-H., Yarosh, Y., Sun, F., et al. (2017). Reprocessed, bias-corrected CMORPH global high-resolution precipitation estimates from 1998. J. Hydrometeorol. 18, 1617–1641. doi: 10.1175/JHM-D-16-0168.1</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-cdt.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="quality-control.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
